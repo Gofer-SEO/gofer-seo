@@ -1,0 +1,17 @@
+/*!
+ * Admin Screen - Page.
+ *
+ * Style for containers & modifications to Bootstrap.
+ *
+ * @since 1.0.0
+ */
+
+/*
+ * Meta Box Holder
+ *
+ * Fixes issue with meta boxes not able to be dragged into
+ * an empty postbox-container.
+ */
+.gofer-seo-admin-page .postbox-container > .meta-box-sortables {
+	min-height: 9px;
+}

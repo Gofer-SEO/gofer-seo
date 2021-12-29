@@ -1,0 +1,21 @@
+/*!
+ * Input Type - Add Field Robots.txt
+ *
+ * @since 1.0.0
+ */
+
+.gofer-seo-add-field-robots-txt div.gofer-seo-row {
+	margin-bottom: 9px;
+}
+
+input.gofer-seo-add-item-robots-txt-user-agent-button.button-secondary {
+	margin-top: 1%;
+	margin-bottom: 1%;
+	margin-left: 1%;
+}
+
+input.gofer-seo-add-item-robots-txt-sitemap-button.button-secondary {
+	margin-top: 1%;
+	margin-bottom: 1%;
+	margin-left: 1%;
+}

@@ -1,0 +1,81 @@
+/*!
+ * Post Quick-Edit.
+ *
+ * Part of the plugin's quick-edits concept used on the All Posts screen.
+ *
+ * @since 1.0.0
+ */
+
+.gofer-seo-quick-edit-wrap {
+	float: left;
+	display: block;
+	opacity: 1;
+	max-height: 75px;
+	overflow: hidden;
+	width: 100%;
+}
+
+/* stylelint-disable selector-class-pattern -- Snakecases are input slugs required for event listeners. */
+.gofer-seo-quick-edit-wrap.gofer_seo_editing {
+	max-height: initial;
+	overflow: visible;
+}
+
+td.gofer_seo_title.column-gofer_seo_title,
+td.gofer_seo_description.column-gofer_seo_description,
+td.gofer_seo_keywords.column-gofer_seo_keywords {
+	overflow: visible;
+}
+
+@media screen and (max-width: 782px) {
+
+	body.wp-admin th.column-gofer_seo_title,
+	th.column-gofer_seo_description,
+	th.column-gofer_seo_keywords,
+	td.gofer_seo_title.column-seotitle,
+	td.gofer_seo_description.column-seodesc,
+	td.gofer_seo_keywords.column-seokeywords {
+		display: none;
+	}
+}
+/* stylelint-enable */
+
+.gofer-seo-quick-edit-pencil {
+	margin-right: 5px;
+	color: #72777c;
+}
+
+.gofer-seo-quick-edit-pencil:hover {
+	color: #0073aa;
+	outline: 0;
+}
+
+.gofer-seo-quick-edit-input {
+	float: left;
+	position: relative;
+	margin-bottom: 10px;
+	font-size: 13px;
+	width: 100%;
+	z-index: 1;
+}
+
+.gofer-seo-quick-edit-input-save {
+	margin-right: 5px;
+	color: rgb(22, 204, 22);
+}
+
+.gofer-seo-quick-edit-input-cancel {
+	color: #f00;
+}
+
+.gofer-seo-quick-edit-pencil:focus,
+.gofer-seo-quick-edit-input-save:focus,
+.gofer-seo-quick-edit-input-cancel:focus {
+	box-shadow: none;
+}
+
+.gofer-seo-quickedit-spinner {
+	float: left;
+	width: 20px;
+	margin-right: 5px;
+}

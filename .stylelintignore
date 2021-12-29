@@ -1,0 +1,9 @@
+*.min.css
+
+/node_modules/
+/vendor/
+
+gofer-seo.css
+bootstrap.css
+notice.css
+select2.css

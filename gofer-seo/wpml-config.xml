@@ -1,0 +1,23 @@
+<wpml-config>
+	<!-- https://wpml.org/documentation/support/language-configuration-files/#custom-fields -->
+	<custom-fields>
+		<custom-field action="translate">_gofer_seo_modules_general_title</custom-field>
+		<custom-field action="translate">_gofer_seo_modules_general_description</custom-field>
+		<custom-field action="translate">_gofer_seo_modules_general_keywords</custom-field>
+		<custom-field action="translate">_gofer_seo_modules_social_media_title</custom-field>
+		<custom-field action="translate">_gofer_seo_modules_social_media_description</custom-field>
+		<custom-field action="translate">_gofer_seo_modules_social_media_keywords</custom-field>
+	</custom-fields>
+	<!-- https://wpml.org/documentation/support/language-configuration-files/#admin-texts -->
+	<admin-texts>
+		<key name="gofer_seo_options">
+			<key name="modules">
+				<key name="general">
+					<key name="*_title" />
+					<key name="*_description" />
+					<key name="*_keywords" />
+				</key>
+			</key>
+		</key>
+	</admin-texts>
+</wpml-config>

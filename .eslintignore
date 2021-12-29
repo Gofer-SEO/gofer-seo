@@ -1,0 +1,14 @@
+// List of files and folders that ESLint should ignore.
+
+*.min.js
+**/*{.,-}min.js
+webpack-config.js
+/vendor/*
+/node_modules/*
+/build/*
+/src/*
+*/assets/*
+
+autotrack.js
+bootstrap.js
+select2.js

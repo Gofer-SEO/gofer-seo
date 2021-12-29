@@ -1,0 +1,341 @@
+/*!
+ * Admin - Inputs
+ *
+ * Styling for multiple inputs.
+ *
+ * @since 1.0.0
+ */
+
+/* stylelint-disable no-descending-specificity */
+/* stylelint-disable block-no-empty */
+/* stylelint-disable font-family-no-missing-generic-family-keyword */
+
+/* Wrap Header (bold wrap) */
+.gofer-seo-wrap-dynamic > p {
+	margin: 0 0 9px 0;
+}
+
+.gofer-seo-wrap-dynamic > p > b {
+	color: #545454;
+	font-size: 14px;
+	font-weight: 700;
+}
+
+@media (max-width: 782px) {
+
+	.gofer-seo-wrap-dynamic > p > b {
+		/* stylelint-disable comment-empty-line-before -- Commented code for future refactor. */
+		/* font-size: 14px; */
+		/* font-weight: 700; */
+		/* stylelint-enable */
+	}
+}
+
+/* *** INPUTS *** */
+.gofer-seo-input-wrap > input {} /* stylelint-disable-line block-no-empty -- Added for future use. */
+
+.gofer-seo-input-wrap input[readonly],
+.gofer-seo-input-wrap textarea[readonly] {
+	background: rgba(255, 255, 255, 0.5);
+	border-color: rgba(126, 137, 147, 0.3);
+	box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.04);
+	color: rgba(50, 55, 60, 0.5);
+}
+
+.gofer-seo-input-wrap > input[type="text"],
+.gofer-seo-input-wrap > input[type="url"] {
+	width: 100%;
+}
+
+.gofer-seo-user-editor .gofer-seo-input-wrap > input[type="text"],
+.gofer-seo-user-editor .gofer-seo-input-wrap > input[type="url"] {
+	width: 25em;
+}
+
+.gofer-seo-input-wrap > textarea {
+	width: 100%;
+	min-height: 45px;
+	max-height: 562px;
+}
+
+.gofer-seo-input-wrap input:disabled,
+.gofer-seo-input-wrap textarea:disabled {
+	text-decoration: line-through;
+}
+
+.gofer-seo-input-wrap > input[type="date"] {
+	width: 36%;
+	min-width: 150px;
+}
+
+.gofer-seo-input-wrap > select {
+	width: 36%;
+	min-width: 150px;
+}
+
+.gofer-seo-user-editor .gofer-seo-input-wrap > select {
+	width: 15em;
+	min-width: unset;
+}
+
+/* Radio */
+.gofer-seo-input-wrap  .gofer-seo-radio-item label {
+	vertical-align: baseline;
+}
+
+.gofer-seo-input-wrap > input[type="radio"] {
+	appearance: auto;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	margin-top: 7px;
+	margin-bottom: 3px;
+}
+
+.gofer-seo-input-wrap input[type="radio"]:checked {
+	background: #6ab66a;
+}
+
+.gofer-seo-input-wrap input[type="radio"]:checked::before {
+	background: #6ab66a;
+}
+
+.gofer-seo-input-wrap input[type="radio"]:focus {
+	border-color: rgb(126, 137, 147);
+	box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+	outline: 0;
+}
+
+.gofer-seo-input-wrap > .gofer-seo-radio-item {
+	float: left;
+	width: 24%;
+	margin-top: 5px;
+	margin-bottom: 3px;
+	padding-right: 1%;
+	min-inline-size: fit-content;
+}
+
+@media (max-width: 1500px) {
+
+	.gofer-seo-input-wrap > .gofer-seo-radio-item {
+		width: 29%;
+		padding-right: 2%;
+	}
+}
+
+@media (max-width: 960px) {
+
+	.gofer-seo-input-wrap > .gofer-seo-radio-item {
+		width: 48%;
+		margin-top: 12px;
+		margin-bottom: 9px;
+	}
+}
+
+@media (max-width: 500px) {
+
+	.gofer-seo-input-wrap > .gofer-seo-radio-item {
+		width: 100%;
+		padding-right: 0;
+	}
+}
+
+/* Checkbox */
+.gofer-seo-input-wrap > input[type="checkbox"] {
+	margin-top: 7px;
+	margin-bottom: 3px;
+}
+
+.gofer-seo-input-wrap input[type="checkbox"]:checked {
+	background: #6ab66a;
+}
+
+.gofer-seo-input-wrap input[type="checkbox"]:checked::before {
+	/* stylelint-disable-next-line font-family-no-missing-generic-family-keyword -- Correct syntax for dashicons. */
+	font: 400 21px/1 dashicons;
+	content: "\f147";
+	color: #fff;
+	margin: -3px 0 0 -4px;
+}
+
+.gofer-seo-input-wrap input[type="checkbox"]:focus {
+	border-color: rgb(126, 137, 147);
+	box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+	outline: 0;
+}
+
+.gofer-seo-input-wrap input[type="checkbox"]:hover {
+	border-color: #9ce69c;
+	box-shadow: 0 0 0 1px #7fbb7f;
+	outline: 2px solid transparent;
+}
+
+@media (max-width: 782px) {
+
+	.gofer-seo-input-wrap > input[type="checkbox"] {
+		margin-top: 8px;
+		margin-bottom: 4px;
+	}
+
+	.gofer-seo-input-wrap input[type="checkbox"]:checked::before {
+		font-size: 27px;
+		margin: 0 0 0 -5px;
+	}
+}
+
+/* Multi-Checkbox */
+.gofer-seo-input-wrap > .gofer-seo-multi-checkbox-item {
+	float: left;
+	width: 25%;
+	margin-top: 5px;
+	margin-bottom: 3px;
+}
+
+@media (max-width: 1500px) {
+
+	.gofer-seo-input-wrap > .gofer-seo-multi-checkbox-item {
+		width: 33%;
+	}
+}
+
+@media (max-width: 960px) {
+
+	.gofer-seo-input-wrap > .gofer-seo-multi-checkbox-item {
+		width: 50%;
+		margin-top: 12px;
+		margin-bottom: 9px;
+	}
+}
+
+@media (max-width: 500px) {
+
+	.gofer-seo-input-wrap > .gofer-seo-multi-checkbox-item {
+		width: 100%;
+	}
+}
+
+/* Range */
+.gofer-seo-input-wrap.gofer-seo-input-type-range input[type="range"] {
+	width: 36%;
+	min-width: 150px;
+}
+
+.gofer-seo-input-wrap.gofer-seo-input-type-range input[type="number"] {
+	width: 54px;
+}
+
+/* Image Media */
+.gofer-seo-input-wrap .gofer-seo-image-media-button {
+	margin-bottom: 3px;
+}
+
+.gofer-seo-image-media-text {} /* stylelint-disable-line block-no-empty -- Added for future use. */
+
+/* stylelint-disable -- Prototype for future release. */
+/*.gofer-seo-image-media-img {*/
+/*	width: 100%;*/
+/*}*/
+/* stylelint-enable */
+
+/* Add Field List */
+.gofer-seo-add-field-list table.gofer-seo-add-field-list-table {
+	width: 100%;
+	border: 1px #d0cbcb outset;
+}
+
+.gofer-seo-add-field-list table.gofer-seo-add-field-list-table:empty {
+	display: none;
+}
+
+.gofer-seo-add-field-list table.gofer-seo-add-field-list-table > thead {
+	text-align: left;
+	background: #cfd0d1;
+	line-height: 1.8;
+}
+
+.gofer-seo-add-field-list table.gofer-seo-add-field-list-table > thead th {
+	padding: 6px 9px;
+}
+
+.gofer-seo-add-field-list table.gofer-seo-add-field-list-table > tbody > tr:nth-child(even) {
+	background: #f1f3f8;
+}
+
+/* Add Field Robots.txt */
+.gofer-seo-add-field-robots-txt table.gofer-seo-add-field-robots-txt-table {
+	width: 100%;
+	border: 1px #d0cbcb outset;
+}
+
+.gofer-seo-add-field-robots-txt table.gofer-seo-add-field-robots-txt-table:empty {
+	display: none;
+}
+
+.gofer-seo-add-field-robots-txt table.gofer-seo-add-field-robots-txt-table > thead {
+	text-align: left;
+	background: #cfd0d1;
+	line-height: 1.8;
+}
+
+.gofer-seo-add-field-robots-txt table.gofer-seo-add-field-robots-txt-table > thead th {
+	padding: 6px 9px;
+}
+
+.gofer-seo-add-field-robots-txt table.gofer-seo-add-field-robots-txt-table > tbody > tr:nth-child(even) {
+	background: #f1f3f8;
+}
+
+/* Select2 */
+/* stylelint-disable selector-class-pattern -- Code is out of scope. */
+.gofer-seo-input-type-select2-multi-select .select2-selection--multiple {
+	min-height: 45px;
+	max-height: 562px;
+	border: 1px solid #7e8993;
+	resize: vertical;
+	overflow-wrap: break-word;
+	overflow: auto;
+}
+/* stylelint-enable */
+
+/* stylelint-disable max-line-length -- Can't Reduce. */
+/* stylelint-disable selector-class-pattern -- Code is out of scope. */
+.gofer-seo-input-type-select2-multi-select .select2-container--default.select2-container--focus .select2-selection--multiple {
+	border: 1px solid #7e8993;
+}
+/* stylelint-enable */
+
+/* Tabs */
+.gofer-seo-tabs .nav-tabs {
+	padding: 0 1%;
+	border-bottom: unset;
+}
+
+.gofer-seo-tabs .nav-tabs .nav-link {
+	padding-bottom: 0.4rem;
+	border-style: solid;
+	border-color: #dfdfdf;
+	border-width: 1px 1px 0 1px;
+	text-decoration: none;
+	font-weight: 600;
+	background-color: #eeeeef;
+	box-shadow: inset 0 -1px 2px 0 #00000063;
+}
+
+.gofer-seo-tabs .nav-tabs .nav-link.active {
+	border-bottom: 3px solid #007cba;
+	box-shadow: 0 2px 3px 0 rgba(71, 185, 226, 0.75);
+}
+
+.gofer-seo-tabs .tab-content {
+	border-top: 1px solid #dee2e6;
+	border-right: 1px solid #dee2e6;
+	border-bottom: 1px solid #dee2e6;
+	border-left: 1px solid #dee2e6;
+	border-radius: 6px;
+	box-shadow: 0 1px 9px #e9edf1;
+}
+
+.gofer-seo-user-editor.gofer-seo-container {
+	width: 100%;
+	padding: 0;
+}
+

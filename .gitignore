@@ -1,0 +1,93 @@
+#################
+## CUSTOM
+#################
+deprecated/
+*.bk*
+.htaccess
+*.log
+
+#Translations
+*.mo
+
+#############
+## Composer
+#############
+vendor/
+
+#############
+## Node.js
+#############
+node_modules
+package-lock.json
+
+#################
+## PHPStorm
+#################
+.idea/
+.idea/workspace.xml
+.idea/inspectionProfiles/profile_settings.xml
+
+# User-specific stuff:
+#.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/dictionaries
+
+### PhpStorm Patch ###
+# Comment Reason: https://github.com/joeblau/gitignore.io/issues/186#issuecomment-215987721
+# *.iml
+# modules.xml
+# .idea/misc.xml
+# *.ipr
+
+#################
+## Netbeans
+#################
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+nbactions.xml
+
+#################
+## Eclipse
+#################
+*.pydevproject
+.project
+.metadata
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.classpath
+.settings/
+.loadpath
+
+# External tool builders
+.externalToolBuilders/
+
+# Locally stored "Eclipse launch configurations"
+*.launch
+
+# CDT-specific
+.cproject
+
+# PDT-specific
+.buildpath
+
+############
+## Windows
+############
+# Windows image file caches
+Thumbs.db
+
+# Folder config file
+Desktop.ini
+
+############
+## MAC
+############
+.DS_Store
