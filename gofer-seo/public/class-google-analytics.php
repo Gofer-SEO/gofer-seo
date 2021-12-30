@@ -105,65 +105,130 @@ class Gofer_SEO_Google_Analytics {
 	 */
 	public function universal_analytics() {
 		$gofer_seo_options = Gofer_SEO_Options::get_instance();
-		$allow_linker  = '';
-		$domain_list   = '';
+		$cookie_domain = 'auto';
+		$create_field_objects = array(
+			'cookieDomain' => 'none',
+			'allowLinker'  => false,
+		);
+		$extra_commands    = array();
 
-		$cookie_domain = ', \'auto\'';
 		if ( $gofer_seo_options->options['modules']['general']['google_analytics']['enable_advanced_settings'] ) {
+			// Cookie Domain.
 			if ( ! empty( $gofer_seo_options->options['modules']['general']['google_analytics']['track_domain'] ) ) {
-				$track_domain = gofer_seo_sanitize_domain( $gofer_seo_options->options['modules']['general']['google_analytics']['track_domain'] );
-				$track_domain = esc_js( $track_domain );
-				if ( ! empty( $track_domain ) ) {
-					$cookie_domain = '\'cookieDomain\': \'' . $track_domain . '\'';
+				$domain = gofer_seo_sanitize_domain( $gofer_seo_options->options['modules']['general']['google_analytics']['track_domain'] );
+				$domain = esc_js( $domain );
+				if ( ! empty( $cookie_domain ) ) {
+					$create_field_objects['cookieDomain'] = $domain;
+					$cookie_domain = $domain;
 				}
 			}
-		}
 
-		if (
-				$gofer_seo_options->options['modules']['general']['google_analytics']['enable_advanced_settings'] &&
-				$gofer_seo_options->options['modules']['general']['google_analytics']['enable_track_multi_domains']
-		) {
-			$allow_linker = '\'allowLinker\': true';
-			if ( ! empty( $gofer_seo_options->options['modules']['general']['google_analytics']['track_multi_domains'] ) ) {
-				$addl_domains = trim( $gofer_seo_options->options['modules']['general']['google_analytics']['track_multi_domains'] );
-				$addl_domains = preg_split( '/[\s,]+/', $addl_domains );
-				if ( ! empty( $addl_domains ) ) {
-					foreach ( $addl_domains as $d ) {
-						$d = gofer_seo_sanitize_domain( $d );
-						if ( ! empty( $d ) ) {
-							if ( ! empty( $domain_list ) ) {
-								$domain_list .= ', ';
+			// Advanced.
+			/**
+			 * IP Anonymization.
+			 *
+			 * @see https://developers.google.com/analytics/devguides/collection/analyticsjs/ip-anonymization
+			 */
+			if ( $gofer_seo_options->options['modules']['general']['google_analytics']['enable_anonymize_ip'] ) {
+				$extra_commands[] = "ga('set', 'anonymizeIp', true);";
+			}
+
+			// Google Official Plugins.
+			/**
+			 * Advertising Features.
+			 *
+			 * @see https://developers.google.com/analytics/devguides/collection/analyticsjs/display-features
+			 */
+			if ( $gofer_seo_options->options['modules']['general']['google_analytics']['enable_advertising_features'] ) {
+				$extra_commands[] = "ga('require', 'displayfeatures');";
+			}
+
+			/**
+			 * Enhanced Ecommerce.
+			 *
+			 * @see https://developers.google.com/analytics/devguides/collection/analyticsjs/enhanced-ecommerce
+			 */
+			if ( $gofer_seo_options->options['modules']['general']['google_analytics']['enable_enhance_ecommerce'] ) {
+				$extra_commands[] = "ga('require', 'ec');";
+			}
+
+			/**
+			 * Enhanced Link Attribution.
+			 *
+			 * @see https://developers.google.com/analytics/devguides/collection/analyticsjs/enhanced-link-attribution
+			 */
+			if ( $gofer_seo_options->options['modules']['general']['google_analytics']['enable_enhance_link_attributes'] ) {
+				$extra_commands[] = "ga('require', 'linkid', 'linkid.js');";
+			}
+
+			/**
+			 * Linker.
+			 *
+			 * Allow Linker & Auto-Link Domains
+			 *
+			 * @see https://developers.google.com/analytics/devguides/collection/analyticsjs/linker
+			 */
+			if ( $gofer_seo_options->options['modules']['general']['google_analytics']['enable_track_multi_domains'] ) {
+				$create_field_objects['allowLinker'] = true;
+				if ( ! empty( $gofer_seo_options->options['modules']['general']['google_analytics']['track_multi_domains'] ) ) {
+					$auto_link_domains = array();
+					$domains = trim( $gofer_seo_options->options['modules']['general']['google_analytics']['track_multi_domains'] );
+					$domains = preg_split( '/[\s,]+/', $domains );
+					if ( ! empty( $domains ) ) {
+						foreach ( $domains as $domain ) {
+							$domain = gofer_seo_sanitize_domain( $domain );
+							if ( ! empty( $domain ) ) {
+								$auto_link_domains[] = $domain;
 							}
-							$domain_list .= '\'' . $d . '\'';
 						}
+					}
+
+					if ( ! empty( $auto_link_domains ) ) {
+						$extra_commands[] = "ga('require', 'linker');";
+						$extra_commands[] = "ga('linker:autoLink', [" . implode( ',', $auto_link_domains ) . "] );";
 					}
 				}
 			}
-		}
-		$extra_options = array();
-		if ( ! empty( $domain_list ) ) {
-			$extra_options[] = 'ga(\'require\', \'linker\');';
-			$extra_options[] = 'ga(\'linker:autoLink\', [' . $domain_list . '] );';
-		}
 
-		if ( $gofer_seo_options->options['modules']['general']['google_analytics']['enable_advanced_settings'] ) {
-			if ( $gofer_seo_options->options['modules']['general']['google_analytics']['enable_advertising_features'] ) {
-				$extra_options[] = 'ga(\'require\', \'displayfeatures\');';
+			/**
+			 * Track Outbound Links.
+			 *
+			 * Requires AutoTrack.js.
+			 *
+			 * @see https://github.com/googleanalytics/autotrack#plugins
+			 */
+			if ( $gofer_seo_options->options['modules']['general']['google_analytics']['enable_clean_url'] ) {
+				$extra_commands[] = "ga('require', 'cleanUrlTracker');";
 			}
-			if ( $gofer_seo_options->options['modules']['general']['google_analytics']['enable_enhance_ecommerce'] ) {
-				$extra_options[] = 'ga(\'require\', \'ec\');';
+			if ( $gofer_seo_options->options['modules']['general']['google_analytics']['enable_track_events'] ) {
+				$extra_commands[] = "ga('require', 'eventTracker');";
 			}
-			if ( $gofer_seo_options->options['modules']['general']['google_analytics']['enable_enhance_link_attributes'] ) {
-				$extra_options[] = 'ga(\'require\', \'linkid\', \'linkid.js\');';
+			if ( $gofer_seo_options->options['modules']['general']['google_analytics']['enable_track_impressions'] ) {
+				$extra_commands[] = "ga('require', 'impressionTracker');";
 			}
-			if ( $gofer_seo_options->options['modules']['general']['google_analytics']['enable_anonymize_ip'] ) {
-				$extra_options[] = 'ga(\'set\', \'anonymizeIp\', true);';
+			if ( $gofer_seo_options->options['modules']['general']['google_analytics']['enable_track_max_scroll'] ) {
+				$extra_commands[] = "ga('require', 'maxScrollTracker');";
+			}
+			if ( $gofer_seo_options->options['modules']['general']['google_analytics']['enable_track_media_query'] ) {
+				$extra_commands[] = "ga('require', 'mediaQueryTracker');";
+			}
+			if ( $gofer_seo_options->options['modules']['general']['google_analytics']['enable_track_outbound_forms'] ) {
+				$extra_commands[] = "ga('require', 'outboundFormTracker');";
 			}
 			if ( $gofer_seo_options->options['modules']['general']['google_analytics']['enable_track_outbound_links'] ) {
-				$extra_options[] = 'ga(\'require\', \'outboundLinkTracker\');';
+				$extra_commands[] = "ga('require', 'outboundLinkTracker');";
+			}
+			if ( $gofer_seo_options->options['modules']['general']['google_analytics']['enable_track_page_visibility'] ) {
+				$extra_commands[] = "ga('require', 'pageVisibilityTracker');";
+			}
+			if ( $gofer_seo_options->options['modules']['general']['google_analytics']['enable_track_social_media'] ) {
+				$extra_commands[] = "ga('require', 'socialWidgetTracker');";
+			}
+			if ( $gofer_seo_options->options['modules']['general']['google_analytics']['enable_track_url_changes'] ) {
+				$extra_commands[] = "ga('require', 'urlChangeTracker');";
 			}
 		}
-		$extra_options = apply_filters( 'gofer_seo_ga_extra_options', $extra_options );
+		$extra_commands = apply_filters( 'gofer_seo_ga_extra_commands', $extra_commands );
 
 		/**
 		 * Internal filter. Don't output certain GA features if Google Tag Manager is active.
@@ -185,43 +250,43 @@ class Gofer_SEO_Google_Analytics {
 				"ga('require', 'cleanUrlTracker');",
 			);
 			foreach ( $options_to_remove as $option ) {
-				$index = array_search( $option, $extra_options, true );
+				$index = array_search( $option, $extra_commands, true );
 				if ( $index ) {
-					unset( $extra_options[ $index ] );
+					unset( $extra_commands[ $index ] );
 				}
-				continue;
 			}
 		}
 
-		$js_options = array();
-		foreach ( array( 'cookie_domain', 'allow_linker' ) as $opts ) {
-			if ( ! empty( $$opts ) ) {
-				$js_options[] = $$opts;
+		// Output.
+		$output_field_objects = array();
+		foreach ( $create_field_objects as $field_name => $field_value ) {
+			if ( is_bool( $field_value ) ) {
+				$field_value = $field_value ? 'true' : 'false';
+			} else {
+				$field_value = strval( $field_value );
+				$field_value = "'{$field_value}'";
 			}
-		}
-		$js_options = empty( $js_options )
-			? ''
-			: ', { ' . implode( ',', $js_options ) . ' } ';
-		// Prepare analytics.
-		$analytics_id = esc_js( $gofer_seo_options->options['modules']['general']['google_analytics']['ua_id'] );
 
-		$output_extra_options = '';
-		foreach ( $extra_options as $option ) {
-			$output_extra_options .= $option;
+			$output_field_objects[] = "'{$field_name}': {$field_value}";
+		}
+		if ( empty( $output_field_objects ) ) {
+			$output_field_objects = '';
+		} else {
+			$output_field_objects = ', {' . implode( ',', $output_field_objects ) . '}';
 		}
 
 		$output = sprintf(
 			'<script type="text/javascript">
 			window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-			ga("create", "%s" %s %s);
-			%s
-			ga("send", "pageview");
+			ga(\'create\', \'%1$s\', \'%2$s\'%3$s);
+			%4$s
+			ga(\'send\', \'pageview\');
 			</script>
 			<script async src="https://www.google-analytics.com/analytics.js"></script>',
-			$analytics_id,
+			esc_js( $gofer_seo_options->options['modules']['general']['google_analytics']['ua_id'] ),
 			$cookie_domain,
-			$js_options,
-			$output_extra_options
+			$output_field_objects,
+			implode( PHP_EOL, $extra_commands )
 		);
 
 		return $output;
