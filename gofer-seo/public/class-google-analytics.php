@@ -65,11 +65,12 @@ class Gofer_SEO_Google_Analytics {
 				$user = wp_get_current_user();
 			}
 
-			if (
-				! empty( $user ) &&
-				array_intersect( $user->roles, $gofer_seo_options->options['modules']['general']['google_analytics']['exclude_user_roles'] )
-			) {
-				return '';
+			$exclude_roles = array_keys( array_filter( $gofer_seo_options->options['modules']['general']['google_analytics']['exclude_user_roles'] ) );
+			if ( ! empty( $exclude_roles ) ) {
+				$matched_roles = array_intersect( $user->roles, $exclude_roles );
+				if ( ! empty( $matched_roles ) ) {
+					return '';
+				}
 			}
 		}
 
