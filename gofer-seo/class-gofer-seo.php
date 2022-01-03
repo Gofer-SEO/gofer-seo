@@ -85,6 +85,8 @@ class Gofer_SEO {
 	private function __construct() {
 		// Initialize plugin.
 		add_action( 'plugin_loaded', array( $this, 'pre_load' ), 3 );
+		add_action( 'mu_plugin_loaded', array( $this, 'pre_load' ), 3 );
+		add_action( 'network_plugin_loaded', array( $this, 'pre_load' ), 3 );
 		add_action( 'plugins_loaded', array( $this, 'load' ), 3 );
 	}
 
