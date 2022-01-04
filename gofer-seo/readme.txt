@@ -3,7 +3,7 @@ Contributors: EkoJR
 Tags: Search Engine Optimization, Analytics, Social Media, Schema, XML Sitemaps, SEO, Meta Data
 Requires at least: 4.9
 Tested up to: 5.8
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 Requires PHP: 5.4.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -66,6 +66,17 @@ Most inputs have tooltips added to make it easier to understand. However, if the
 
 
 == Changelog ==
+
+= 1.0.1 =
+* Add backwards compatibility with WP Sitemaps 5.5.0.
+* Fix files not loading on multi-site.
+* Refactor Google Analytics.
+* Fix excluding roles from Google Analytics tracking.
+* Fix missing operations for autotrack.js plugins.
+* Fix output syntax.
+* Exclude roles without needing to enable advanced settings.
+* Change arrangement of Analytics settings.
+* Change input titles to better reflect Google Analytics documents.
 
 = 1.0.0 =
 * Initial release.

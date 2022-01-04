@@ -575,6 +575,17 @@ class Gofer_SEO_Screen_Page_Module_General extends Gofer_SEO_Screen_Page_Module 
 							'placeholder' => 'UA-########-#',
 						),
 					),
+					'exclude_user_roles'             => array(
+						'title'      => __( 'Exclude Roles from Tracking', 'gofer-seo' ),
+						'type'       => 'multicheckbox',
+						'items'      => $users_items,
+						'conditions' => array(
+							'google_analytics-ua_id' => array(
+								'operator'    => '!=',
+								'right_value' => '',
+							),
+						),
+					),
 					'enable_advanced_settings'       => array(
 						'title'      => __( 'Enable Advanced Settings', 'gofer-seo' ),
 						'type'       => 'checkbox',
@@ -586,7 +597,7 @@ class Gofer_SEO_Screen_Page_Module_General extends Gofer_SEO_Screen_Page_Module 
 						),
 					),
 					'track_domain'                   => array(
-						'title'      => __( 'Track Domain', 'gofer-seo' ),
+						'title'      => __( 'Cookie Domain', 'gofer-seo' ),
 						'type'       => 'text',
 						'conditions' => array(
 							'google_analytics-ua_id' => array(
@@ -605,7 +616,7 @@ class Gofer_SEO_Screen_Page_Module_General extends Gofer_SEO_Screen_Page_Module 
 						),
 					),
 					'enable_track_multi_domains'     => array(
-						'title'      => __( 'Enable Tracking Multiple Domains', 'gofer-seo' ),
+						'title'      => __( 'Enable Linker for Cross-Domain', 'gofer-seo' ),
 						'type'       => 'checkbox',
 						'conditions' => array(
 							'google_analytics-ua_id' => array(
@@ -619,7 +630,7 @@ class Gofer_SEO_Screen_Page_Module_General extends Gofer_SEO_Screen_Page_Module 
 						),
 					),
 					'track_multi_domains'            => array(
-						'title'      => __( 'Track Additional Domains', 'gofer-seo' ),
+						'title'      => __( 'Auto-Link Domains', 'gofer-seo' ),
 						'type'       => 'textarea',
 						'conditions' => array(
 							'google_analytics-ua_id' => array(
@@ -639,10 +650,9 @@ class Gofer_SEO_Screen_Page_Module_General extends Gofer_SEO_Screen_Page_Module 
 							'rows' => 6,
 						),
 					),
-					'exclude_user_roles'             => array(
-						'title'      => __( 'Exclude Roles from Tracking', 'gofer-seo' ),
-						'type'       => 'multicheckbox',
-						'items'      => $users_items,
+					'enable_enhance_ecommerce'       => array(
+						'title'      => __( 'Enhance eCommerce', 'gofer-seo' ),
+						'type'       => 'checkbox',
 						'conditions' => array(
 							'google_analytics-ua_id' => array(
 								'operator'    => '!=',
@@ -668,8 +678,8 @@ class Gofer_SEO_Screen_Page_Module_General extends Gofer_SEO_Screen_Page_Module 
 							),
 						),
 					),
-					'enable_enhance_ecommerce'       => array(
-						'title'      => __( 'Enhance eCommerce', 'gofer-seo' ),
+					'enable_advertising_features'    => array(
+						'title'      => __( 'Enable Advertising Features', 'gofer-seo' ),
 						'type'       => 'checkbox',
 						'conditions' => array(
 							'google_analytics-ua_id' => array(
@@ -682,6 +692,22 @@ class Gofer_SEO_Screen_Page_Module_General extends Gofer_SEO_Screen_Page_Module 
 							),
 						),
 					),
+					'enable_anonymize_ip'            => array(
+						'title'      => __( 'Anonymize IP', 'gofer-seo' ),
+						'type'       => 'checkbox',
+						'conditions' => array(
+							'google_analytics-ua_id' => array(
+								'operator'    => '!=',
+								'right_value' => '',
+							),
+							'google_analytics-enable_advanced_settings' => array(
+								'operator'    => '==',
+								'right_value' => true,
+							),
+						),
+					),
+
+					// AutoTrack.
 					'enable_track_outbound_links'    => array(
 						'title'      => __( 'Track Outbound Links', 'gofer-seo' ),
 						'type'       => 'checkbox',
@@ -796,34 +822,6 @@ class Gofer_SEO_Screen_Page_Module_General extends Gofer_SEO_Screen_Page_Module 
 					),
 					'enable_track_max_scroll'        => array(
 						'title'      => __( 'Track Max Scroll', 'gofer-seo' ),
-						'type'       => 'checkbox',
-						'conditions' => array(
-							'google_analytics-ua_id' => array(
-								'operator'    => '!=',
-								'right_value' => '',
-							),
-							'google_analytics-enable_advanced_settings' => array(
-								'operator'    => '==',
-								'right_value' => true,
-							),
-						),
-					),
-					'enable_advertising_features'    => array(
-						'title'      => __( 'Enable Advertising Features', 'gofer-seo' ),
-						'type'       => 'checkbox',
-						'conditions' => array(
-							'google_analytics-ua_id' => array(
-								'operator'    => '!=',
-								'right_value' => '',
-							),
-							'google_analytics-enable_advanced_settings' => array(
-								'operator'    => '==',
-								'right_value' => true,
-							),
-						),
-					),
-					'enable_anonymize_ip'            => array(
-						'title'      => __( 'Anonymize IP', 'gofer-seo' ),
 						'type'       => 'checkbox',
 						'conditions' => array(
 							'google_analytics-ua_id' => array(

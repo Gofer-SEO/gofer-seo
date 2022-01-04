@@ -154,29 +154,26 @@ class Gofer_SEO_Module_Sitemap extends Gofer_SEO_Module {
 	 */
 	public function init() {
 		parent::init();
-		global $wp_version;
 		global $wp_rewrite;
 		$wp_rewrite->flush_rules();
 
-		if ( version_compare( '5.5.0', $wp_version, '<=' ) ) {
-			$this->register_rewrites_sitemap();
-			add_action( 'template_redirect', array( $this, 'render_sitemaps' ) );
-			$this->register_sitemaps();
-			$this->renderer = new Gofer_SEO_Sitemaps_Renderer();
+		$this->register_rewrites_sitemap();
+		add_action( 'template_redirect', array( $this, 'render_sitemaps' ) );
+		$this->register_sitemaps();
+		$this->renderer = new Gofer_SEO_Sitemaps_Renderer();
 
-			$gofer_seo_options = Gofer_SEO_Options::get_instance();
-			if ( $gofer_seo_options->options['modules']['sitemap']['enable_news_sitemap'] ) {
-				$this->register_rewrites_news_sitemap();
-				add_action( 'template_redirect', array( $this, 'render_news_sitemaps' ) );
-				$this->register_news_sitemaps();
-				$this->news_renderer = new Gofer_SEO_News_Sitemaps_Renderer();
-			}
-			if ( $gofer_seo_options->options['modules']['sitemap']['enable_rss_sitemap'] ) {
-				$this->register_rewrites_rss_sitemap();
-				add_action( 'template_redirect', array( $this, 'render_rss_sitemaps' ) );
-				$this->register_rss_sitemaps();
-				$this->rss_renderer = new Gofer_SEO_RSS_Sitemaps_Renderer();
-			}
+		$gofer_seo_options = Gofer_SEO_Options::get_instance();
+		if ( $gofer_seo_options->options['modules']['sitemap']['enable_news_sitemap'] ) {
+			$this->register_rewrites_news_sitemap();
+			add_action( 'template_redirect', array( $this, 'render_news_sitemaps' ) );
+			$this->register_news_sitemaps();
+			$this->news_renderer = new Gofer_SEO_News_Sitemaps_Renderer();
+		}
+		if ( $gofer_seo_options->options['modules']['sitemap']['enable_rss_sitemap'] ) {
+			$this->register_rewrites_rss_sitemap();
+			add_action( 'template_redirect', array( $this, 'render_rss_sitemaps' ) );
+			$this->register_rss_sitemaps();
+			$this->rss_renderer = new Gofer_SEO_RSS_Sitemaps_Renderer();
 		}
 	}
 

@@ -52,6 +52,13 @@ class Gofer_SEO_Compat {
 
 		require_once GOFER_SEO_DIR . 'includes/compatibility/class-compat-jetpack.php';
 		require_once GOFER_SEO_DIR . 'includes/compatibility/class-compat-wpml.php';
+
+		if ( version_compare( '5.5.0', $wp_version, '>' ) ) {
+			// Compatibility - WP Sitemaps.
+			require_once GOFER_SEO_DIR . 'includes/compatibility/wp/sitemaps/providers/class-wp-sitemaps-provider.php';
+			require_once GOFER_SEO_DIR . 'includes/compatibility/wp/sitemaps/class-wp-sitemaps-renderer.php';
+			require_once GOFER_SEO_DIR . 'includes/compatibility/wp/sitemaps/class-wp-sitemaps-stylesheet.php';
+		}
 	}
 
 	/**
