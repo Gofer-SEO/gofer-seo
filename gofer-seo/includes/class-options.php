@@ -1579,6 +1579,10 @@ class Gofer_SEO_Options {
 				'type'  => 'bool',
 				'value' => false,
 			),
+			'enable_min_files'           => array(
+				'type'  => 'bool',
+				'value' => true,
+			),
 		);
 
 		$typesets['advanced'] = array_replace_recursive(
