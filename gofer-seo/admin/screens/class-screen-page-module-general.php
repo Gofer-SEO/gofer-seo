@@ -542,23 +542,28 @@ class Gofer_SEO_Screen_Page_Module_General extends Gofer_SEO_Screen_Page_Module 
 			/* **________**********************************************************************************************/
 			/* _/ Verify \____________________________________________________________________________________________*/
 			'verify_google'                        => array(
-				'title' => __( 'Verify Google', 'gofer-seo' ),
+				/* translators: %s: Verification code used with Search Engines. */
+				'title' => sprintf( __( 'Verify %s', 'gofer-seo' ), __( 'Google', 'gofer-seo' ) ),
 				'type'  => 'text',
 			),
 			'verify_bing'                          => array(
-				'title' => __( 'Verify Bing', 'gofer-seo' ),
+				/* translators: %s: Verification code used with Search Engines. */
+				'title' => sprintf( __( 'Verify %s', 'gofer-seo' ), __( 'Bing', 'gofer-seo' ) ),
 				'type'  => 'text',
 			),
 			'verify_pinterest'                     => array(
-				'title' => __( 'Verify Pinterest', 'gofer-seo' ),
+				/* translators: %s: Verification code used with Search Engines. */
+				'title' => sprintf( __( 'Verify %s', 'gofer-seo' ), __( 'Pinterest', 'gofer-seo' ) ),
 				'type'  => 'text',
 			),
 			'verify_yandex'                        => array(
-				'title' => __( 'Verify Yandex', 'gofer-seo' ),
+				/* translators: %s: Verification code used with Search Engines. */
+				'title' => sprintf( __( 'Verify %s', 'gofer-seo' ), __( 'Yandex', 'gofer-seo' ) ),
 				'type'  => 'text',
 			),
 			'verify_baidu'                         => array(
-				'title' => __( 'Verify Baidu', 'gofer-seo' ),
+				/* translators: %s: Verification code used with Search Engines. */
+				'title' => sprintf( __( 'Verify %s', 'gofer-seo' ), __( 'Baidu', 'gofer-seo' ) ),
 				'type'  => 'text',
 			),
 

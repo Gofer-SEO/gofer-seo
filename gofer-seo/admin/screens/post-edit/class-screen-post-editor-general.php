@@ -538,7 +538,8 @@ class Gofer_SEO_Screen_Post_Editor_General extends Gofer_SEO_Screen_Post_Editor 
 	public function ajax_quick_edit_save() {
 		check_ajax_referer( 'gofer_seo_quick_edit' );
 		if ( ! current_user_can( 'gofer_seo_access' ) ) {
-			wp_send_json_error( __( 'User doesn\'t have `gofer_seo_access` capabilities.', 'gofer-seo' ) );
+			/* translators: %1$s: WordPress User Role slug. */
+			wp_send_json_error( sprintf( __( 'User doesn\'t have `%1$s` capabilities.', 'gofer-seo' ), 'gofer_seo_access' ) );
 		}
 
 		$post_id     = null;
@@ -556,7 +557,8 @@ class Gofer_SEO_Screen_Post_Editor_General extends Gofer_SEO_Screen_Post_Editor 
 
 		// Check edit_post capabilities.
 		if ( ! current_user_can( 'edit_post', $post_id ) ) {
-			wp_send_json_error( __( 'User doesn\'t have `edit_post` capabilities.', 'gofer-seo' ) );
+			/* translators: %1$s: WordPress User Role slug. */
+			wp_send_json_error( sprintf( __( 'User doesn\'t have `%1$s` capabilities.', 'gofer-seo' ), 'edit_post' ) );
 		}
 
 		// Get Column Name.

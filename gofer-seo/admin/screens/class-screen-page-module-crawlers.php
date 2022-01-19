@@ -130,11 +130,13 @@ class Gofer_SEO_Screen_Page_Module_Crawlers extends Gofer_SEO_Screen_Page_Module
 			/* **____________******************************************************************************************/
 			/* _/ Robots.txt \________________________________________________________________________________________*/
 			'enable_override_robots_txt' => array(
-				'title'      => __( 'Override Robots.txt', 'gofer-seo' ),
+				/* translators: %s: Represents the filename robots.txt. */
+				'title'      => sprintf( __( 'Override %s', 'gofer-seo' ), 'Robots.txt' ),
 				'input_type' => 'checkbox',
 			),
 			'robots_txt_rules'           => array(
-				'title'      => __( 'Robots.txt Rules', 'gofer-seo' ),
+				/* translators: %s: Represents the filename robots.txt. */
+				'title'      => sprintf( __( '%s Rules', 'gofer-seo' ), 'Robots.txt' ),
 				'input_type' => 'add-field-robots-txt',
 				'layout'     => 'input-row',
 				'wrap'       => array(
@@ -220,7 +222,7 @@ class Gofer_SEO_Screen_Page_Module_Crawlers extends Gofer_SEO_Screen_Page_Module
 				),
 			),
 			'robots_txt' => array(
-				'title'    => __( 'Robot.txt', 'gofer-seo' ),
+				'title'    => 'Robots.txt',
 				'context'  => 'gofer_seo_normal',
 				'priority' => 'default',
 				'inputs'   => array(

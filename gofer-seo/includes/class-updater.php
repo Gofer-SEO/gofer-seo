@@ -307,7 +307,7 @@ class Gofer_SEO_Updater {
 				new WP_Error(
 					'gpfer_seo_updater',
 					sprintf(
-						/* translators: $1$s is PHP syntax for 'class', and %2$s is the method reference. */
+						/* translators: %1$s is PHP syntax for 'class', and %2$s is the method reference. */
 						__( 'Gofer SEO Error: update class missing %1$s in %2$s.', 'gofer-seo' ),
 						'\'class\'',
 						'`Gofer_SEO_Updater::load_option_updates()`'
@@ -319,7 +319,7 @@ class Gofer_SEO_Updater {
 				new WP_Error(
 					'gpfer_seo_updater',
 					sprintf(
-						/* translators: $1$s is PHP syntax for 'extends *', and %2$s is the classname reference. */
+						/* translators: %1$s is PHP syntax for 'extends *', and %2$s is the classname reference. */
 						__( 'Gofer SEO Error: update class missing `%1$s` in `%2$s`  class declaration.', 'gofer-seo' ),
 						'extends Gofer_SEO_Update_Options',
 						get_class( $update_class['class'] )
