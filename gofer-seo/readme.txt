@@ -67,6 +67,12 @@ Most inputs have tooltips added to make it easier to understand. However, if the
 
 == Changelog ==
 
+= 1.0.2 =
+* Change JS & CSS enqueue files to minify.
+* Add Use Minify setting to Advanced module.
+* Add Internationalization support.
+* Change i18n strings.
+
 = 1.0.1 =
 * Add backwards compatibility with WP Sitemaps 5.5.0.
 * Fix files not loading on multi-site.
