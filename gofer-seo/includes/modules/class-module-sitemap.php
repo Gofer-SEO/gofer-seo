@@ -458,10 +458,11 @@ class Gofer_SEO_Module_Sitemap extends Gofer_SEO_Module {
 				} else {
 					/* translators: Notifies the admin which sitemaps failed to notify with which search engine(s). */
 					$error_message = sprintf(
-					/* translators: %1$s is the search engine, and %2$s is a URL. */
-					__( 'Failed to notify %1$s about changes to your sitemap at %2$s, unable to access via wp_remote_get().', 'gofer-seo' ),
+						/* translators: %1$s: Search Engine name. %2$s: Target URL. %3$s: WordPress function name. */
+						__( 'Failed to notify %1$s about changes to your sitemap at %2$s, unable to access via %3$s.', 'gofer-seo' ),
 						$k,
-						$url
+						$url,
+						'wp_remote_get()'
 					);
 					new Gofer_SEO_Error( 'gofer_seo_module_sitemap_ping_2', $error_message );
 				}

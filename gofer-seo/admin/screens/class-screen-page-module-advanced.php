@@ -100,6 +100,10 @@ class Gofer_SEO_Screen_Page_Module_Advanced extends Gofer_SEO_Screen_Page_Module
 				'title' => __( 'Enable Stop WP Heartbeat', 'gofer-seo' ),
 				'type'  => 'checkbox',
 			),
+			'enable_min_files'           => array(
+				'title' => __( 'Use Minified JS & CSS files.', 'gofer-seo' ),
+				'type'  => 'checkbox',
+			),
 
 			// TODO Create Editor Input
 			// OR
@@ -141,6 +145,7 @@ class Gofer_SEO_Screen_Page_Module_Advanced extends Gofer_SEO_Screen_Page_Module
 					'enable_title_rewrite',
 					'enable_unprotect_post_meta',
 					'enable_stop_heartbeat',
+					'enable_min_files',
 				),
 			),
 		);

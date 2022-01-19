@@ -706,10 +706,12 @@ class Gofer_SEO_Notifications {
 	 * @since 1.0.0
 	 */
 	public function admin_enqueue_scripts() {
+		$file_ext_js  = gofer_seo_is_min_enabled() ? 'min.css' : 'css';
+		$file_ext_css = gofer_seo_is_min_enabled() ? 'min.css' : 'css';
 		// Register.
 		wp_register_script(
 			'gofer-seo-notice-js',
-			GOFER_SEO_URL . 'admin/js/notice.js',
+			GOFER_SEO_URL . 'admin/js/notice.' . $file_ext_js,
 			array( 'jquery' ),
 			GOFER_SEO_VERSION,
 			true
@@ -735,7 +737,7 @@ class Gofer_SEO_Notifications {
 
 		wp_enqueue_style(
 			'gofer-seo-notice-css',
-			GOFER_SEO_URL . 'admin/css/notice.css',
+			GOFER_SEO_URL . 'admin/css/notice.' . $file_ext_css,
 			false,
 			GOFER_SEO_VERSION,
 			false
@@ -870,7 +872,8 @@ class Gofer_SEO_Notifications {
 	public function ajax_notice_action() {
 		check_ajax_referer( 'gofer_seo_ajax_notice' );
 		if ( ! current_user_can( 'gofer_seo_access' ) ) {
-			wp_send_json_error( __( "User doesn't have `gofer_seo_access` capabilities.", 'gofer-seo' ) );
+			/* translators: %1$s: WordPress User Role slug. */
+			wp_send_json_error( sprintf( __( 'User doesn\'t have `%1$s` capabilities.', 'gofer-seo' ), 'gofer_seo_access' ) );
 		}
 		// Notice (Slug) => (Action_Options) Index.
 		$notice_slug  = null;

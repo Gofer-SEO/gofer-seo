@@ -363,9 +363,10 @@ class Gofer_SEO_Admin {
 	 * @param $hook_suffix
 	 */
 	public function admin_enqueue_styles_all( $hook_suffix ) {
+		$file_ext = gofer_seo_is_min_enabled() ? 'min.css' : 'css';
 		wp_enqueue_style(
 			'gofer-seo-css',
-			GOFER_SEO_URL . 'admin/css/gofer-seo.css',
+			GOFER_SEO_URL . 'admin/css/gofer-seo.' . $file_ext,
 			array(),
 			GOFER_SEO_VERSION
 		);

@@ -10,7 +10,7 @@
  * @wordpress-plugin
  * Plugin Name:       Gofer SEO
  * Description:       SEO Performance to Gofer.
- * Version:           1.0.1
+ * Version:           1.0.2
  * Requires at least: 4.9
  * Requires PHP:      5.3.8
  * Author:            EkoJR

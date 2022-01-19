@@ -287,10 +287,13 @@ function gofer_seo_get_sanitized_file( $filename ) {
 		// Remove insecured lines.
 		if ( preg_match( '/\<(\?php|script)/', $file[ $i ] ) ) {
 			throw new Exception(
-					__(
-							'<b>Security warning:</b> Your file looks compromised. Please check the file for any script-injection.',
-							'gofer-seo'
-					)
+				sprintf(
+					/* translators: %1$s: HTML element. %2$s: HTML element. %3$s: The filename to check. */
+					__( '%1$sSecurity warning:%2$s Your file looks compromised. Please check `%3$s` for any script-injection.', 'gofer-seo' ),
+					'<b>',
+					'</b>',
+					$filename
+				)
 			);
 		}
 		// Apply security filters.

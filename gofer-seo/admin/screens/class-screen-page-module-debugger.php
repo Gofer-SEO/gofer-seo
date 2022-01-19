@@ -118,7 +118,8 @@ class Gofer_SEO_Screen_Page_Module_Debugger extends Gofer_SEO_Screen_Page_Module
 				'input_type' => 'checkbox',
 			),
 			'enable_error_logs' => array(
-				'title'      => __( 'Enable Error .log', 'gofer-seo' ),
+				/* translators: %s: File extension for log files. */
+				'title'      => sprintf( __( 'Enable Error %s', 'gofer-seo' ), '.log' ),
 				'input_type' => 'checkbox',
 			),
 
@@ -312,9 +313,10 @@ class Gofer_SEO_Screen_Page_Module_Debugger extends Gofer_SEO_Screen_Page_Module
 			return;
 		}
 
+		$file_ext = gofer_seo_is_min_enabled() ? 'min.js' : 'js';
 		wp_enqueue_script(
 			'gofer-seo-screens-page-module-debugger-js',
-			GOFER_SEO_URL . 'admin/js/screens/admin-page-module-debugger.js',
+			GOFER_SEO_URL . 'admin/js/screens/admin-page-module-debugger' . $file_ext,
 			array( 'jquery' ),
 			GOFER_SEO_VERSION,
 			true
@@ -437,7 +439,8 @@ class Gofer_SEO_Screen_Page_Module_Debugger extends Gofer_SEO_Screen_Page_Module
 	public function ajax_delete_errors() {
 		check_ajax_referer( 'gofer_seo_screen_module_debugger' );
 		if ( ! current_user_can( 'gofer_seo_access' ) ) {
-			wp_send_json_error( __( 'User doesn\'t have `gofer_seo_access` capabilities.', 'gofer-seo' ) );
+			/* translators: %1$s: WordPress User Role slug. */
+			wp_send_json_error( sprintf( __( 'User doesn\'t have `%1$s` capabilities.', 'gofer-seo' ), 'gofer_seo_access' ) );
 		}
 
 		$errors = new Gofer_SEO_Errors();
@@ -454,7 +457,8 @@ class Gofer_SEO_Screen_Page_Module_Debugger extends Gofer_SEO_Screen_Page_Module
 	public function ajax_clear_cache() {
 		check_ajax_referer( 'gofer_seo_screen_module_debugger' );
 		if ( ! current_user_can( 'gofer_seo_access' ) ) {
-			wp_send_json_error( __( 'User doesn\'t have `gofer_seo_access` capabilities.', 'gofer-seo' ) );
+			/* translators: %1$s: WordPress User Role slug. */
+			wp_send_json_error( sprintf( __( 'User doesn\'t have `%1$s` capabilities.', 'gofer-seo' ), 'gofer_seo_access' ) );
 		}
 
 		// Query Functions in `query.php`.

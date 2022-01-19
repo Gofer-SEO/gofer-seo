@@ -488,7 +488,8 @@ class Gofer_SEO_Tooltips {
 			'generate_description-use_content'             => __( 'Enable this to use the content to generate a description. Warning: Using this is more resource intense.', 'gofer-seo' ),
 
 			// Advanced.
-			'use_wp_title'                                 => __( 'Use wp_title to get the title used by the theme; this is disabled by default. If you use this option, set your title formats appropriately, as your theme might try to do its own title SEO as well.', 'gofer-seo' ),
+			/* translators: %s: WordPress function name. */
+			'use_wp_title'                                 => sprintf( __( 'Use %s to get the title used by the theme; this is disabled by default. If you use this option, set your title formats appropriately, as your theme might try to do its own title SEO as well.', 'gofer-seo' ), 'wp_title' ),
 			'enable_title_shortcodes'                      => __( 'Enable this to run shortcodes within the title.', 'gofer-seo' ),
 			'enable_description_shortcodes'                => __( 'Check this and shortcodes will get executed for descriptions auto-generated from content.', 'gofer-seo' ),
 			'enable_trim_description'                      => __( 'Check this to prevent your Description from being truncated regardless of its length.', 'gofer-seo' ),
@@ -951,7 +952,8 @@ class Gofer_SEO_Tooltips {
 			'referer_blacklist'       => __( 'This is the list of disallowed referers used for blocking potentially malicious bots.', 'gofer-seo' ),
 
 			// Robots.txt.
-			'enable_override_robots_txt'              => __( 'Whether to include the default WP Robots.txt.', 'gofer-seo' ),
+			/* translators: %s: Represents the filename robots.txt. */
+			'enable_override_robots_txt'              => sprintf( __( 'Whether to include the default WP %s.', 'gofer-seo' ), 'Robots.txt' ),
 			'robots_txt_rules-user_agents-user_agent' => __( 'The name of the user-agent aka crawler.', 'gofer-seo' ),
 			'robots_txt_rules-user_agents-rule_type'  => __( 'The type of action you want to apply.', 'gofer-seo' ),
 			'robots_txt_rules-user_agents-rule_value' => __( 'The relative URL.', 'gofer-seo' ),
@@ -974,7 +976,8 @@ class Gofer_SEO_Tooltips {
 			'php_max_execution_time'     => __( 'This setting allows you to raise your PHP execution time to a reasonable value.', 'gofer-seo' ),
 			'enable_title_rewrite'       => __( 'Enable this option if you run into issues with the title tag being set by your theme or another plugin.', 'gofer-seo' ),
 			'enable_unprotect_post_meta' => __( "Check this to unprotect internal postmeta fields for use with XMLRPC. If you don't know what that is, leave it unchecked.", 'gofer-seo' ),
-			'enable_stop_heartbeat'      => __( 'Allows disabling WP\'s heartbeat JS and may help resolve an issue with it.<br />Please note, some parts of the WP platform depend on it, as well as some plugins.', 'gofer-seo' ),
+			/* translators: %s: HTML line break. */
+			'enable_stop_heartbeat'      => sprintf( __( 'Allows disabling WP\'s heartbeat JS and may help resolve an issue with it.%sPlease note, some parts of the WP platform depend on it, as well as some plugins.', 'gofer-seo' ), '<br />' ),
 		);
 
 		return $tooltips;
@@ -995,7 +998,8 @@ class Gofer_SEO_Tooltips {
 
 			// Error Settings.
 			'enable_errors'     => __( 'Enables tracking backend errors. This setting alone only includes expected Gofer SEO errors or logs.', 'gofer-seo' ),
-			'enable_wp_errors'  => __( 'Whether to include WP errors.<br />This is strongly discouraged depending on the scope of the site.', 'gofer-seo' ),
+			/* translators: %s: HTML line break. */
+			'enable_wp_errors'  => sprintf( __( 'Whether to include WP errors.%sThis is strongly discouraged depending on the scope of the site.', 'gofer-seo' ), '<br />' ),
 			'enable_error_logs' => __( 'This will create a log of important events (gofer-seo.log) in the wp-content directory which might help debugging. Make sure this directory is writable.', 'gofer-seo' ),
 
 			// Errors List.

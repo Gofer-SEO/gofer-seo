@@ -63,12 +63,21 @@ function gofer_seo_do_template( $template_path, $args = array(), $theme_sub_dir 
 	$template_file = gofer_seo_locate_template( $template_path, $theme_sub_dir, $dir );
 
 	if ( ! $template_file ) {
-		/* translators: %s template name */
+		/* translators: %s: Filename of the template. */
 		_doing_it_wrong( __FUNCTION__, sprintf( esc_html__( 'Template %s does not exist.', 'gofer-seo' ), '<code>' . esc_html( $template_file ) . '</code>' ), esc_html( GOFER_SEO_VERSION ) );
 		return;
 	}
 	if ( isset( $args['gofer_seo_template'] ) ) {
-		_doing_it_wrong( __FUNCTION__, sprintf( esc_html__( 'gofer_seo_template in $args param is a reserved key.', 'gofer-seo' ), '<code>' . esc_html( $template_file ) . '</code>' ), esc_html( GOFER_SEO_VERSION ) );
+		_doing_it_wrong(
+			__FUNCTION__,
+			sprintf(
+				/* translators: %1$s: Filename of the template. %2$s: Array key/slug. %3$s: PHP array variable. */
+				esc_html__( 'Template: %1$s - %2$s in %3$s param is a reserved key.', 'gofer-seo' ),
+				'<code>' . esc_html( $template_file ) . '</code>' ),
+				'gofer_seo_template',
+				'$args',
+			esc_html( GOFER_SEO_VERSION )
+		);
 		unset( $args['gofer_seo_template'] );
 	}
 

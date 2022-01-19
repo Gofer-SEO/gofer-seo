@@ -3,7 +3,7 @@ Contributors: EkoJR
 Tags: Search Engine Optimization, Analytics, Social Media, Schema, XML Sitemaps, SEO, Meta Data
 Requires at least: 4.9
 Tested up to: 5.8
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 Requires PHP: 5.4.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -66,6 +66,12 @@ Most inputs have tooltips added to make it easier to understand. However, if the
 
 
 == Changelog ==
+
+= 1.0.2 =
+* Change JS & CSS enqueue files to minify.
+* Add Use Minify setting to Advanced module.
+* Add Internationalization support.
+* Change i18n strings.
 
 = 1.0.1 =
 * Add backwards compatibility with WP Sitemaps 5.5.0.

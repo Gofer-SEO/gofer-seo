@@ -8,6 +8,25 @@
  */
 
 /**
+ * Is Minify Enabled.
+ *
+ * @since 1.0.2
+ *
+ * @return bool
+ */
+function gofer_seo_is_min_enabled() {
+	static $enabled;
+	if ( ! is_null( $enabled ) ) {
+		return $enabled;
+	}
+	$gofer_seo_options = Gofer_SEO_Options::get_instance();
+
+	$enabled = $gofer_seo_options->options['modules']['advanced']['enable_min_files'];
+
+	return $enabled;
+}
+
+/**
  * Get Enabled Post Types.
  *
  * @since 1.0.0
