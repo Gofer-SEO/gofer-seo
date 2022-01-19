@@ -133,39 +133,6 @@ module.exports = function(grunt) {
 			]
 		},
 
-		// https://www.npmjs.com/package/grunt-contrib-uglify
-		uglify: {
-			dev: {
-				files: [{
-					expand: true,
-					cwd: 'gofer-seo/',
-					src: [
-						'<%= filesMinJS %>'
-					],
-					dest: ['gofer-seo/'],
-					rename: function(dst, src) {
-						// To keep the source js files and make new files as `*.min.js`:
-						return dst + '/' + src.replace('.js', '.min.js');
-					}
-				}]
-			}
-		},
-
-		// https://www.npmjs.com/package/grunt-contrib-cssmin
-		cssmin: {
-			dev: {
-				files: [{
-					expand: true,
-					cwd: 'gofer-seo/',
-					src: [
-						'<%= filesMinCSS %>'
-					],
-					dest: 'gofer-seo/',
-					ext: '.min.css'
-				}]
-			}
-		},
-
 		// https://www.npmjs.com/package/grunt-stylelint
 		stylelint: {
 			options: {
@@ -241,6 +208,39 @@ module.exports = function(grunt) {
 				'gofer-seo/public/css/*.css',
 				'!gofer-seo/public/css/*.min.css'
 			]
+		},
+
+		// https://www.npmjs.com/package/grunt-contrib-uglify
+		uglify: {
+			core: {
+				files: [{
+					expand: true,
+					cwd: 'gofer-seo/',
+					src: [
+						'<%= filesMinJS %>'
+					],
+					dest: ['gofer-seo/'],
+					rename: function(dst, src) {
+						// To keep the source js files and make new files as `*.min.js`:
+						return dst + '/' + src.replace('.js', '.min.js');
+					}
+				}]
+			}
+		},
+
+		// https://www.npmjs.com/package/grunt-contrib-cssmin
+		cssmin: {
+			core: {
+				files: [{
+					expand: true,
+					cwd: 'gofer-seo/',
+					src: [
+						'<%= filesMinCSS %>'
+					],
+					dest: 'gofer-seo/',
+					ext: '.min.css'
+				}]
+			}
 		}
 	});
 
@@ -250,11 +250,11 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-phpcs');
 	grunt.loadNpmTasks('grunt-phplint');
 	grunt.loadNpmTasks('grunt-contrib-jshint');
-	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-eslint');
-	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-contrib-csslint');
 	grunt.loadNpmTasks('grunt-stylelint');
+	grunt.loadNpmTasks('grunt-contrib-uglify');
+	grunt.loadNpmTasks('grunt-contrib-cssmin');
 
 	// Default task(s).
 	grunt.registerTask(
