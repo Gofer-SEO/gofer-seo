@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Gofer SEO\n"
-"POT-Creation-Date: 2022-01-18 16:58-0800\n"
+"POT-Creation-Date: 2022-01-18 18:18-0800\n"
 "PO-Revision-Date: 2022-01-18 15:44-0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -33,13 +33,13 @@ msgid "Cheatin' huh?"
 msgstr ""
 
 #. translators: This is an action link users can click to open the General Settings menu.
-#: admin/class-gofer-seo-admin.php:227 admin/screens/class-screen.php:449
-#: admin/screens/class-screen.php:477
+#: admin/class-gofer-seo-admin.php:226 admin/screens/class-screen.php:453
+#: admin/screens/class-screen.php:481
 msgid "SEO Settings"
 msgstr ""
 
 #. translators: This is an action link users can click to open a feature request/bug report on GitHub.
-#: admin/class-gofer-seo-admin.php:261
+#: admin/class-gofer-seo-admin.php:260
 msgid "Rate this plugin."
 msgstr ""
 
@@ -48,22 +48,22 @@ msgid "Dismiss"
 msgstr ""
 
 #. translators: %1$s: WordPress User Role slug.
-#: admin/partials/class-notifications.php:874
-#: admin/screens/class-screen-page-module-debugger.php:442
-#: admin/screens/class-screen-page-module-debugger.php:460
-#: admin/screens/post-edit/class-screen-post-editor-general.php:542
-#: admin/screens/post-edit/class-screen-post-editor-general.php:561
+#: admin/partials/class-notifications.php:876
+#: admin/screens/class-screen-page-module-debugger.php:443
+#: admin/screens/class-screen-page-module-debugger.php:461
+#: admin/screens/post-edit/class-screen-post-editor-general.php:544
+#: admin/screens/post-edit/class-screen-post-editor-general.php:563
 #, php-format
 msgid "User doesn't have `%1$s` capabilities."
 msgstr ""
 
-#: admin/partials/class-notifications.php:898
-#: admin/partials/class-notifications.php:901
+#: admin/partials/class-notifications.php:900
+#: admin/partials/class-notifications.php:903
 #, php-format
 msgid "Missing values from `%s`."
 msgstr ""
 
-#: admin/partials/class-notifications.php:922
+#: admin/partials/class-notifications.php:924
 msgid "Notice updated successfully."
 msgstr ""
 
@@ -1010,6 +1010,8 @@ msgstr ""
 
 #: admin/partials/class-tooltips.php:833 admin/partials/class-tooltips.php:834
 #: admin/partials/class-tooltips.php:835
+#: includes/compatibility/wp/sitemaps/class-wp-sitemaps-stylesheet.php:67
+#: includes/compatibility/wp/sitemaps/class-wp-sitemaps-stylesheet.php:181
 #: includes/sitemap/class-news-sitemaps-stylesheet.php:44
 #: includes/sitemap/class-news-sitemaps-stylesheet.php:173
 #: includes/sitemap/class-rss-sitemaps-stylesheet.php:152
@@ -1468,19 +1470,6 @@ msgstr ""
 msgid "Update Sitemap Settings"
 msgstr ""
 
-#. translators: %s is a placeholder, which means that it should not be translated. It will be replaced with the name of the premium version of the plugin, Gofer SEO Pro.
-#: admin/partials/notifications/wc-detected-notification.php:21
-#, php-format
-msgid ""
-"We have detected you are running WooCommerce. Upgrade to %s to unlock our "
-"advanced eCommerce SEO features, including SEO for Product Categories and "
-"more."
-msgstr ""
-
-#: admin/partials/notifications/wc-detected-notification.php:29
-msgid "Upgrade to Pro"
-msgstr ""
-
 #: admin/screens/class-screen-page-module-advanced.php:57
 msgid "Memory Limit"
 msgstr ""
@@ -1533,18 +1522,22 @@ msgstr ""
 msgid "Enable Stop WP Heartbeat"
 msgstr ""
 
-#: admin/screens/class-screen-page-module-advanced.php:135
+#: admin/screens/class-screen-page-module-advanced.php:104
+msgid "Use Minified JS & CSS files."
+msgstr ""
+
+#: admin/screens/class-screen-page-module-advanced.php:139
 #: admin/screens/class-screen-page-module-debugger.php:235
 msgid "System Settings"
 msgstr ""
 
-#: admin/screens/class-screen-page-module-advanced.php:172
+#: admin/screens/class-screen-page-module-advanced.php:177
 msgid "Advanced Settings"
 msgstr ""
 
-#: admin/screens/class-screen-page-module-advanced.php:173
+#: admin/screens/class-screen-page-module-advanced.php:178
 #: admin/screens/class-screen-page-module-general.php:152
-#: admin/screens/class-screen-page-module-general.php:1128
+#: admin/screens/class-screen-page-module-general.php:1126
 #: admin/screens/class-screen-page-module-sitemap.php:624
 #: admin/screens/class-screen-page-module-social-media.php:457
 msgid "Advanced"
@@ -1717,11 +1710,11 @@ msgstr ""
 msgid "Debugger"
 msgstr ""
 
-#: admin/screens/class-screen-page-module-debugger.php:448
+#: admin/screens/class-screen-page-module-debugger.php:449
 msgid "Successfully updated."
 msgstr ""
 
-#: admin/screens/class-screen-page-module-debugger.php:494
+#: admin/screens/class-screen-page-module-debugger.php:495
 msgid "Successfully cleared cache."
 msgstr ""
 
@@ -1967,88 +1960,88 @@ msgid "Tracking ID"
 msgstr ""
 
 #: admin/screens/class-screen-page-module-general.php:584
-msgid "Enable Advanced Settings"
-msgstr ""
-
-#: admin/screens/class-screen-page-module-general.php:594
-msgid "Track Domain"
-msgstr ""
-
-#: admin/screens/class-screen-page-module-general.php:613
-msgid "Enable Tracking Multiple Domains"
-msgstr ""
-
-#: admin/screens/class-screen-page-module-general.php:627
-msgid "Track Additional Domains"
-msgstr ""
-
-#: admin/screens/class-screen-page-module-general.php:648
 msgid "Exclude Roles from Tracking"
 msgstr ""
 
-#: admin/screens/class-screen-page-module-general.php:663
-msgid "Enhance Link Attributes"
+#: admin/screens/class-screen-page-module-general.php:595
+msgid "Enable Advanced Settings"
 msgstr ""
 
-#: admin/screens/class-screen-page-module-general.php:677
+#: admin/screens/class-screen-page-module-general.php:605
+msgid "Cookie Domain"
+msgstr ""
+
+#: admin/screens/class-screen-page-module-general.php:624
+msgid "Enable Linker for Cross-Domain"
+msgstr ""
+
+#: admin/screens/class-screen-page-module-general.php:638
+msgid "Auto-Link Domains"
+msgstr ""
+
+#: admin/screens/class-screen-page-module-general.php:659
 msgid "Enhance eCommerce"
 msgstr ""
 
-#: admin/screens/class-screen-page-module-general.php:691
-msgid "Track Outbound Links"
+#: admin/screens/class-screen-page-module-general.php:673
+msgid "Enhance Link Attributes"
 msgstr ""
 
-#: admin/screens/class-screen-page-module-general.php:705
-msgid "Track Outbound Forms"
-msgstr ""
-
-#: admin/screens/class-screen-page-module-general.php:719
-msgid "Track Social Media"
-msgstr ""
-
-#: admin/screens/class-screen-page-module-general.php:733
-msgid "Track Events"
-msgstr ""
-
-#: admin/screens/class-screen-page-module-general.php:747
-msgid "Track URL Changes"
-msgstr ""
-
-#: admin/screens/class-screen-page-module-general.php:761
-msgid "Track Media Query"
-msgstr ""
-
-#: admin/screens/class-screen-page-module-general.php:775
-msgid "Track Page Visibility"
-msgstr ""
-
-#: admin/screens/class-screen-page-module-general.php:789
-msgid "Track Impressions"
-msgstr ""
-
-#: admin/screens/class-screen-page-module-general.php:803
-msgid "Track Max Scroll"
-msgstr ""
-
-#: admin/screens/class-screen-page-module-general.php:817
+#: admin/screens/class-screen-page-module-general.php:687
 msgid "Enable Advertising Features"
 msgstr ""
 
-#: admin/screens/class-screen-page-module-general.php:831
+#: admin/screens/class-screen-page-module-general.php:701
 msgid "Anonymize IP"
 msgstr ""
 
-#: admin/screens/class-screen-page-module-general.php:845
+#: admin/screens/class-screen-page-module-general.php:717
+msgid "Track Outbound Links"
+msgstr ""
+
+#: admin/screens/class-screen-page-module-general.php:731
+msgid "Track Outbound Forms"
+msgstr ""
+
+#: admin/screens/class-screen-page-module-general.php:745
+msgid "Track Social Media"
+msgstr ""
+
+#: admin/screens/class-screen-page-module-general.php:759
+msgid "Track Events"
+msgstr ""
+
+#: admin/screens/class-screen-page-module-general.php:773
+msgid "Track URL Changes"
+msgstr ""
+
+#: admin/screens/class-screen-page-module-general.php:787
+msgid "Track Media Query"
+msgstr ""
+
+#: admin/screens/class-screen-page-module-general.php:801
+msgid "Track Page Visibility"
+msgstr ""
+
+#: admin/screens/class-screen-page-module-general.php:815
+msgid "Track Impressions"
+msgstr ""
+
+#: admin/screens/class-screen-page-module-general.php:829
+msgid "Track Max Scroll"
+msgstr ""
+
+#: admin/screens/class-screen-page-module-general.php:843
 msgid "Clean URL"
 msgstr ""
 
-#: admin/screens/class-screen-page-module-general.php:864
+#: admin/screens/class-screen-page-module-general.php:862
 #: admin/screens/class-screen-page-module-social-media.php:292
 msgid "Generate Keywords"
 msgstr ""
 
-#: admin/screens/class-screen-page-module-general.php:868
-#: admin/screens/class-screen-page-module-general.php:900
+#: admin/screens/class-screen-page-module-general.php:866
+#: admin/screens/class-screen-page-module-general.php:898
 #: admin/screens/class-screen-page-module-social-media.php:296
 #: admin/screens/class-screen-page-module-social-media.php:328
 #: admin/screens/post-edit/class-screen-post-editor-general.php:199
@@ -2059,82 +2052,82 @@ msgstr ""
 msgid "Enable"
 msgstr ""
 
-#: admin/screens/class-screen-page-module-general.php:872
+#: admin/screens/class-screen-page-module-general.php:870
 msgid "Enable on Static Posts Page"
 msgstr ""
 
-#: admin/screens/class-screen-page-module-general.php:883
+#: admin/screens/class-screen-page-module-general.php:881
 #: admin/screens/class-screen-page-module-social-media.php:311
 msgid "Use Taxonomies"
 msgstr ""
 
-#: admin/screens/class-screen-page-module-general.php:896
+#: admin/screens/class-screen-page-module-general.php:894
 #: admin/screens/class-screen-page-module-social-media.php:324
 msgid "Generate Descriptions"
 msgstr ""
 
-#: admin/screens/class-screen-page-module-general.php:904
+#: admin/screens/class-screen-page-module-general.php:902
 #: admin/screens/class-screen-page-module-social-media.php:332
 msgid "Use Excerpt"
 msgstr ""
 
-#: admin/screens/class-screen-page-module-general.php:914
+#: admin/screens/class-screen-page-module-general.php:912
 #: admin/screens/class-screen-page-module-social-media.php:342
 msgid "Use Content"
 msgstr ""
 
-#: admin/screens/class-screen-page-module-general.php:929
+#: admin/screens/class-screen-page-module-general.php:927
 msgid "Use WP Title"
 msgstr ""
 
-#: admin/screens/class-screen-page-module-general.php:933
+#: admin/screens/class-screen-page-module-general.php:931
 #: admin/screens/class-screen-page-module-social-media.php:358
 msgid "Enable Title Shortcodes"
 msgstr ""
 
-#: admin/screens/class-screen-page-module-general.php:937
+#: admin/screens/class-screen-page-module-general.php:935
 #: admin/screens/class-screen-page-module-social-media.php:362
 msgid "Enable Description Shortcodes"
 msgstr ""
 
-#: admin/screens/class-screen-page-module-general.php:941
+#: admin/screens/class-screen-page-module-general.php:939
 msgid "Trim Description"
 msgstr ""
 
-#: admin/screens/class-screen-page-module-general.php:945
+#: admin/screens/class-screen-page-module-general.php:943
 msgid "Show Descriptions on Pagination"
 msgstr ""
 
-#: admin/screens/class-screen-page-module-general.php:949
+#: admin/screens/class-screen-page-module-general.php:947
 msgid "Redirect Attachments to Parent"
 msgstr ""
 
-#: admin/screens/class-screen-page-module-general.php:953
+#: admin/screens/class-screen-page-module-general.php:951
 msgid "Menu Order Number"
 msgstr ""
 
-#: admin/screens/class-screen-page-module-general.php:957
+#: admin/screens/class-screen-page-module-general.php:955
 msgid "Exclude URLs"
 msgstr ""
 
-#: admin/screens/class-screen-page-module-general.php:988
+#: admin/screens/class-screen-page-module-general.php:986
 msgid "Active Modules"
 msgstr ""
 
-#: admin/screens/class-screen-page-module-general.php:1001
-#: admin/screens/class-screen-page-module-general.php:1238
+#: admin/screens/class-screen-page-module-general.php:999
+#: admin/screens/class-screen-page-module-general.php:1236
 #: admin/screens/class-screen-page-module-schema-graph.php:232
 #: admin/screens/class-screen-page-module-sitemap.php:554
 msgid "General Settings"
 msgstr ""
 
-#: admin/screens/class-screen-page-module-general.php:1011
+#: admin/screens/class-screen-page-module-general.php:1009
 #: admin/screens/class-screen-page-module-sitemap.php:565
 #: admin/screens/class-screen-page-module-social-media.php:393
 msgid "Site/Defaults"
 msgstr ""
 
-#: admin/screens/class-screen-page-module-general.php:1031
+#: admin/screens/class-screen-page-module-general.php:1029
 #: admin/screens/class-screen-page-module-social-media.php:406
 #: admin/screens/post-edit/class-screen-post-editor-social-media.php:74
 #: admin/screens/post-edit/class-screen-post-editor-social-media.php:170
@@ -2143,90 +2136,90 @@ msgstr ""
 msgid "Image"
 msgstr ""
 
-#: admin/screens/class-screen-page-module-general.php:1040
+#: admin/screens/class-screen-page-module-general.php:1038
 #: admin/screens/class-screen-page-module-sitemap.php:578
 #: admin/screens/class-screen-page-module-social-media.php:418
 msgid "Post Type Content"
 msgstr ""
 
-#: admin/screens/class-screen-page-module-general.php:1049
+#: admin/screens/class-screen-page-module-general.php:1047
 #: admin/screens/class-screen-page-module-sitemap.php:587
 msgid "Taxonomy Content"
 msgstr ""
 
-#: admin/screens/class-screen-page-module-general.php:1058
+#: admin/screens/class-screen-page-module-general.php:1056
 #: admin/screens/class-screen-page-module-sitemap.php:596
 msgid "Archive Content"
 msgstr ""
 
-#: admin/screens/class-screen-page-module-general.php:1071
+#: admin/screens/class-screen-page-module-general.php:1069
 msgid "Search Content"
 msgstr ""
 
-#: admin/screens/class-screen-page-module-general.php:1080
+#: admin/screens/class-screen-page-module-general.php:1078
 msgid "404 Content"
 msgstr ""
 
-#: admin/screens/class-screen-page-module-general.php:1089
+#: admin/screens/class-screen-page-module-general.php:1087
 msgid "Additional Content"
 msgstr ""
 
-#: admin/screens/class-screen-page-module-general.php:1099
+#: admin/screens/class-screen-page-module-general.php:1097
 msgid "Verification"
 msgstr ""
 
-#: admin/screens/class-screen-page-module-general.php:1111
+#: admin/screens/class-screen-page-module-general.php:1109
 msgid "Analytics"
 msgstr ""
 
-#: admin/screens/class-screen-page-module-general.php:1119
+#: admin/screens/class-screen-page-module-general.php:1117
 #: admin/screens/class-screen-page-module-social-media.php:448
 msgid "Generate"
 msgstr ""
 
-#: admin/screens/class-screen-page-module-general.php:1239
+#: admin/screens/class-screen-page-module-general.php:1237
 #: admin/screens/post-edit/class-screen-post-editor-general.php:166
 #: admin/screens/term-edit/class-screen-term-editor-general.php:129
 msgid "General"
 msgstr ""
 
-#: admin/screens/class-screen-page-module-general.php:1327
+#: admin/screens/class-screen-page-module-general.php:1325
 msgid "Analyze page"
 msgstr ""
 
-#: admin/screens/class-screen-page-module-general.php:1334
+#: admin/screens/class-screen-page-module-general.php:1332
 msgid "Check links to this URL"
 msgstr ""
 
-#: admin/screens/class-screen-page-module-general.php:1339
+#: admin/screens/class-screen-page-module-general.php:1337
 msgid "Check Google Cache"
 msgstr ""
 
-#: admin/screens/class-screen-page-module-general.php:1344
+#: admin/screens/class-screen-page-module-general.php:1342
 msgid "Google Structured Data Test"
 msgstr ""
 
-#: admin/screens/class-screen-page-module-general.php:1349
+#: admin/screens/class-screen-page-module-general.php:1347
 msgid "Facebook Debugger"
 msgstr ""
 
-#: admin/screens/class-screen-page-module-general.php:1354
+#: admin/screens/class-screen-page-module-general.php:1352
 msgid "Pinterest Rich Pins Validator"
 msgstr ""
 
-#: admin/screens/class-screen-page-module-general.php:1359
+#: admin/screens/class-screen-page-module-general.php:1357
 msgid "HTML Validator"
 msgstr ""
 
-#: admin/screens/class-screen-page-module-general.php:1364
+#: admin/screens/class-screen-page-module-general.php:1362
 msgid "CSS Validator"
 msgstr ""
 
-#: admin/screens/class-screen-page-module-general.php:1369
+#: admin/screens/class-screen-page-module-general.php:1367
 msgid "Google Page Speed Test"
 msgstr ""
 
-#: admin/screens/class-screen-page-module-general.php:1374
+#: admin/screens/class-screen-page-module-general.php:1372
 msgid "Mobile-Friendly Test"
 msgstr ""
 
@@ -2385,6 +2378,7 @@ msgstr ""
 #: admin/screens/post-edit/class-screen-post-editor-sitemap.php:67
 #: admin/screens/term-edit/class-screen-term-editor-sitemap.php:67
 #: admin/screens/user-edit/class-screen-user-editor-sitemap.php:44
+#: includes/compatibility/wp/sitemaps/class-wp-sitemaps-stylesheet.php:70
 #: includes/sitemap/class-sitemaps-stylesheet.php:47
 msgid "Priority"
 msgstr ""
@@ -2459,6 +2453,8 @@ msgid "Exclude"
 msgstr ""
 
 #: admin/screens/class-screen-page-module-sitemap.php:671
+#: includes/compatibility/wp/sitemaps/class-wp-sitemaps-stylesheet.php:52
+#: includes/compatibility/wp/sitemaps/class-wp-sitemaps-stylesheet.php:166
 #: includes/sitemap/class-sitemaps-stylesheet.php:25
 msgid "XML Sitemap"
 msgstr ""
@@ -2585,7 +2581,7 @@ msgid " Settings"
 msgstr ""
 
 #. Plugin Name of the plugin/theme
-#: admin/screens/class-screen.php:437
+#: admin/screens/class-screen.php:441
 #: admin/screens/post-edit/class-screen-post-editor-general.php:268
 #: admin/screens/post-edit/class-screen-post-editor-sitemap.php:130
 #: admin/screens/post-edit/class-screen-post-editor-social-media.php:212
@@ -2678,51 +2674,51 @@ msgstr ""
 msgid "Modules"
 msgstr ""
 
-#: admin/screens/post-edit/class-screen-post-editor-general.php:436
+#: admin/screens/post-edit/class-screen-post-editor-general.php:438
 msgid "Save"
 msgstr ""
 
-#: admin/screens/post-edit/class-screen-post-editor-general.php:437
+#: admin/screens/post-edit/class-screen-post-editor-general.php:439
 msgid "Cancel"
 msgstr ""
 
-#: admin/screens/post-edit/class-screen-post-editor-general.php:438
+#: admin/screens/post-edit/class-screen-post-editor-general.php:440
 msgid "Please wait..."
 msgstr ""
 
-#: admin/screens/post-edit/class-screen-post-editor-general.php:439
-#: admin/screens/post-edit/class-screen-post-editor-general.php:512
+#: admin/screens/post-edit/class-screen-post-editor-general.php:441
+#: admin/screens/post-edit/class-screen-post-editor-general.php:514
 msgid "No value"
 msgstr ""
 
-#: admin/screens/post-edit/class-screen-post-editor-general.php:472
+#: admin/screens/post-edit/class-screen-post-editor-general.php:474
 #: admin/screens/term-edit/class-screen-term-editor-general.php:40
 msgid "SEO Title"
 msgstr ""
 
-#: admin/screens/post-edit/class-screen-post-editor-general.php:473
+#: admin/screens/post-edit/class-screen-post-editor-general.php:475
 #: admin/screens/term-edit/class-screen-term-editor-general.php:41
 msgid "SEO Description"
 msgstr ""
 
-#: admin/screens/post-edit/class-screen-post-editor-general.php:474
+#: admin/screens/post-edit/class-screen-post-editor-general.php:476
 #: admin/screens/term-edit/class-screen-term-editor-general.php:42
 msgid "SEO Keywords"
 msgstr ""
 
-#: admin/screens/post-edit/class-screen-post-editor-general.php:523
+#: admin/screens/post-edit/class-screen-post-editor-general.php:525
 msgid "Edit"
 msgstr ""
 
-#: admin/screens/post-edit/class-screen-post-editor-general.php:555
+#: admin/screens/post-edit/class-screen-post-editor-general.php:557
 msgid "Quick-Edit AJAX is missing the Post ID."
 msgstr ""
 
-#: admin/screens/post-edit/class-screen-post-editor-general.php:569
+#: admin/screens/post-edit/class-screen-post-editor-general.php:571
 msgid "Quick-Edit AJAX is missing the Column Name."
 msgstr ""
 
-#: admin/screens/post-edit/class-screen-post-editor-general.php:578
+#: admin/screens/post-edit/class-screen-post-editor-general.php:580
 msgid "Quick-Edit AJAX is missing the input Value."
 msgstr ""
 
@@ -3073,6 +3069,75 @@ msgid ""
 "Gofer SEO Error: update class missing `%1$s` in `%2$s`  class declaration."
 msgstr ""
 
+#. translators: %s: List of element names.
+#: includes/compatibility/wp/sitemaps/class-wp-sitemaps-renderer.php:176
+#: includes/sitemap/class-news-sitemaps-renderer.php:137
+#, php-format
+msgid "Fields other than %s are not currently supported for the sitemap index."
+msgstr ""
+
+#. translators: %s: List of element names.
+#: includes/compatibility/wp/sitemaps/class-wp-sitemaps-renderer.php:241
+#: includes/sitemap/class-rss-sitemaps-renderer.php:237
+#: includes/sitemap/class-sitemaps-renderer.php:172
+#, php-format
+msgid "Fields other than %s are not currently supported for sitemaps."
+msgstr ""
+
+#. translators: %s: SimpleXML
+#: includes/compatibility/wp/sitemaps/class-wp-sitemaps-renderer.php:270
+#, php-format
+msgid "Could not generate XML sitemap due to missing %s extension"
+msgstr ""
+
+#: includes/compatibility/wp/sitemaps/class-wp-sitemaps-renderer.php:273
+msgid "WordPress &rsaquo; Error"
+msgstr ""
+
+#: includes/compatibility/wp/sitemaps/class-wp-sitemaps-stylesheet.php:53
+#: includes/compatibility/wp/sitemaps/class-wp-sitemaps-stylesheet.php:167
+msgid ""
+"This XML Sitemap is generated by WordPress to make your content more visible "
+"for search engines."
+msgstr ""
+
+#: includes/compatibility/wp/sitemaps/class-wp-sitemaps-stylesheet.php:56
+#: includes/compatibility/wp/sitemaps/class-wp-sitemaps-stylesheet.php:170
+msgid "https://www.sitemaps.org/"
+msgstr ""
+
+#: includes/compatibility/wp/sitemaps/class-wp-sitemaps-stylesheet.php:57
+#: includes/compatibility/wp/sitemaps/class-wp-sitemaps-stylesheet.php:171
+msgid "Learn more about XML sitemaps."
+msgstr ""
+
+#. translators: %s: Number of URLs.
+#: includes/compatibility/wp/sitemaps/class-wp-sitemaps-stylesheet.php:62
+#: includes/compatibility/wp/sitemaps/class-wp-sitemaps-stylesheet.php:176
+#: includes/sitemap/class-news-sitemaps-stylesheet.php:39
+#: includes/sitemap/class-news-sitemaps-stylesheet.php:168
+#: includes/sitemap/class-rss-sitemaps-stylesheet.php:39
+#: includes/sitemap/class-rss-sitemaps-stylesheet.php:147
+#: includes/sitemap/class-sitemaps-stylesheet.php:39
+#: includes/sitemap/class-sitemaps-stylesheet.php:171
+#, php-format
+msgid "Number of URLs in this XML Sitemap: %s."
+msgstr ""
+
+#: includes/compatibility/wp/sitemaps/class-wp-sitemaps-stylesheet.php:68
+#: includes/compatibility/wp/sitemaps/class-wp-sitemaps-stylesheet.php:182
+#: includes/sitemap/class-news-sitemaps-stylesheet.php:174
+#: includes/sitemap/class-rss-sitemaps-stylesheet.php:153
+#: includes/sitemap/class-sitemaps-stylesheet.php:45
+#: includes/sitemap/class-sitemaps-stylesheet.php:177
+msgid "Last Modified"
+msgstr ""
+
+#: includes/compatibility/wp/sitemaps/class-wp-sitemaps-stylesheet.php:69
+#: includes/sitemap/class-sitemaps-stylesheet.php:46
+msgid "Change Frequency"
+msgstr ""
+
 #. translators: %1$s: HTML element. %2$s: HTML element. %3$s: The filename to check.
 #: includes/formatting.php:292
 #, php-format
@@ -3081,7 +3146,7 @@ msgid ""
 "for any script-injection."
 msgstr ""
 
-#: includes/functions.php:132
+#: includes/functions.php:151
 msgid "Success."
 msgstr ""
 
@@ -3117,14 +3182,14 @@ msgid "Nothing found for %s"
 msgstr ""
 
 #. translators: %1$s is the search engine, %2$s is a URL, and %3$s is the error code.
-#: includes/modules/class-module-sitemap.php:454
+#: includes/modules/class-module-sitemap.php:451
 #, php-format
 msgid ""
 "Failed to notify %1$s about changes to your sitemap at %2$s, error code %3$s."
 msgstr ""
 
 #. translators: %1$s: Search Engine name. %2$s: Target URL. %3$s: WordPress function name.
-#: includes/modules/class-module-sitemap.php:465
+#: includes/modules/class-module-sitemap.php:462
 #, php-format
 msgid ""
 "Failed to notify %1$s about changes to your sitemap at %2$s, unable to "
@@ -3139,12 +3204,6 @@ msgstr ""
 
 #: includes/query.php:250
 msgid "Invalid taxonomy."
-msgstr ""
-
-#. translators: %s: List of element names.
-#: includes/sitemap/class-news-sitemaps-renderer.php:137
-#, php-format
-msgid "Fields other than %s are not currently supported for the sitemap index."
 msgstr ""
 
 #. translators: %s: List of element names.
@@ -3175,17 +3234,6 @@ msgstr ""
 msgid "You can find more information about XML sitemaps at %s."
 msgstr ""
 
-#. translators: %s: Number of URLs.
-#: includes/sitemap/class-news-sitemaps-stylesheet.php:39
-#: includes/sitemap/class-news-sitemaps-stylesheet.php:168
-#: includes/sitemap/class-rss-sitemaps-stylesheet.php:39
-#: includes/sitemap/class-rss-sitemaps-stylesheet.php:147
-#: includes/sitemap/class-sitemaps-stylesheet.php:39
-#: includes/sitemap/class-sitemaps-stylesheet.php:171
-#, php-format
-msgid "Number of URLs in this XML Sitemap: %s."
-msgstr ""
-
 #: includes/sitemap/class-news-sitemaps-stylesheet.php:45
 msgid "Name"
 msgstr ""
@@ -3202,22 +3250,8 @@ msgstr ""
 msgid "XML News Sitemap Index"
 msgstr ""
 
-#: includes/sitemap/class-news-sitemaps-stylesheet.php:174
-#: includes/sitemap/class-rss-sitemaps-stylesheet.php:153
-#: includes/sitemap/class-sitemaps-stylesheet.php:45
-#: includes/sitemap/class-sitemaps-stylesheet.php:177
-msgid "Last Modified"
-msgstr ""
-
 #: includes/sitemap/class-rss-sitemaps-renderer.php:173
 msgid "RSS generated Sitemap."
-msgstr ""
-
-#. translators: %s: List of element names.
-#: includes/sitemap/class-rss-sitemaps-renderer.php:237
-#: includes/sitemap/class-sitemaps-renderer.php:172
-#, php-format
-msgid "Fields other than %s are not currently supported for sitemaps."
 msgstr ""
 
 #. translators: %s is the hyperlink.
@@ -3262,10 +3296,6 @@ msgstr ""
 msgid ""
 "This is an XML Sitemap, generated by %s, meant to be consumed by search "
 "engines like Google or Bing."
-msgstr ""
-
-#: includes/sitemap/class-sitemaps-stylesheet.php:46
-msgid "Change Frequency"
 msgstr ""
 
 #: includes/sitemap/class-sitemaps-stylesheet.php:48
