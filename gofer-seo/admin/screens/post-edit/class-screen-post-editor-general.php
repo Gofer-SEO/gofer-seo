@@ -358,9 +358,10 @@ class Gofer_SEO_Screen_Post_Editor_General extends Gofer_SEO_Screen_Post_Editor 
 	 * @param $hook_suffix
 	 */
 	public function admin_register_styles( $hook_suffix ) {
+		$file_ext = gofer_seo_is_min_enabled() ? 'min.css' : 'css';
 		wp_register_style(
 			'gofer-seo-quick-edit-css',
-			GOFER_SEO_URL . 'admin/css/quick-edit.css',
+			GOFER_SEO_URL . 'admin/css/quick-edit.' . $file_ext,
 			array(),
 			GOFER_SEO_VERSION,
 			'all'
@@ -368,7 +369,7 @@ class Gofer_SEO_Screen_Post_Editor_General extends Gofer_SEO_Screen_Post_Editor 
 
 		wp_register_style(
 			'gofer-seo-input-type-snippet-default-css',
-			GOFER_SEO_URL . 'admin/css/inputs/types/snippet-default.css',
+			GOFER_SEO_URL . 'admin/css/inputs/types/snippet-default.' . $file_ext,
 			array(),
 			GOFER_SEO_VERSION,
 			'all'
@@ -390,9 +391,10 @@ class Gofer_SEO_Screen_Post_Editor_General extends Gofer_SEO_Screen_Post_Editor 
 	 * @param $hook_suffix
 	 */
 	public function admin_register_scripts( $hook_suffix ) {
+		$file_ext = gofer_seo_is_min_enabled() ? 'min.js' : 'js';
 		wp_register_script(
 			'gofer-seo-quick-edit-js',
-			GOFER_SEO_URL . 'admin/js/quick-edit.js',
+			GOFER_SEO_URL . 'admin/js/quick-edit.' . $file_ext,
 			array( 'jquery' ),
 			GOFER_SEO_VERSION,
 			true
@@ -400,7 +402,7 @@ class Gofer_SEO_Screen_Post_Editor_General extends Gofer_SEO_Screen_Post_Editor 
 
 		wp_register_script(
 			'gofer-seo-input-type-snippet-default-js',
-			GOFER_SEO_URL . 'admin/js/inputs/types/snippet-default.js',
+			GOFER_SEO_URL . 'admin/js/inputs/types/snippet-default.' . $file_ext,
 			array(),
 			GOFER_SEO_VERSION,
 			true

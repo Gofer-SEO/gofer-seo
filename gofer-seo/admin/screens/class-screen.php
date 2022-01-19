@@ -195,12 +195,14 @@ abstract class Gofer_SEO_Screen {
 			return;
 		}
 
+		$file_ext = gofer_seo_is_min_enabled() ? 'min.css' : 'css';
+
 		// Styles that would be used on all screens.
 		// Plugin logo, font-icons, etc.
 		if ( ! wp_style_is( 'gofer-seo-bootstrap-css', 'registered' ) ) {
 			wp_register_style(
 				'gofer-seo-bootstrap-css',
-				GOFER_SEO_URL . 'admin/css/bootstrap.css',
+				GOFER_SEO_URL . 'admin/css/bootstrap.' . $file_ext,
 				array(),
 				GOFER_SEO_VERSION,
 				'all'
@@ -212,7 +214,7 @@ abstract class Gofer_SEO_Screen {
 		if ( function_exists( 'is_rtl' ) && is_rtl() ) {
 			wp_enqueue_style(
 				'gofer-seo-rtl-css',
-				GOFER_SEO_URL . 'admin/css/gofer-seo-rtl.css',
+				GOFER_SEO_URL . 'admin/css/gofer-seo-rtl.' . $file_ext,
 				array(),
 				GOFER_SEO_VERSION
 			);
@@ -225,7 +227,7 @@ abstract class Gofer_SEO_Screen {
 
 		wp_register_style(
 			'gofer-seo-admin-bar-menu-css',
-			GOFER_SEO_URL . 'admin/css/admin-bar-menu.css',
+			GOFER_SEO_URL . 'admin/css/admin-bar-menu.' . $file_ext,
 			array(),
 			GOFER_SEO_VERSION,
 			'all'
@@ -233,7 +235,7 @@ abstract class Gofer_SEO_Screen {
 
 		wp_register_style(
 			'gofer-seo-input-types-css',
-			GOFER_SEO_URL . 'admin/css/inputs/types.css',
+			GOFER_SEO_URL . 'admin/css/inputs/types.' . $file_ext,
 			array(),
 			GOFER_SEO_VERSION,
 			'all'
@@ -241,7 +243,7 @@ abstract class Gofer_SEO_Screen {
 
 		wp_register_style(
 			'gofer-seo-input-layouts-css',
-			GOFER_SEO_URL . 'admin/css/inputs/layouts.css',
+			GOFER_SEO_URL . 'admin/css/inputs/layouts.' . $file_ext,
 			array(),
 			GOFER_SEO_VERSION,
 			'all'
@@ -249,7 +251,7 @@ abstract class Gofer_SEO_Screen {
 
 		wp_register_style(
 			'gofer-seo-tooltips-css',
-			GOFER_SEO_URL . 'admin/css/inputs/tooltips.css',
+			GOFER_SEO_URL . 'admin/css/inputs/tooltips.' . $file_ext,
 			array(),
 			GOFER_SEO_VERSION,
 			'all'
@@ -257,7 +259,7 @@ abstract class Gofer_SEO_Screen {
 
 		wp_register_style(
 			'gofer-seo-select2-css',
-			GOFER_SEO_URL . 'assets/select2-v4.0.13/select2.css',
+			GOFER_SEO_URL . 'assets/select2-v4.0.13/select2.' . $file_ext,
 			array(),
 			GOFER_SEO_VERSION,
 			'all'
@@ -291,10 +293,12 @@ abstract class Gofer_SEO_Screen {
 			return;
 		}
 
+		$file_ext = gofer_seo_is_min_enabled() ? 'min.js' : 'js';
+
 		if ( ! wp_script_is( 'gofer-seo-bootstrap-js', 'registered' ) ) {
 			wp_register_script(
 				'gofer-seo-bootstrap-js',
-				GOFER_SEO_URL . 'assets/bootstrap-v5.1.3/bootstrap.js',
+				GOFER_SEO_URL . 'assets/bootstrap-v5.1.3/bootstrap.' . $file_ext,
 				array(
 					'jquery',
 				),
@@ -305,7 +309,7 @@ abstract class Gofer_SEO_Screen {
 
 		wp_register_script(
 			'gofer-seo-screens-meta-box-js',
-			GOFER_SEO_URL . 'admin/js/screens/meta-box.js',
+			GOFER_SEO_URL . 'admin/js/screens/meta-box.' . $file_ext,
 			array(
 				'jquery',
 				'postbox',
@@ -316,7 +320,7 @@ abstract class Gofer_SEO_Screen {
 
 		wp_register_script(
 			'gofer-seo-tooltips-js',
-			GOFER_SEO_URL . 'admin/js/inputs/tooltips.js',
+			GOFER_SEO_URL . 'admin/js/inputs/tooltips.' . $file_ext,
 			array(
 				'jquery',
 				'jquery-ui-core',
@@ -330,7 +334,7 @@ abstract class Gofer_SEO_Screen {
 
 		wp_register_script(
 			'gofer-seo-inputs-input-conditions-js',
-			GOFER_SEO_URL . 'admin/js/inputs/input-conditions.js',
+			GOFER_SEO_URL . 'admin/js/inputs/input-conditions.' . $file_ext,
 			array(
 				'jquery',
 			),
@@ -340,7 +344,7 @@ abstract class Gofer_SEO_Screen {
 
 		wp_register_script(
 			'gofer-seo-input-type-image-media-js',
-			GOFER_SEO_URL . 'admin/js/inputs/types/image-media.js',
+			GOFER_SEO_URL . 'admin/js/inputs/types/image-media.' . $file_ext,
 			array(
 				'jquery',
 			),
@@ -350,7 +354,7 @@ abstract class Gofer_SEO_Screen {
 
 		wp_register_script(
 			'gofer-seo-input-type-add-field-list-js',
-			GOFER_SEO_URL . 'admin/js/inputs/types/add-field-list.js',
+			GOFER_SEO_URL . 'admin/js/inputs/types/add-field-list.' . $file_ext,
 			array(),
 			GOFER_SEO_VERSION,
 			true
@@ -358,7 +362,7 @@ abstract class Gofer_SEO_Screen {
 
 		wp_register_script(
 			'gofer-seo-select2-js',
-			GOFER_SEO_URL . 'assets/select2-v4.0.13/select2.js',
+			GOFER_SEO_URL . 'assets/select2-v4.0.13/select2.' . $file_ext,
 			array(
 				'jquery',
 			),
@@ -368,7 +372,7 @@ abstract class Gofer_SEO_Screen {
 
 		wp_register_script(
 			'gofer-seo-input-type-select2-multi-select-js',
-			GOFER_SEO_URL . 'admin/js/inputs/types/select2-multi-select.js',
+			GOFER_SEO_URL . 'admin/js/inputs/types/select2-multi-select.' . $file_ext,
 			array(
 				'jquery',
 				'gofer-seo-select2-js',

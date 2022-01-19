@@ -313,10 +313,11 @@ abstract class Gofer_SEO_Screen_Page extends Gofer_SEO_Screen {
 			return;
 		}
 
+		$file_ext = gofer_seo_is_min_enabled() ? 'min.css' : 'css';
 		// Styles that would be used on module screens.
 		wp_register_style(
 			'gofer-seo-screen-page-css',
-			GOFER_SEO_URL . 'admin/css/screens/screen-page.css',
+			GOFER_SEO_URL . 'admin/css/screens/screen-page.' . $file_ext,
 			array(),
 			GOFER_SEO_VERSION,
 			'all'

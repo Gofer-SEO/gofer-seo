@@ -313,9 +313,10 @@ class Gofer_SEO_Screen_Page_Module_Debugger extends Gofer_SEO_Screen_Page_Module
 			return;
 		}
 
+		$file_ext = gofer_seo_is_min_enabled() ? 'min.js' : 'js';
 		wp_enqueue_script(
 			'gofer-seo-screens-page-module-debugger-js',
-			GOFER_SEO_URL . 'admin/js/screens/admin-page-module-debugger.js',
+			GOFER_SEO_URL . 'admin/js/screens/admin-page-module-debugger' . $file_ext,
 			array( 'jquery' ),
 			GOFER_SEO_VERSION,
 			true

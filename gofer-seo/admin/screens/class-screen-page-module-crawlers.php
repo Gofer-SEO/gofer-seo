@@ -286,9 +286,10 @@ class Gofer_SEO_Screen_Page_Module_Crawlers extends Gofer_SEO_Screen_Page_Module
 			return;
 		}
 
+		$file_ext = gofer_seo_is_min_enabled() ? 'min.css' : 'css';
 		wp_register_style(
 			'gofer-seo-input-type-add-field-robots-txt-css',
-			GOFER_SEO_URL . 'admin/css/inputs/types/add-field-robots-txt.css',
+			GOFER_SEO_URL . 'admin/css/inputs/types/add-field-robots-txt.' . $file_ext,
 			array(),
 			GOFER_SEO_VERSION,
 			'all'
@@ -311,9 +312,10 @@ class Gofer_SEO_Screen_Page_Module_Crawlers extends Gofer_SEO_Screen_Page_Module
 			return;
 		}
 
+		$file_ext = gofer_seo_is_min_enabled() ? 'min.js' : 'js';
 		wp_register_script(
 			'gofer-seo-input-type-add-field-robots-txt-js',
-			GOFER_SEO_URL . 'admin/js/inputs/types/add-field-robots-txt.js',
+			GOFER_SEO_URL . 'admin/js/inputs/types/add-field-robots-txt.' . $file_ext,
 			array(),
 			GOFER_SEO_VERSION,
 			true
