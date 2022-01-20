@@ -11,13 +11,18 @@
 		"sass:build": "sass gofer-seo/admin/css/main.scss:gofer-seo/admin/css/main.css",
 		"sass:watch": "sass --watch gofer-seo/admin/css/main.scss:gofer-seo/admin/css/main.css",
 		"sass:watch:compress": "sass --watch gofer-seo/admin/css/main.scss:gofer-seo/admin/css/main.css --style compressed",
+		"check-engines": "wp-scripts check-engines",
+		"check-licenses": "wp-scripts check-licenses --prod --gpl2",
 		"lint:css": "wp-scripts lint-style",
 		"lint:js": "wp-scripts lint-js",
 		"lint:md": "wp-scripts lint-md",
+		"lint:pkg-json": "wp-scripts lint-pkg-json",
+		"lint:md:docs": "wp-scripts lint-md-docs",
 		"watch": "wp-scripts build --config webpack-config.js --watch",
 		"build": "wp-scripts build --config webpack-config.js",
 		"packages-update": "wp-scripts packages-update",
-		"postpackages-update": "npm run build"
+		"postpackages-update": "npm run build",
+		"plugin-zip": "wp-scripts plugin-zip"
 	},
 	"repository": {
 		"type": "git",
