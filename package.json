@@ -8,6 +8,9 @@
 	},
 	"scripts": {
 		"grunt": "grunt",
+		"sass:build": "sass gofer-seo/admin/css/main.scss:gofer-seo/admin/css/main.css",
+		"sass:watch": "sass --watch gofer-seo/admin/css/main.scss:gofer-seo/admin/css/main.css",
+		"sass:watch:compress": "sass --watch gofer-seo/admin/css/main.scss:gofer-seo/admin/css/main.css --style compressed",
 		"lint:css": "wp-scripts lint-style",
 		"lint:js": "wp-scripts lint-js",
 		"lint:md": "wp-scripts lint-md",
@@ -43,7 +46,10 @@
 		"grunt-phpcbf": "^0.1.1",
 		"grunt-phpcs": "^0.4.0",
 		"grunt-phplint": "^0.1.0",
-		"lodash": "^4.17.15"
+		"grunt-sass": "~3.1.0",
+		"lodash": "^4.17.15",
+		"node-sass": "~4.12.0",
+		"sass": "^1.49.0"
 	},
 	"dependencies": {}
 }
