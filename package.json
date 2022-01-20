@@ -18,14 +18,14 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/NAME/gofer-seo.git"
+		"url": "git+https://github.com/Gofer-SEO/gofer-seo.git"
 	},
 	"author": "",
 	"license": "ISC",
 	"bugs": {
-		"url": "https://github.com/NAME/gofer-seo/issues"
+		"url": "https://github.com/Gofer-SEO/gofer-seo/issues"
 	},
-	"homepage": "https://github.com/NAME/gofer-seo#readme",
+	"homepage": "https://github.com/Gofer-SEO/gofer-seo#readme",
 	"devDependencies": {
 		"@wordpress/icons": "^6.1.1",
 		"@wordpress/scripts": "^19.2.2",
