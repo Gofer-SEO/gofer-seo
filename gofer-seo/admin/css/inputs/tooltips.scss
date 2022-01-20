@@ -1,0 +1,61 @@
+/*!
+ * Admin Inputs - Tooltips.
+ *
+ * Style for modifications to jQuery UI Tooltips.
+ *
+ * @since 1.0.0
+ */
+
+.gofer-seo-tooltip {
+	&,&:active {
+		text-align: left;
+		float: left;
+		max-width: 23px;
+		min-width: 20px;
+		padding-top: 2px;
+		outline: none;
+		color: #888;
+		font-family: sans-serif;
+		line-height: 17px;
+	}
+
+	&::before {
+		content: "\f223";
+		font-size: 22px;
+		font-family: dashicons;
+		vertical-align: middle;
+		margin-right: 4px;
+	}
+
+	span {
+		font-size: 14px;
+	}
+}
+
+// JS.
+.gofer-seo-ui-tooltip.ui-tooltip {
+	padding: 8px;
+	position: absolute;
+	z-index: 9999;
+	max-width: 300px;
+	-webkit-box-shadow: 0 0 5px #aaa;
+	box-shadow: 0 0 5px #aaa;
+}
+
+.ui-tooltip.ui-widget.ui-corner-all.ui-widget-content.gofer-seo-ui-tooltip {
+	font-family: "Open Sans", sans-serif;
+	-webkit-box-shadow: 0 1px 6px -2px #0073aa;
+	box-shadow: 0 1px 6px -2px #0073aa;
+	border: 0;
+	border-radius: 0;
+	background: #fefefe;
+
+	a {
+		color: #0073aa;
+		text-decoration: none;
+	}
+
+	dt {
+		font-weight: 700;
+	}
+}

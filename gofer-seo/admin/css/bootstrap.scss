@@ -1,0 +1,222 @@
+/*!
+ * Alternate Bootstrap CSS
+ *
+ * Contains similar concepts from Bootstrap CSS v4.5.0.
+ *
+ * Creating an alt will prevent/reduce conflicts if other plugins/themes use Bootstrap CSS, and
+ * will allow more control over CSS styles as well as reduce the file size.
+ *
+ * @since 1.0.0
+ */
+
+.fade {
+	transition: opacity 0.15s linear;
+
+	&:not(.show) {
+		opacity: 0;
+	}
+	@media (prefers-reduced-motion: reduce) {
+		transition: none;
+	}
+}
+
+.gofer-seo-container {
+	width: 98%;
+	padding-right: 1%;
+	padding-left: 1%;
+}
+
+.gofer-seo-wrap {
+	margin-bottom: 9px;
+
+	//@media (max-width: 782px) {
+	//	margin-top: 11px;
+	//}
+}
+
+.gofer-seo-wrap-dynamic {
+	margin-bottom: 4px;
+	margin-top: 5px;
+
+	//@media (max-width: 782px) {
+	//	margin-top: 11px;
+	//}
+}
+
+.gofer-seo-wrap,
+.gofer-seo-wrap-dynamic {
+	@media (max-width: 782px) {
+		margin-top: 11px;
+	}
+}
+
+.gofer-seo-row {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	//margin-right: -15px;
+	//margin-left: -15px;
+}
+
+@mixin gofer-seo-col {
+	position: relative;
+	width: 100%;
+	//padding-right: 15px;
+	//padding-left: 15px;
+}
+
+.gofer-seo-col {
+	@include gofer-seo-col;
+	-ms-flex-preferred-size: 0;
+	flex-basis: 0;
+	-ms-flex-positive: 1;
+	flex-grow: 1;
+	min-width: 0;
+	max-width: 100%;
+}
+
+.gofer-seo-col-auto {
+	@include gofer-seo-col;
+	-ms-flex: 0 0 auto;
+	flex: 0 0 auto;
+	width: auto;
+	max-width: 100%;
+}
+
+$widths: (
+		1: 8.333333%,
+		2: 16.666667%,
+		3: 25%,
+		4: 33.333333%,
+		5: 41.666667%,
+		6: 50%,
+		7: 58.333333%,
+		8: 66.666667%,
+		9: 75%,
+		10: 83.333333%,
+		11: 91.666667%,
+		12: 100%,
+);
+
+@each $index, $width in $widths {
+	.gofer-seo-col-#{$index} {
+		@include gofer-seo-col;
+		-ms-flex: 0 0 $width;
+		flex: 0 0 $width;
+		max-width: $width;
+	}
+}
+
+// Tabs.
+.gofer-seo-tabs nav {
+	display: block;
+}
+
+.gofer-seo-tabs {
+	.nav {
+		display: -ms-flexbox;
+		display: flex;
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+		padding-left: 0;
+		margin-bottom: 0;
+		list-style: none;
+	}
+
+	.nav-tabs {
+		border-bottom: 1px solid #dee2e6;
+	}
+
+	.nav-link {
+		display: block;
+		padding: 0.5rem 1rem;
+		color: #0d6efd;
+		text-decoration: none;
+		transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+
+		&:hover, &:focus {
+			color: #0a58ca;
+		}
+
+		&.disabled {
+			color: #6c757d;
+			pointer-events: none;
+			cursor: default;
+		}
+
+		@media (prefers-reduced-motion: reduce) {
+			transition: none;
+		}
+	}
+
+	.nav-tabs {
+		.nav-link {
+			margin-bottom: -1px;
+			background: none;
+			border: 1px solid transparent;
+			border-top-left-radius: 0.25rem;
+			border-top-right-radius: 0.25rem;
+
+			&:hover, &:focus {
+				border-color: #e9ecef #e9ecef #dee2e6;
+				isolation: isolate;
+			}
+
+			&.disabled {
+				color: #6c757d;
+				background-color: transparent;
+				border-color: transparent;
+			}
+
+			&.active {
+				color: #495057;
+				background-color: #fff;
+				border-color: #dee2e6 #dee2e6 #fff;
+			}
+		}
+
+		.nav-item.show .nav-link {
+			color: #495057;
+			background-color: #fff;
+			border-color: #dee2e6 #dee2e6 #fff;
+		}
+
+		.dropdown-menu {
+			margin-top: -1px;
+			border-top-left-radius: 0;
+			border-top-right-radius: 0;
+		}
+	}
+
+	.tab-content {
+		> .tab-pane {
+			display: none;
+		}
+
+		> .active {
+			display: block;
+		}
+	}
+}
+
+
+// Responsive @media.
+//@media (prefers-reduced-motion: reduce) {
+//	.fade {
+//		transition: none;
+//	}
+//}
+//
+//@media (max-width: 782px) {
+//	.gofer-seo-wrap,
+//	.gofer-seo-wrap-dynamic {
+//		margin-top: 11px;
+//	}
+//}
+//
+//@media (prefers-reduced-motion: reduce) {
+//	.gofer-seo-tabs .nav-link {
+//		transition: none;
+//	}
+//}
