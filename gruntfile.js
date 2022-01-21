@@ -80,14 +80,28 @@ module.exports = function(grunt) {
 			}
 		},
 
+		// https://www.npmjs.com/package/sass
 		// https://www.npmjs.com/package/grunt-sass
 		sass: {
 			options: {
 				implementation: node_sass,
 				outputStyle: 'expanded',
 				indented: false,
-				sourceMap: true
-				// verbose: true
+				sourcemap: 'none'
+			},
+			dev: {
+				options: {
+					sourceMap: true
+				},
+				files: [{
+					expand: true,
+					cwd: 'gofer-seo/',
+					src: [
+						'<%= filesSCSS %>'
+					],
+					dest: 'gofer-seo/',
+					ext: '.css'
+				}]
 			},
 			main: {
 				expand: true,
