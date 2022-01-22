@@ -22,10 +22,13 @@ if ( ! defined( 'ABSPATH' ) || empty( $gofer_seo_template ) ) {
 	// Direct access not allowed.
 	die( '-1' );
 }
+
+global $hook_suffix;
 ?>
 <div class="gofer-seo-user-editor gofer-seo-container">
 	<?php foreach ( $input_typesets as $input_typeset ) :
 		$args = array(
+			'hook_suffix'   => $hook_suffix,
 			'input_typeset' => $input_typeset,
 			'name'          => $input_typeset['slug'],
 			'id'            => $input_typeset['slug'],
