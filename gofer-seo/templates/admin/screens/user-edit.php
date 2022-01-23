@@ -24,6 +24,7 @@ if ( ! defined( 'ABSPATH' ) || empty( $gofer_seo_template ) ) {
 }
 
 global $hook_suffix;
+wp_nonce_field( 'gofer_seo_screens_page', 'gofer_seo_nonce' );
 ?>
 <div class="gofer-seo-user-editor gofer-seo-container">
 	<?php foreach ( $input_typesets as $input_typeset ) :
