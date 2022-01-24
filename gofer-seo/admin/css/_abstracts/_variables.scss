@@ -59,7 +59,7 @@ $default-red-light: rgba(255, 117, 117, 1);
 // Bootstrap (Preserve - Bootstrap defaults).
 $bootstrap-border-1:         #dee2e6;
 $bootstrap-border-2:         #e9ecef;
-$bootstrap-white:            #ffffff;
+$bootstrap-white:            #fff;
 $bootstrap-color:            #495057;
 $bootstrap-color-disabled:   #6c757d;
 $bootstrap-color-link:       #0d6efd;
@@ -76,7 +76,7 @@ $gofer-seo-secondary-button:          $primary-dark-1;
 // Notice.
 $notice-button-orange-1:              #d54e21;
 $notice-button-orange-2:              #aa3e1a;
-$notice-button-orange-color:          #ffffff;
+$notice-button-orange-color:          #fff;
 $notice-button-orange-bg-color-hover: #bc3508;
 
 // Quick-Edit.
@@ -129,7 +129,7 @@ $types-checkbox-border-color:       $primary;
 $types-checkbox-box-shadow:         transparentize( $secondary, 0.9 );
 $types-checkbox-border-color-hover: $primary-dark-1;
 $types-checkbox-box-shadow-hover:   transparentize( $secondary, 0.4 );
-$types-checkbox-icon-color:         #ffffff;
+$types-checkbox-icon-color:         #fff;
 
 // Range.
 

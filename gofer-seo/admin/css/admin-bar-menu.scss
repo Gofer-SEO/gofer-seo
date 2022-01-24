@@ -23,8 +23,8 @@
 }
 
 #wpadminbar .ab-top-menu > li.hover > .ab-item .ab-gofer-seo-icon,
-#wpadminbar.nojq .quicklinks .ab-top-menu > li > .ab-item:focus .ab-gofer-seo-icon,
 #wpadminbar:not(.mobile) .ab-top-menu > li:hover > .ab-item .ab-gofer-seo-icon,
-#wpadminbar:not(.mobile) .ab-top-menu > li > .ab-item:focus .ab-gofer-seo-icon {
+#wpadminbar:not(.mobile) .ab-top-menu > li > .ab-item:focus .ab-gofer-seo-icon,
+#wpadminbar.nojq .quicklinks .ab-top-menu > li > .ab-item:focus .ab-gofer-seo-icon {
 	color: #72aee6;
 }

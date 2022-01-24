@@ -8,6 +8,7 @@
 
 @import "_abstracts/variables";
 
+/* stylelint-disable selector-class-pattern -- WP uses the slug format. */
 .gofer-seo-quick-edit-wrap {
 	display: block;
 	float: left;
@@ -114,7 +115,7 @@ td {
 	width: 16px;
 	margin: 0 6px 3px 0;
 }
-
+/* stylelint-enable */
 
 // Responsive @media.
 //@media screen and (max-width: 782px) {

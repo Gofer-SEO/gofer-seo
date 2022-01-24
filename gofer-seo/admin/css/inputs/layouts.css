@@ -107,6 +107,7 @@
   }
 }
 
+/* stylelint-disable no-descending-specificity -- Grouped with Field List input type. */
 .gofer-seo-add-field-list > .gofer-seo-row {
   margin-bottom: 18px;
 }
@@ -114,3 +115,5 @@
 .gofer-seo-add-field-list > .gofer-seo-row > .gofer-seo-col-12 > div > .gofer-seo-row {
   margin-bottom: 9px;
 }
+
+/* stylelint-enable */

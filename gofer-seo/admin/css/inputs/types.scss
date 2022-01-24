@@ -108,7 +108,7 @@
 			outline: 2px solid transparent;
 		}
 
-		$image_base64: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAASCAYAAABvqT8MAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAABR0RVh0VGl0bGUATnVtYmVyIFNwaW5uZXJr6ez+AAAADHRFWHRBdXRob3IARWtvSlKOVX6QAAAAGHRFWHRDcmVhdGlvbiBUaW1lADIwMjItMDEtMjK6g7YRAAAAL3RFWHRTb3VyY2UAaHR0cHM6Ly93b3JkcHJlc3Mub3JnL3BsdWdpbnMvZ29mZXItc2VvLxVSD8sAAABYdEVYdENvcHlyaWdodABDQzAgUHVibGljIERvbWFpbiBEZWRpY2F0aW9uIGh0dHA6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL3B1YmxpY2RvbWFpbi96ZXJvLzEuMC/G4735AAAAh0lEQVQoke3SvQnCUBiF4UeyQcABBEewCa5g5QDWltkohWPYOoToAoKNhVgppsmFEG+8Btu8cKrv/eD+HOJsUfbMPljhiRfWKXmBO95NHij65BkuLTnkinlXznGMyCFnTGHSLGywTBz3gF3qTiP88aw/f1ybQdUIDCpf4Gu9s8jCCTfsUXWHNWSLMarqPgfzAAAAAElFTkSuQmCC");
+		$image_base64: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAASCAYAAABvqT8MAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAABR0RVh0VGl0bGUATnVtYmVyIFNwaW5uZXJr6ez+AAAADHRFWHRBdXRob3IARWtvSlKOVX6QAAAAGHRFWHRDcmVhdGlvbiBUaW1lADIwMjItMDEtMjK6g7YRAAAAL3RFWHRTb3VyY2UAaHR0cHM6Ly93b3JkcHJlc3Mub3JnL3BsdWdpbnMvZ29mZXItc2VvLxVSD8sAAABYdEVYdENvcHlyaWdodABDQzAgUHVibGljIERvbWFpbiBEZWRpY2F0aW9uIGh0dHA6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL3B1YmxpY2RvbWFpbi96ZXJvLzEuMC/G4735AAAAh0lEQVQoke3SvQnCUBiF4UeyQcABBEewCa5g5QDWltkohWPYOoToAoKNhVgppsmFEG+8Btu8cKrv/eD+HOJsUfbMPljhiRfWKXmBO95NHij65BkuLTnkinlXznGMyCFnTGHSLGywTBz3gF3qTiP88aw/f1ybQdUIDCpf4Gu9s8jCCTfsUXWHNWSLMarqPgfzAAAAAElFTkSuQmCC);
 		&::-webkit-outer-spin-button,
 		&::-webkit-inner-spin-button {
 			-webkit-appearance: none;
@@ -118,13 +118,13 @@
 		&:hover::-webkit-inner-spin-button {
 			background: $primary $image_base64 no-repeat center center;
 			border-left: 1px solid $secondary-light-2;
-			opacity: .5;
+			opacity: 0.5;
 		}
 
 		&::-webkit-inner-spin-button:hover,
 		&::-webkit-inner-spin-button:active {
 			box-shadow: 0 0 2px $secondary-light-1;
-			opacity: .8;
+			opacity: 0.8;
 		}
 	}
 
@@ -226,7 +226,7 @@
 		}
 
 		&:checked {
-			background: #ffffff;
+			background: #fff;
 
 			&::before {
 				background: $types-radio-background-checked;
@@ -257,6 +257,7 @@
 			background: $types-checkbox-background-checked;
 
 			&::before {
+				/* stylelint-disable-next-line font-family-no-missing-generic-family-keyword -- Dashicons is required. */
 				font: 400 21px/1 dashicons;
 				content: "\f147";
 				color: $types-checkbox-icon-color;
@@ -302,6 +303,7 @@
 				background: $types-checkbox-background-checked;
 
 				&::before {
+					/* stylelint-disable-next-line font-family-no-missing-generic-family-keyword -- Dashicons is required. */
 					font: 400 21px/1 dashicons;
 					content: "\f147";
 					color: $types-checkbox-icon-color;
@@ -351,8 +353,8 @@
 		$thumb-width: 30px;
 		$thumb-border-radius: 9px;
 		&::-webkit-slider-thumb {
-			box-shadow: 0px 0px 0px #000000;
-			border: 0px solid #000000;
+			box-shadow: 0 0 0 #000;
+			border: 0 solid #000;
 			height: $thumb-height;
 			width: $thumb-width;
 			border-radius: $thumb-border-radius;
@@ -363,8 +365,8 @@
 		}
 
 		&::-moz-range-thumb {
-			box-shadow: 0px 0px 0px #000000;
-			border: 0px solid #000000;
+			box-shadow: 0 0 0 #000;
+			border: 0 solid #000;
 			height: $thumb-height;
 			width: $thumb-width;
 			border-radius: $thumb-border-radius;
@@ -374,8 +376,8 @@
 
 		&::-ms-thumb {
 			margin-top: 1px;
-			box-shadow: 0px 0px 0px #000000;
-			border: 0px solid #000000;
+			box-shadow: 0 0 0 #000;
+			border: 0 solid #000;
 			height: $thumb-height;
 			width: $thumb-width;
 			border-radius: $thumb-border-radius;
@@ -397,11 +399,11 @@
 			width: $track-width;
 			height: $track-height;
 			cursor: pointer;
-			animate: 0.2s;
-			box-shadow: 0px 0px 0px #000000;
+			//animate: 0.2s;
+			box-shadow: 0 0 0 #000;
 			background: $primary;
 			border-radius: $track-border-radius;
-			border: 0px solid #000000;
+			border: 0 solid #000;
 		}
 
 		&:active::-webkit-slider-runnable-track {
@@ -412,18 +414,18 @@
 			width: $track-width;
 			height: $track-height;
 			cursor: pointer;
-			animate: 0.2s;
-			box-shadow: 0px 0px 0px #000000;
+			//animate: 0.2s;
+			box-shadow: 0 0 0 #000;
 			background: $primary;
 			border-radius: $track-border-radius;
-			border: 0px solid #000000;
+			border: 0 solid #000;
 		}
 
 		&::-ms-track {
 			width: $track-width;
 			height: $track-height;
 			cursor: pointer;
-			animate: 0.2s;
+			//animate: 0.2s;
 			background: transparent;
 			border-color: transparent;
 			color: transparent;
@@ -443,16 +445,16 @@
 
 		&::-ms-fill-lower {
 			background: $primary;
-			border: 0px solid #000000;
+			border: 0 solid #000;
 			border-radius: floor( $track-border-radius / 2 ) * 4;
-			box-shadow: 0px 0px 0px #000000;
+			box-shadow: 0 0 0 #000;
 		}
 
 		&::-ms-fill-upper {
 			background: #e4e8d1;
-			border: 0px solid #000000;
+			border: 0 solid #000;
 			border-radius: floor( $track-border-radius / 2 ) * 4;
-			box-shadow: 0px 0px 0px #000000;
+			box-shadow: 0 0 0 #000;
 		}
 
 		&:focus::-ms-fill-lower {
@@ -613,6 +615,7 @@
 }
 
 // Select2.
+/* stylelint-disable selector-class-pattern -- Select2 uses their own pattern. */
 .gofer-seo-input-type-select2-multi-select {
 	.select2-container .select2-selection--multiple {
 		min-height: 45px;
@@ -625,12 +628,12 @@
 		.select2-selection__choice {
 			height: 18px;
 			padding: 1px 9px 2px 5px;
-			margin: 7px 6px 2px 0px;
+			margin: 7px 6px 2px 0;
 			background: $primary-dark-1;
-			color: #ffffff;
+			color: #fff;
 
 			.select2-selection__choice__remove {
-				color: #ffffff;
+				color: #fff;
 
 				&:hover {
 					color: $default-red-light;
@@ -663,6 +666,7 @@
 		}
 	}
 }
+/* stylelint-enable */
 
 // Tabs.
 .gofer-seo-tabs {

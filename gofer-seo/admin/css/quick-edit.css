@@ -12,6 +12,7 @@
  *
  * @since 1.0.3
  */
+/* stylelint-disable selector-class-pattern -- WP uses the slug format. */
 .gofer-seo-quick-edit-wrap {
   display: block;
   float: left;
@@ -109,3 +110,5 @@ td.gofer_seo_title.column-gofer_seo_title, td.gofer_seo_description.column-gofer
   width: 16px;
   margin: 0 6px 3px 0;
 }
+
+/* stylelint-enable */
