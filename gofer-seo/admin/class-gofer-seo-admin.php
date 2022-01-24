@@ -112,7 +112,9 @@ class Gofer_SEO_Admin {
 	public function load() {
 		$gofer_seo_options = Gofer_SEO_Options::get_instance();
 
-		add_action( 'wp_enqueue_scripts', array( $this, 'front_enqueue_styles' ) );
+
+		add_action( 'admin_enqueue_scripts', array( $this, 'admin_enqueue_styles_all' ) );
+		add_action( 'wp_enqueue_scripts', array( $this, 'admin_enqueue_styles_all' ) );
 
 		if ( is_admin() ) {
 			add_filter( 'plugin_action_links_' . GOFER_SEO_PLUGIN_BASENAME, array( $this, 'add_action_links' ), 10, 4 );
@@ -123,7 +125,7 @@ class Gofer_SEO_Admin {
 			add_action( 'admin_init', array( $this, 'check_php_version' ) );
 			add_action( 'admin_init', array( $this, 'visibility_warning' ) );
 
-			add_action( 'admin_enqueue_scripts', array( $this, 'admin_enqueue_styles_all' ) );
+
 			add_action( 'admin_enqueue_scripts', array( $this, 'admin_enqueue_styles' ) );
 			add_action( 'admin_enqueue_scripts', array( $this, 'front_enqueue_styles' ) );
 
@@ -135,6 +137,7 @@ class Gofer_SEO_Admin {
 			}
 		} else {
 			// Frontend only. DO NOT load in Admin side.
+			add_action( 'wp_enqueue_scripts', array( $this, 'front_enqueue_styles' ) );
 		}
 
 		$this->admin_loader = new Gofer_SEO_Admin_Loader();
@@ -364,11 +367,13 @@ class Gofer_SEO_Admin {
 	 */
 	public function admin_enqueue_styles_all( $hook_suffix ) {
 		$file_ext = gofer_seo_is_min_enabled() ? 'min.css' : 'css';
-		wp_enqueue_style(
-			'gofer-seo-css',
-			GOFER_SEO_URL . 'admin/css/gofer-seo.' . $file_ext,
+
+		wp_register_style(
+			'gofer-seo-admin-bar-menu-css',
+			GOFER_SEO_URL . 'admin/css/admin-bar-menu.' . $file_ext,
 			array(),
-			GOFER_SEO_VERSION
+			GOFER_SEO_VERSION,
+			'all'
 		);
 	}
 
@@ -395,6 +400,15 @@ class Gofer_SEO_Admin {
 		if ( ! is_admin() ) {
 			return;
 		}
+
+		$file_ext = gofer_seo_is_min_enabled() ? 'min.css' : 'css';
+
+		wp_enqueue_style(
+			'gofer-seo-css',
+			GOFER_SEO_URL . 'admin/css/gofer-seo.' . $file_ext,
+			array(),
+			GOFER_SEO_VERSION
+		);
 	}
 
 	/**

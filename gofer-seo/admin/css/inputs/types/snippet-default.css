@@ -5,77 +5,57 @@
  *
  * @since 1.0.0
  */
-
-/* stylelint-disable block-no-empty */
-
 .gofer-seo-snippet-g {
-	font-family: arial, sans-serif;
+  font-family: arial, sans-serif;
 }
 
-.gofer-seo-snippet-rc {}
-
-.gofer-seo-snippet-header {}
-
 .gofer-seo-snippet-header > a {
-	display: block;
+  display: block;
 }
 
 .gofer-seo-snippet-site-sources > div {
-	display: inline-block;
+  display: inline-block;
 }
 
 .gofer-seo-snippet-site-sources cite {
-	color: #202124;
-	font-style: normal;
-	font-size: 14px;
-	padding-top: 1px;
-	line-height: 1.3;
-	cursor: pointer;
+  color: #202124;
+  font-style: normal;
+  font-size: 14px;
+  padding-top: 1px;
+  line-height: 1.3;
+  cursor: pointer;
 }
 
 .gofer-seo-snippet-site-sources .dashicons.dashicons-arrow-down {
-	color: #70757a;
-	border-color: #70757a transparent;
-	margin-top: -2px;
+  color: #70757a;
+  border-color: #70757a transparent;
+  margin-top: -2px;
 }
 
 .gofer-seo-snippet-content {
-	font-size: 14px;
-	color: #4d5156;
-	line-height: 1.58;
-	word-wrap: break-word;
+  font-size: 14px;
+  color: #4d5156;
+  line-height: 1.58;
+  word-wrap: break-word;
 }
 
-/* Used in JS. */
-.gofer-seo-snippet-site-url {
-
-}
-
-/* Used in JS. */
 .gofer-seo-snippet-title {
-	display: inline-block;
-	color: #1a0dab;
-	font-size: 20px;
-	line-height: 1.3;
-	margin: 0;
-	padding: 0;
-	padding-top: 8px;
-	margin-bottom: 7px;
-	font-weight: 400;
-	cursor: pointer;
+  display: inline-block;
+  color: #1a0dab;
+  font-size: 20px;
+  line-height: 1.3;
+  margin: 0;
+  padding: 0;
+  padding-top: 8px;
+  margin-bottom: 7px;
+  font-weight: 400;
+  cursor: pointer;
 }
 
-/* Used in JS. */
 .gofer-seo-snippet-title:hover {
-	text-decoration: underline;
+  text-decoration: underline;
 }
 
-/* Used in JS. */
-.gofer-seo-snippet-description {
-
-}
-
-/* Used in JS. */
 .gofer-seo-snippet-description-long {
-	color: #d87373;
+  color: #d87373;
 }

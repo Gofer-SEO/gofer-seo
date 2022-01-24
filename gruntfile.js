@@ -7,9 +7,17 @@
  */
 module.exports = function(grunt) {
 
+	const node_sass = require('node-sass');
+
 	// Project configuration.
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
+		filesSCSS: [
+			'admin/css/*.scss',
+			'admin/css/**/*.scss',
+			'public/css/*.scss',
+			'public/css/**/*.scss'
+		],
 		filesPHP: [
 			'gofer-seo/*.php',
 			'gofer-seo/admin/**/*.php',
@@ -71,6 +79,51 @@ module.exports = function(grunt) {
 					mode: 777,
 					create: ['logs']
 				}
+			}
+		},
+
+		// https://www.npmjs.com/package/sass
+		// https://www.npmjs.com/package/grunt-sass
+		sass: {
+			options: {
+				implementation: node_sass,
+				outputStyle: 'expanded',
+				indented: false,
+				sourcemap: 'none'
+			},
+			dev: {
+				options: {
+					sourceMap: true
+				},
+				files: [{
+					expand: true,
+					cwd: 'gofer-seo/',
+					src: [
+						'<%= filesSCSS %>'
+					],
+					dest: 'gofer-seo/',
+					ext: '.css'
+				}]
+			},
+			main: {
+				expand: true,
+				cwd: 'gofer-seo/',
+				src: [
+					'**/main.scss'
+				],
+				dest: 'gofer-seo/',
+				ext: '.css'
+			},
+			dist: {
+				files: [{
+					expand: true,
+					cwd: 'gofer-seo/',
+					src: [
+						'<%= filesSCSS %>'
+					],
+					dest: 'gofer-seo/',
+					ext: '.css'
+				}]
 			}
 		},
 
@@ -246,6 +299,7 @@ module.exports = function(grunt) {
 
 	// Load the plugins.
 	grunt.loadNpmTasks('grunt-mkdir');
+	grunt.loadNpmTasks('grunt-sass');
 	grunt.loadNpmTasks('grunt-phpcbf');
 	grunt.loadNpmTasks('grunt-phpcs');
 	grunt.loadNpmTasks('grunt-phplint');
@@ -267,9 +321,16 @@ module.exports = function(grunt) {
 			'jshint',
 			'eslint',
 			'uglify',
+			'sass',
 			'stylelint:auto_fix',
 			'stylelint:check',
 			'cssmin'
+		]
+	);
+	grunt.registerTask(
+		'build sass',
+		[
+			'sass'
 		]
 	);
 	grunt.registerTask(
@@ -315,7 +376,7 @@ module.exports = function(grunt) {
 		]
 	);
 	grunt.registerTask(
-		'build',
+		'build min',
 		[
 			'uglify',
 			'cssmin'

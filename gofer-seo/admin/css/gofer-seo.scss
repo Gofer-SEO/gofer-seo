@@ -1,0 +1,133 @@
+/*!
+ * Gofer SEO - Core CSS
+ *
+ * @since 1.0.0
+ * @package Gofer SEO
+ */
+
+//@use '_abstracts/variables';
+//@use "_abstracts/variables" as v;
+@import "_abstracts/variables";
+
+.gofer-seo-admin-page form {
+	.postbox-header {
+		background: $secondary-light-3;
+		background: $primary-light-3;
+	}
+}
+
+#editor .gofer-seo-container,
+.gofer-seo-admin-page form {
+	// Buttons.
+	// Primary Button.
+	.button.button-primary {
+		background: $gofer-seo-primary-button;
+		border-color: darken( $gofer-seo-primary-button, 3% );
+		color: #fff;
+
+		&:active, &:focus, &:hover {
+			background: darken( $gofer-seo-primary-button, 9% );
+			border-color: darken( $gofer-seo-primary-button, 9% );
+			box-shadow: none;
+		}
+
+		&:active {
+			box-shadow: none;
+		}
+
+		&:focus {
+			box-shadow: 0 0 0 1px #fff, 0 0 0 3px darken( $gofer-seo-primary-button, 3% );
+		}
+	}
+
+	// Secondary Button.
+	.button.button-secondary {
+		color: $gofer-seo-secondary-button;
+		border-color: $gofer-seo-secondary-button;
+		background: #f6f7f7;
+
+		&:active, &:focus, &:hover {
+
+		}
+
+		&:active {
+			background: #f6f7f7;
+			border-color: #8c8f94;
+			box-shadow: none;
+		}
+
+		&:focus {
+			background: #f6f7f7;
+			border-color: lighten($gofer-seo-secondary-button, 3%);
+			color: darken($gofer-seo-secondary-button, 3%);
+			box-shadow: 0 0 0 1px lighten($gofer-seo-secondary-button, 3%);
+			outline: 2px solid transparent;
+			outline-offset: 0;
+		}
+
+		&:hover {
+			background: #f0f0f1;
+			border-color: darken($gofer-seo-secondary-button, 3%);
+			color: darken($gofer-seo-secondary-button, 3%);
+		}
+	}
+}
+
+
+.gofer-seo-media-lib-dashicon:hover {
+	cursor: help;
+	color: $gofer-seo-color-dashicon-hover;
+}
+
+.gofer-seo-media-lib-tooltip {
+	display: inline-block;
+	position: relative;
+
+	.gofer-seo-media-lib-tooltip-text {
+		visibility: hidden;
+		position: absolute;
+		width: 120px;
+		border-radius: 6px;
+		padding: 10px;
+		z-index: 1;
+		bottom: 125%;
+		left: 50%;
+		margin-left: -70px;
+		color: $gofer-seo-color-tooltip-text;
+		background-color: $gofer-seo-bg-color-tooltip-text;
+		text-align: center;
+		font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+		font-size: 0.8rem;
+		line-height: 1rem;
+		opacity: 0;
+		transition: opacity 0.3s;
+
+		&::after {
+			content: "";
+			position: absolute;
+			top: 100%;
+			left: 50%;
+			margin-left: -5px;
+			border-width: 5px;
+			border-style: solid;
+			border-color: $gofer-seo-border-color-tooltip-text transparent transparent transparent;
+		}
+	}
+
+	&:hover .gofer-seo-media-lib-tooltip-text {
+		visibility: visible;
+		opacity: 1;
+	}
+
+}
+
+// Fixes the default CSS for the Classic Editor link modal.
+#wp-link-wrap {
+	height: 530px !important;
+	margin-top: -265px !important;
+}
+
+#search-results,
+#most-recent-results {
+	margin-top: 55px !important;
+}

@@ -1,0 +1,131 @@
+/*!
+ * Post Quick-Edit.
+ *
+ * Part of the plugin's quick-edits concept used on the All Posts screen.
+ *
+ * @since 1.0.0
+ */
+
+@import "_abstracts/variables";
+
+/* stylelint-disable selector-class-pattern -- WP uses the slug format. */
+.gofer-seo-quick-edit-wrap {
+	display: block;
+	float: left;
+	opacity: 1;
+	max-height: 75px;
+	overflow: hidden;
+	width: 100%;
+
+	&.gofer_seo_editing {
+		max-height: initial;
+		overflow: visible;
+	}
+}
+
+body.wp-admin th.column-gofer_seo_title {
+	@media screen and (max-width: 782px) {
+		display: none;
+	}
+}
+
+th {
+	&.column-gofer_seo_description,
+	&.column-gofer_seo_keywords {
+		@media screen and (max-width: 782px) {
+			display: none;
+		}
+	}
+}
+
+td {
+	&.gofer_seo_title.column-gofer_seo_title,
+	&.gofer_seo_description.column-gofer_seo_description,
+	&.gofer_seo_keywords.column-gofer_seo_keywords {
+		overflow: visible;
+	}
+
+	&.gofer_seo_title.column-seotitle,
+	&.gofer_seo_description.column-seodesc,
+	&.gofer_seo_keywords.column-seokeywords {
+		@media screen and (max-width: 782px) {
+			display: none;
+		}
+	}
+}
+
+.gofer-seo-quick-edit-pencil {
+	margin-right: 5px;
+	color: $quick-edit-color-pencil;
+
+	&:hover {
+		color: $quick-edit-color-pencil-hover;
+		outline: 0;
+	}
+
+	&:focus {
+		box-shadow: none;
+	}
+}
+
+.gofer-seo-quick-edit-input {
+	float: left;
+	position: relative;
+	margin-bottom: 10px;
+	font-size: 13px;
+	width: 100%;
+	z-index: 1;
+}
+
+.gofer-seo-quick-edit-input-save {
+	margin-right: 5px;
+	color: $quick-edit-color-save;
+
+	&:active {
+		color: $quick-edit-color-save;
+	}
+
+	&:hover {
+		color: lighten( $quick-edit-color-save, 12% );
+	}
+
+	&:focus {
+		box-shadow: none;
+	}
+}
+
+.gofer-seo-quick-edit-input-cancel {
+	color: $quick-edit-color-cancel;
+
+	&:active {
+		color: $quick-edit-color-cancel;
+	}
+
+	&:hover {
+		color: lighten( $quick-edit-color-cancel, 12% );
+	}
+
+	&:focus {
+		box-shadow: none;
+	}
+}
+
+.gofer-seo-quickedit-spinner {
+	float: left;
+	width: 16px;
+	margin: 0 6px 3px 0;
+}
+/* stylelint-enable */
+
+// Responsive @media.
+//@media screen and (max-width: 782px) {
+//
+//	body.wp-admin th.column-gofer_seo_title,
+//	th.column-gofer_seo_description,
+//	th.column-gofer_seo_keywords,
+//	td.gofer_seo_title.column-seotitle,
+//	td.gofer_seo_description.column-seodesc,
+//	td.gofer_seo_keywords.column-seokeywords {
+//		display: none;
+//	}
+//}

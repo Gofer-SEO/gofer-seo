@@ -1,0 +1,162 @@
+/**
+ * Gofer SEO - SASS/SCSS Abstract - Variables
+ *
+ * Contains commonly used values, like color, size, dimensions, etc..
+ *
+ * @since 1.0.3
+ */
+
+// *** COLOR PALETTES ***
+$primary-light-4: rgba(244, 245, 240, 1);
+$primary-light-3: rgb(201, 206, 179);
+$primary-light-2: rgba(186, 191, 161, 1);
+$primary-light-1: rgba(160, 166, 131, 1);
+$primary:         rgba(137, 143, 105, 1);
+$primary-dark-1:  rgba(112, 118,  81, 1);
+$primary-dark-2:  rgba( 82,  88,  53, 1);
+
+$secondary-light-3: rgb(206, 199, 178);
+$secondary-light-2: rgba(108, 99, 88, 1);
+$secondary-light-1: rgba( 61, 56, 51, 1);
+$secondary:         rgba( 39, 34, 28, 1);
+$secondary-dark-1:  rgba( 35, 29, 20, 1);
+$secondary-dark-2:  rgba( 32, 24, 15, 1);
+
+$text-primary:   #000;
+$text-primary-2: rgba( 32, 24, 15, 1);
+$text-secondary: #fff;
+$text-link:      rgba(  0, 115, 170, 1);
+
+$wp-hover:      rgba(  0, 150, 221, 1);
+$hover-light-1: rgba(  0, 164, 243, 1);
+$hover:         rgba(  0, 115, 170, 1);
+$hover-dark-1:  rgba(  0,  91, 135, 1);
+
+// Caution Orange.
+$orange-light-3: rgba(255, 214, 176, 1);
+$orange-light-2: rgba(255, 173,  99, 1);
+$orange-light-1: rgba(255, 150,  57, 1);
+$orange:         rgba(255, 120,   0, 1);
+$orange-dark-1:  rgba(197,  93,   0, 1);
+$orange-dark-2:  rgba(155,  73,   0, 1);
+
+// Safety Yellow.
+$yellow-light-2: rgba(255, 252, 150, 1);
+$yellow-light-1: rgba(255, 251, 109, 1);
+$yellow:         rgba(255, 250,  76, 1);
+$yellow-dark-1:  rgba(237, 232,  36, 1);
+$yellow-dark-2:  rgba(186, 182,  14, 1);
+
+// Basic/Default Colors.
+$default-green:     rgba( 22, 204,  22, 1);
+$default-red:       rgba(255,   0,   0, 1);
+$wp-red-light:      #d63638;
+$default-red-light: rgba(255, 117, 117, 1);
+
+
+
+// *** COLORS ***
+// Bootstrap (Preserve - Bootstrap defaults).
+$bootstrap-border-1:         #dee2e6;
+$bootstrap-border-2:         #e9ecef;
+$bootstrap-white:            #fff;
+$bootstrap-color:            #495057;
+$bootstrap-color-disabled:   #6c757d;
+$bootstrap-color-link:       #0d6efd;
+$bootstrap-color-link-hover: #0a58ca;
+
+// Gofer SEO.
+$gofer-seo-color-dashicon-hover:      $hover-light-1;
+$gofer-seo-color-tooltip-text:        $text-secondary;
+$gofer-seo-bg-color-tooltip-text:     $secondary-light-2;
+$gofer-seo-border-color-tooltip-text: $secondary-light-1;
+$gofer-seo-primary-button:            $primary-dark-1;
+$gofer-seo-secondary-button:          $primary-dark-1;
+
+// Notice.
+$notice-button-orange-1:              #d54e21;
+$notice-button-orange-2:              #aa3e1a;
+$notice-button-orange-color:          #fff;
+$notice-button-orange-bg-color-hover: #bc3508;
+
+// Quick-Edit.
+$quick-edit-color-pencil:       $secondary-light-1;
+$quick-edit-color-pencil-hover: $wp-hover;
+$quick-edit-color-save:         $default-green;
+$quick-edit-color-cancel:       $default-red;
+
+// Inputs.
+// Inputs > Tooltips.
+$tooltip-icon-color:        $secondary-light-2;
+$tooltip-icon-color-active: $secondary-light-2;
+$tooltip-icon-color-hover:  $secondary-light-3;
+$tooltip-icon-color:        $orange-light-2;
+$tooltip-icon-color-active: $orange-light-2;
+$tooltip-icon-color-hover:  $orange-light-1;
+$tooltip-icon-color:        $orange-light-3;
+$tooltip-icon-color-active: $orange-light-3;
+$tooltip-icon-color-hover:  $orange-light-1;
+
+$tooltip-ui-bg-color: $primary-light-4;
+$tooltip-ui-box-shadow: $secondary;
+
+// Inputs > Layouts.
+$layouts-color: $text-primary-2;
+
+// Inputs > Types.
+$types-input-border-color:       $secondary-light-1;
+$types-input-border-color-focus: $secondary-light-2;
+$types-input-box-shadow-focus:   transparentize( $secondary-light-1, 0.4 );
+
+$types-color: $text-primary-2;
+
+// Inputs Readonly.
+$types-readonly-bg:           rgba(255, 255, 255, 0.5);
+$types-readonly-border-color: rgba(126, 137, 147, 0.3);
+$types-readonly-box-shadow:   rgba(  0,   0,   0, 0.04);
+$types-readonly-color:        rgba( 50,  55,  60, 0.5);
+
+// Radio
+$types-radio-background-checked: $primary;
+$types-radio-border-color:       $primary;
+$types-radio-box-shadow:         transparentize( $secondary, 0.9 );
+$types-radio-border-color-hover: $primary-light-1;
+$types-radio-box-shadow-hover:   transparentize( $secondary, 0.4 );
+
+// Checkbox/Multi-Checkbox
+$types-checkbox-background-checked: $primary;
+$types-checkbox-border-color:       $primary;
+$types-checkbox-box-shadow:         transparentize( $secondary, 0.9 );
+$types-checkbox-border-color-hover: $primary-dark-1;
+$types-checkbox-box-shadow-hover:   transparentize( $secondary, 0.4 );
+$types-checkbox-icon-color:         #fff;
+
+// Range.
+
+
+// Number.
+$types-number-background-checked: $primary;
+$types-number-border-color:       $secondary-light-1;
+$types-number-border-color-focus: $secondary-light-2;
+$types-number-box-shadow:         transparentize( $secondary, 0.9 );
+$types-number-border-color-hover: $secondary-light-2;
+$types-number-box-shadow-hover:   transparentize( $secondary, 0.4 );
+$types-number-icon-color:         #ffffff;
+
+$types-add-field-table-border:   $secondary-light-3;
+$types-add-field-table-thead-bg: $secondary-light-3;
+$types-add-field-table-tbody-bg: $primary-light-4;
+
+$type-select2-border: #7e8993;
+
+// Tabs.
+$type-tabs-nav-color-link:          $text-primary-2;
+$type-tabs-nav-color-link-hover:    $secondary-light-3;
+$type-tabs-nav-border:              $secondary-light-3;
+$type-tabs-nav-bg-color: $primary-light-4;
+$type-tabs-nav-box-shadow:          $secondary-dark-2;
+$type-tabs-nav-border-color-active: $orange;
+$type-tabs-nav-box-shadow-active:   $secondary;
+
+$type-tabs-tab-content-border:      $secondary-light-3;
+$type-tabs-tab-content-box-shadow:  $secondary-light-2;

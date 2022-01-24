@@ -87,7 +87,7 @@ class Gofer_SEO_Screen_Page_Module_Debugger extends Gofer_SEO_Screen_Page_Module
 				'title' => __( 'Clear Cache', 'gofer-seo' ),
 				'type'  => 'button-submit',
 				'attrs' => array(
-					'class' => 'button-secondary',
+					'class' => 'button button-secondary',
 					'value' => __( 'Clear All', 'gofer-seo' ),
 				),
 			),
@@ -144,7 +144,7 @@ class Gofer_SEO_Screen_Page_Module_Debugger extends Gofer_SEO_Screen_Page_Module
 				'title' => __( 'Delete All Errors', 'gofer-seo' ),
 				'type'  => 'button-submit',
 				'attrs' => array(
-					'class' => 'button-secondary',
+					'class' => 'button button-secondary',
 					'value' => __( 'Delete', 'gofer-seo' ),
 				),
 			),

@@ -1,0 +1,50 @@
+/*!
+ * Gofer SEO - SASS/SCSS Abstract - Variables
+ *
+ * Contains commonly used values, like color, size, dimensions, etc..
+ *
+ * @since 1.0.3
+ */
+
+// *** COLOR PALETTES ***
+$primary-light-3: rgba(244, 245, 240, 1);
+$primary-light-2: rgba(186, 191, 161, 1);
+$primary-light-1: rgba(160, 166, 131, 1);
+$primary:         rgba(137, 143, 105, 1);
+$primary-dark-1:  rgba(112, 118,  81, 1);
+$primary-dark-2:  rgba( 82,  88,  53, 1);
+
+$secondary-light-3: rgb(206, 199, 178);
+$secondary-light-2: rgba(108, 99, 88, 1);
+$secondary-light-1: rgba( 61, 56, 51, 1);
+$secondary:         rgba( 39, 34, 28, 1);
+$secondary-dark-1:  rgba( 35, 29, 20, 1);
+$secondary-dark-2:  rgba( 32, 24, 15, 1);
+
+$text-primary:   #000;
+$text-primary-2: rgba( 32, 24, 15, 1);
+$text-secondary: #fff;
+$text-link:      rgba(  0, 115, 170, 1);
+
+$wp-hover:      rgba(  0, 150, 221, 1);
+$hover-light-1: rgba(  0, 164, 243, 1);
+$hover:         rgba(  0, 115, 170, 1);
+$hover-dark-1:  rgba(  0,  91, 135, 1);
+
+// Caution Orange.
+$orange-light-2: rgba(255, 173,  99, 1);
+$orange-light-1: rgba(255, 150,  57, 1);
+$orange:         rgba(255, 120,   0, 1);
+$orange-dark-1:  rgba(197,  93,   0, 1);
+$orange-dark-2:  rgba(155,  73,   0, 1);
+
+// Safety Yellow.
+$yellow-light-2: rgba(255, 252, 150, 1);
+$yellow-light-1: rgba(255, 251, 109, 1);
+$yellow:         rgba(255, 250,  76, 1);
+$yellow-dark-1:  rgba(237, 232,  36, 1);
+$yellow-dark-2:  rgba(186, 182,  14, 1);
+
+// Basic/Default Colors.
+$default-green: rgba( 22, 204,  22, 1);
+$default-red:   rgba(255,   0,   0, 1);

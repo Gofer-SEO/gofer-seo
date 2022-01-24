@@ -2,8 +2,8 @@
 Contributors: EkoJR
 Tags: Search Engine Optimization, Analytics, Social Media, Schema, XML Sitemaps, SEO, Meta Data
 Requires at least: 4.9
-Tested up to: 5.8
-Stable tag: 1.0.2
+Tested up to: 5.9
+Stable tag: 1.0.3
 Requires PHP: 5.4.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -66,6 +66,14 @@ Most inputs have tooltips added to make it easier to understand. However, if the
 
 
 == Changelog ==
+
+= 1.0.3 =
+* Change CSS to SASS.
+* Change/Refactor styles.
+* Fix PHP error missing index on User/Profile Editor.
+* Fix missing nonce on User Editor.
+* Fix PHP error undefined index in Post class.
+* Fix missing JS file.
 
 = 1.0.2 =
 * Change JS & CSS enqueue files to minify.

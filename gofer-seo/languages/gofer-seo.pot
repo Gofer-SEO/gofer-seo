@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Gofer SEO\n"
-"POT-Creation-Date: 2022-01-18 18:18-0800\n"
+"POT-Creation-Date: 2022-01-24 01:21-0800\n"
 "PO-Revision-Date: 2022-01-18 15:44-0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -33,13 +33,13 @@ msgid "Cheatin' huh?"
 msgstr ""
 
 #. translators: This is an action link users can click to open the General Settings menu.
-#: admin/class-gofer-seo-admin.php:226 admin/screens/class-screen.php:453
-#: admin/screens/class-screen.php:481
+#: admin/class-gofer-seo-admin.php:229 admin/screens/class-screen.php:445
+#: admin/screens/class-screen.php:473
 msgid "SEO Settings"
 msgstr ""
 
 #. translators: This is an action link users can click to open a feature request/bug report on GitHub.
-#: admin/class-gofer-seo-admin.php:260
+#: admin/class-gofer-seo-admin.php:263
 msgid "Rate this plugin."
 msgstr ""
 
@@ -1012,11 +1012,11 @@ msgstr ""
 #: admin/partials/class-tooltips.php:835
 #: includes/compatibility/wp/sitemaps/class-wp-sitemaps-stylesheet.php:67
 #: includes/compatibility/wp/sitemaps/class-wp-sitemaps-stylesheet.php:181
-#: includes/sitemap/class-news-sitemaps-stylesheet.php:44
-#: includes/sitemap/class-news-sitemaps-stylesheet.php:173
-#: includes/sitemap/class-rss-sitemaps-stylesheet.php:152
-#: includes/sitemap/class-sitemaps-stylesheet.php:44
-#: includes/sitemap/class-sitemaps-stylesheet.php:176
+#: includes/sitemap/class-news-sitemaps-stylesheet.php:50
+#: includes/sitemap/class-news-sitemaps-stylesheet.php:187
+#: includes/sitemap/class-rss-sitemaps-stylesheet.php:163
+#: includes/sitemap/class-sitemaps-stylesheet.php:49
+#: includes/sitemap/class-sitemaps-stylesheet.php:187
 msgid "URL"
 msgstr ""
 
@@ -2379,7 +2379,7 @@ msgstr ""
 #: admin/screens/term-edit/class-screen-term-editor-sitemap.php:67
 #: admin/screens/user-edit/class-screen-user-editor-sitemap.php:44
 #: includes/compatibility/wp/sitemaps/class-wp-sitemaps-stylesheet.php:70
-#: includes/sitemap/class-sitemaps-stylesheet.php:47
+#: includes/sitemap/class-sitemaps-stylesheet.php:52
 msgid "Priority"
 msgstr ""
 
@@ -2440,7 +2440,7 @@ msgstr ""
 
 #: admin/screens/class-screen-page-module-sitemap.php:516
 #: includes/sitemap/class-rss-sitemaps-renderer.php:161
-#: includes/sitemap/class-rss-sitemaps-stylesheet.php:25
+#: includes/sitemap/class-rss-sitemaps-stylesheet.php:26
 msgid "RSS Sitemap"
 msgstr ""
 
@@ -2455,7 +2455,7 @@ msgstr ""
 #: admin/screens/class-screen-page-module-sitemap.php:671
 #: includes/compatibility/wp/sitemaps/class-wp-sitemaps-stylesheet.php:52
 #: includes/compatibility/wp/sitemaps/class-wp-sitemaps-stylesheet.php:166
-#: includes/sitemap/class-sitemaps-stylesheet.php:25
+#: includes/sitemap/class-sitemaps-stylesheet.php:26
 msgid "XML Sitemap"
 msgstr ""
 
@@ -2581,7 +2581,7 @@ msgid " Settings"
 msgstr ""
 
 #. Plugin Name of the plugin/theme
-#: admin/screens/class-screen.php:441
+#: admin/screens/class-screen.php:433
 #: admin/screens/post-edit/class-screen-post-editor-general.php:268
 #: admin/screens/post-edit/class-screen-post-editor-sitemap.php:130
 #: admin/screens/post-edit/class-screen-post-editor-social-media.php:212
@@ -2600,8 +2600,8 @@ msgstr ""
 #: admin/screens/term-edit/class-screen-term-editor-general.php:133
 #: admin/screens/term-edit/class-screen-term-editor-social-media.php:57
 #: admin/screens/user-edit/class-screen-user-editor-general.php:40
-#: includes/sitemap/class-news-sitemaps-stylesheet.php:48
-#: includes/sitemap/class-rss-sitemaps-stylesheet.php:45
+#: includes/sitemap/class-news-sitemaps-stylesheet.php:54
+#: includes/sitemap/class-rss-sitemaps-stylesheet.php:50
 msgid "Title"
 msgstr ""
 
@@ -2610,7 +2610,7 @@ msgstr ""
 #: admin/screens/term-edit/class-screen-term-editor-general.php:137
 #: admin/screens/term-edit/class-screen-term-editor-social-media.php:61
 #: admin/screens/user-edit/class-screen-user-editor-general.php:56
-#: includes/sitemap/class-rss-sitemaps-stylesheet.php:47
+#: includes/sitemap/class-rss-sitemaps-stylesheet.php:52
 msgid "Description"
 msgstr ""
 
@@ -3114,27 +3114,21 @@ msgstr ""
 #. translators: %s: Number of URLs.
 #: includes/compatibility/wp/sitemaps/class-wp-sitemaps-stylesheet.php:62
 #: includes/compatibility/wp/sitemaps/class-wp-sitemaps-stylesheet.php:176
-#: includes/sitemap/class-news-sitemaps-stylesheet.php:39
-#: includes/sitemap/class-news-sitemaps-stylesheet.php:168
-#: includes/sitemap/class-rss-sitemaps-stylesheet.php:39
-#: includes/sitemap/class-rss-sitemaps-stylesheet.php:147
-#: includes/sitemap/class-sitemaps-stylesheet.php:39
-#: includes/sitemap/class-sitemaps-stylesheet.php:171
 #, php-format
 msgid "Number of URLs in this XML Sitemap: %s."
 msgstr ""
 
 #: includes/compatibility/wp/sitemaps/class-wp-sitemaps-stylesheet.php:68
 #: includes/compatibility/wp/sitemaps/class-wp-sitemaps-stylesheet.php:182
-#: includes/sitemap/class-news-sitemaps-stylesheet.php:174
-#: includes/sitemap/class-rss-sitemaps-stylesheet.php:153
-#: includes/sitemap/class-sitemaps-stylesheet.php:45
-#: includes/sitemap/class-sitemaps-stylesheet.php:177
+#: includes/sitemap/class-news-sitemaps-stylesheet.php:188
+#: includes/sitemap/class-rss-sitemaps-stylesheet.php:164
+#: includes/sitemap/class-sitemaps-stylesheet.php:50
+#: includes/sitemap/class-sitemaps-stylesheet.php:188
 msgid "Last Modified"
 msgstr ""
 
 #: includes/compatibility/wp/sitemaps/class-wp-sitemaps-stylesheet.php:69
-#: includes/sitemap/class-sitemaps-stylesheet.php:46
+#: includes/sitemap/class-sitemaps-stylesheet.php:51
 msgid "Change Frequency"
 msgstr ""
 
@@ -3212,41 +3206,58 @@ msgstr ""
 msgid "Fields other than %s are not currently supported for news sitemaps."
 msgstr ""
 
-#: includes/sitemap/class-news-sitemaps-stylesheet.php:25
+#: includes/sitemap/class-news-sitemaps-stylesheet.php:26
 msgid "XML News Sitemap"
 msgstr ""
 
-#. translators: %s is the hyperlink.
-#: includes/sitemap/class-news-sitemaps-stylesheet.php:28
-#: includes/sitemap/class-news-sitemaps-stylesheet.php:157
+#. translators: %1$s: Technical name for sitemap. %2$s: Link & Name of plugin.
+#: includes/sitemap/class-news-sitemaps-stylesheet.php:29
+#: includes/sitemap/class-news-sitemaps-stylesheet.php:167
+#: includes/sitemap/class-rss-sitemaps-stylesheet.php:29
+#: includes/sitemap/class-rss-sitemaps-stylesheet.php:143
+#: includes/sitemap/class-sitemaps-stylesheet.php:29
+#: includes/sitemap/class-sitemaps-stylesheet.php:167
 #, php-format
 msgid ""
-"This is an XML News Sitemap, generated by %s, meant to be consumed by search "
-"engines like Google."
+"This is an %1$s generated by %2$s, and is utilized by search engines like "
+"Google, Bing, Yandex, etc.."
 msgstr ""
 
-#. translators: %s is the hyperlink.
-#: includes/sitemap/class-news-sitemaps-stylesheet.php:33
-#: includes/sitemap/class-news-sitemaps-stylesheet.php:162
-#: includes/sitemap/class-rss-sitemaps-stylesheet.php:33
-#: includes/sitemap/class-sitemaps-stylesheet.php:33
+#. translators: %1$s: Link & Name of website.
+#: includes/sitemap/class-news-sitemaps-stylesheet.php:35
+#: includes/sitemap/class-news-sitemaps-stylesheet.php:173
+#: includes/sitemap/class-rss-sitemaps-stylesheet.php:35
+#: includes/sitemap/class-rss-sitemaps-stylesheet.php:149
+#: includes/sitemap/class-sitemaps-stylesheet.php:35
+#: includes/sitemap/class-sitemaps-stylesheet.php:173
 #, php-format
-msgid "You can find more information about XML sitemaps at %s."
+msgid "Visit %1$s for more information regarding Sitemaps."
 msgstr ""
 
-#: includes/sitemap/class-news-sitemaps-stylesheet.php:45
+#. translators: %s: Number of URLs.
+#: includes/sitemap/class-news-sitemaps-stylesheet.php:44
+#: includes/sitemap/class-news-sitemaps-stylesheet.php:182
+#: includes/sitemap/class-rss-sitemaps-stylesheet.php:44
+#: includes/sitemap/class-rss-sitemaps-stylesheet.php:158
+#: includes/sitemap/class-sitemaps-stylesheet.php:44
+#: includes/sitemap/class-sitemaps-stylesheet.php:182
+#, php-format
+msgid "Number of URLs: %s."
+msgstr ""
+
+#: includes/sitemap/class-news-sitemaps-stylesheet.php:51
 msgid "Name"
 msgstr ""
 
-#: includes/sitemap/class-news-sitemaps-stylesheet.php:46
+#: includes/sitemap/class-news-sitemaps-stylesheet.php:52
 msgid "Language"
 msgstr ""
 
-#: includes/sitemap/class-news-sitemaps-stylesheet.php:47
+#: includes/sitemap/class-news-sitemaps-stylesheet.php:53
 msgid "Publication Date"
 msgstr ""
 
-#: includes/sitemap/class-news-sitemaps-stylesheet.php:154
+#: includes/sitemap/class-news-sitemaps-stylesheet.php:164
 msgid "XML News Sitemap Index"
 msgstr ""
 
@@ -3254,62 +3265,24 @@ msgstr ""
 msgid "RSS generated Sitemap."
 msgstr ""
 
-#. translators: %s is the hyperlink.
-#: includes/sitemap/class-rss-sitemaps-stylesheet.php:28
-#, php-format
-msgid ""
-"This is an RSS Sitemap, generated by %s, meant to be consumed by search "
-"engines like Google or Bing."
-msgstr ""
-
-#: includes/sitemap/class-rss-sitemaps-stylesheet.php:44
+#: includes/sitemap/class-rss-sitemaps-stylesheet.php:49
 msgid "Link/URL"
 msgstr ""
 
-#: includes/sitemap/class-rss-sitemaps-stylesheet.php:46
+#: includes/sitemap/class-rss-sitemaps-stylesheet.php:51
 msgid "Publish Date"
 msgstr ""
 
-#: includes/sitemap/class-rss-sitemaps-stylesheet.php:131
+#: includes/sitemap/class-rss-sitemaps-stylesheet.php:140
 msgid "RSS Sitemap Index"
 msgstr ""
 
-#: includes/sitemap/class-rss-sitemaps-stylesheet.php:134
-#: includes/sitemap/class-sitemaps-stylesheet.php:158
-msgid "Generated by"
-msgstr ""
-
-#: includes/sitemap/class-rss-sitemaps-stylesheet.php:136
-msgid ""
-"this is an RSS Sitemap, meant to be consumed by search engines like Google "
-"or Bing."
-msgstr ""
-
-#: includes/sitemap/class-rss-sitemaps-stylesheet.php:140
-#: includes/sitemap/class-sitemaps-stylesheet.php:164
-msgid "You can find more information about XML sitemaps at"
-msgstr ""
-
-#. translators: %s is the hyperlink.
-#: includes/sitemap/class-sitemaps-stylesheet.php:28
-#, php-format
-msgid ""
-"This is an XML Sitemap, generated by %s, meant to be consumed by search "
-"engines like Google or Bing."
-msgstr ""
-
-#: includes/sitemap/class-sitemaps-stylesheet.php:48
+#: includes/sitemap/class-sitemaps-stylesheet.php:53
 msgid "Images"
 msgstr ""
 
-#: includes/sitemap/class-sitemaps-stylesheet.php:155
+#: includes/sitemap/class-sitemaps-stylesheet.php:164
 msgid "XML Sitemap Index"
-msgstr ""
-
-#: includes/sitemap/class-sitemaps-stylesheet.php:160
-msgid ""
-"this is an XML Sitemap, meant to be consumed by search engines like Google "
-"or Bing."
 msgstr ""
 
 #. translators: %s: Filename of the template.
@@ -3324,8 +3297,8 @@ msgstr ""
 msgid "Template: %1$s - %2$s in %3$s param is a reserved key."
 msgstr ""
 
-#: templates/admin/inputs/types/add-field-robots-txt.php:110
-#: templates/admin/inputs/types/add-field-robots-txt.php:176
+#: templates/admin/inputs/types/add-field-robots-txt.php:127
+#: templates/admin/inputs/types/add-field-robots-txt.php:196
 msgid "Add Item"
 msgstr ""
 

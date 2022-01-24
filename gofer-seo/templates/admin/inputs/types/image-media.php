@@ -48,7 +48,7 @@ wp_enqueue_script( 'gofer-seo-input-type-image-media-js' );
 ?>
 <input
 		type="button"
-		class="gofer-seo-image-media-button button-primary"
+		class="gofer-seo-image-media-button button button-secondary"
 		value="<?php esc_attr_e( 'Select an image', 'gofer-seo' ); ?>"
 >
 <input

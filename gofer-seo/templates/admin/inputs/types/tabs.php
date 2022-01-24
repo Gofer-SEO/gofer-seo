@@ -46,7 +46,6 @@ if ( ! empty( $esc ) ) {
 $tooltips = new Gofer_SEO_Tooltips( $hook_suffix );
 
 wp_enqueue_script( 'gofer-seo-tooltips-js' );
-wp_enqueue_style( 'gofer-seo-tooltips-css' );
 ?>
 <div class="gofer-seo-tabs" >
 	<nav>

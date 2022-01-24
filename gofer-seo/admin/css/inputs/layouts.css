@@ -5,75 +5,115 @@
  *
  * @since 1.0.0
  */
+/**
+ * Gofer SEO - SASS/SCSS Abstract - Variables
+ *
+ * Contains commonly used values, like color, size, dimensions, etc..
+ *
+ * @since 1.0.3
+ */
+.gofer-seo-meta-box.gofer-seo-container {
+  width: 100%;
+  padding-right: 0;
+  padding-left: 0;
+}
 
-/* stylelint-disable no-descending-specificity,  block-no-empty */
-
-/* Rows */
 .gofer-seo-meta-box > div > .gofer-seo-row {
-	margin-bottom: 9px;
-}
-
-.gofer-seo-wrap > div > .gofer-seo-row {
-	margin-bottom: 9px;
-}
-
-.gofer-seo-wrap-dynamic > div > .gofer-seo-row {
-	margin-bottom: 9px;
-	padding-left: 18px;
-}
-
-.gofer-seo-add-field-list > .gofer-seo-row {
-	margin-bottom: 18px;
-}
-
-.gofer-seo-add-field-list > .gofer-seo-row > .gofer-seo-col-12 > div > .gofer-seo-row {
-	margin-bottom: 9px;
-}
-
-.gofer-seo-tabs div.tab-pane {
-	padding: 18px 2% 2%;
-}
-
-.gofer-seo-tabs div.tab-pane > div > div.gofer-seo-row {
-	margin-bottom: 18px;
-}
-
-/* LABELS */
-.gofer-seo-meta-box > div > .gofer-seo-row > .gofer-seo-label-outer,
-.gofer-seo-wrap > div > .gofer-seo-row > .gofer-seo-label-outer,
-.gofer-seo-tabs div.tab-pane > div > div.gofer-seo-row > .gofer-seo-label-outer {
-	/* font-size: 14px; */ /* stylelint-disable-line comment-empty-line-before -- Added for future use. */
-	font-weight: 600;
-	color: #545454;
-	margin-top: 3px;
-}
-
-@media (max-width: 782px) {
-
-	.gofer-seo-meta-box > div > .gofer-seo-row > .gofer-seo-label-outer,
-	.gofer-seo-wrap > div > .gofer-seo-row > .gofer-seo-label-outer,
-	.gofer-seo-wrap-dynamic > div > .gofer-seo-row > .gofer-seo-label-outer,
-	.gofer-seo-tabs div.tab-pane > div > div.gofer-seo-row > .gofer-seo-label-outer {
-		margin-top: 9px;
-	}
+  margin-bottom: 9px;
 }
 
 .gofer-seo-meta-box > div > .gofer-seo-row > .gofer-seo-label-outer {
-	font-size: 12px;
-	cursor: default;
-	min-height: 27px;
+  font-weight: 600;
+  color: #20180f;
+  margin-top: 3px;
 }
 
-.gofer-seo-wrap > div > .gofer-seo-row > .gofer-seo-label-outer,
-.gofer-seo-wrap-dynamic > div > .gofer-seo-row > .gofer-seo-label-outer,
+.gofer-seo-meta-box > div > .gofer-seo-row > .gofer-seo-label-outer > label {
+  font-size: 12px;
+  vertical-align: top;
+}
+
+@media screen and (max-width: 782px) {
+  .gofer-seo-meta-box > div > .gofer-seo-row > .gofer-seo-label-outer {
+    margin-top: 9px;
+  }
+}
+
+.gofer-seo-wrap > div > .gofer-seo-row {
+  margin-bottom: 9px;
+}
+
+.gofer-seo-wrap > div > .gofer-seo-row > .gofer-seo-label-outer {
+  font-weight: 600;
+  color: #20180f;
+  margin-top: 3px;
+  font-size: 12px;
+}
+
+.gofer-seo-wrap > div > .gofer-seo-row > .gofer-seo-label-outer > label {
+  font-size: 12px;
+  vertical-align: top;
+}
+
+@media screen and (max-width: 782px) {
+  .gofer-seo-wrap > div > .gofer-seo-row > .gofer-seo-label-outer {
+    margin-top: 9px;
+  }
+}
+
+.gofer-seo-wrap-dynamic > div > .gofer-seo-row {
+  margin-bottom: 9px;
+  padding-left: 9px;
+}
+
+.gofer-seo-wrap-dynamic > div > .gofer-seo-row > .gofer-seo-label-outer {
+  font-size: 12px;
+}
+
+.gofer-seo-wrap-dynamic > div > .gofer-seo-row > .gofer-seo-label-outer > label {
+  font-size: 12px;
+  vertical-align: top;
+}
+
+@media screen and (max-width: 782px) {
+  .gofer-seo-wrap-dynamic > div > .gofer-seo-row > .gofer-seo-label-outer {
+    margin-top: 9px;
+  }
+}
+
+.gofer-seo-tabs div.tab-pane {
+  padding: 18px 2% 2%;
+}
+
+.gofer-seo-tabs div.tab-pane > div > div.gofer-seo-row {
+  margin-bottom: 18px;
+}
+
 .gofer-seo-tabs div.tab-pane > div > div.gofer-seo-row > .gofer-seo-label-outer {
-	font-size: 12px;
+  font-weight: 600;
+  color: #20180f;
+  margin-top: 3px;
+  font-size: 12px;
 }
 
-.gofer-seo-label-outer > label {
-	padding-right: 9%;
+.gofer-seo-tabs div.tab-pane > div > div.gofer-seo-row > .gofer-seo-label-outer > label {
+  font-size: 12px;
+  vertical-align: top;
 }
 
-.gofer-seo-meta-box > div > .gofer-seo-row > .gofer-seo-input-outer,
-.gofer-seo-wrap > div > .gofer-seo-row > .gofer-seo-input-outer,
-.gofer-seo-wrap-dynamic > div > .gofer-seo-row > .gofer-seo-input-outer {}
+@media screen and (max-width: 782px) {
+  .gofer-seo-tabs div.tab-pane > div > div.gofer-seo-row > .gofer-seo-label-outer {
+    margin-top: 9px;
+  }
+}
+
+/* stylelint-disable no-descending-specificity -- Grouped with Field List input type. */
+.gofer-seo-add-field-list > .gofer-seo-row {
+  margin-bottom: 18px;
+}
+
+.gofer-seo-add-field-list > .gofer-seo-row > .gofer-seo-col-12 > div > .gofer-seo-row {
+  margin-bottom: 9px;
+}
+
+/* stylelint-enable */

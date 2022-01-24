@@ -71,10 +71,6 @@ class Gofer_SEO_Screen_Edit_User extends Gofer_SEO_Screen_Edit {
 			return;
 		}
 
-		wp_enqueue_style( 'gofer-seo-bootstrap-css' );
-		wp_enqueue_style( 'gofer-seo-input-layouts-css' );
-		wp_enqueue_style( 'gofer-seo-input-types-css' );
-
 		wp_enqueue_script( 'gofer-seo-bootstrap-js' );
 		wp_enqueue_script( 'gofer-seo-inputs-input-conditions-js' );
 	}

@@ -74,7 +74,7 @@ wp_enqueue_script( 'gofer-seo-input-type-add-field-list-js' );
 					</div>
 				</div>
 			<?php endforeach; ?>
-			<input type="submit" class="gofer-seo-add-item-list-button button-secondary" value="Add Item">
+			<input type="submit" class="gofer-seo-add-item-list-button button button-secondary" value="Add Item">
 		</div>
 	</div>
 	<div class="gofer-seo-row">

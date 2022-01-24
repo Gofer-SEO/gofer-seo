@@ -1,0 +1,40 @@
+/*!
+ * Gofer_SEO_Notifications CSS
+ *
+ * @package Gofer SEO
+ * @since 1.0.0
+ */
+
+@import "_abstracts/variables";
+
+.gofer-seo-notice {
+	padding: 10px 5px 0 5px;
+}
+
+.gofer-seo-notice-delay {
+	display: inherit;
+	// width: fit-content;
+
+	&.gofer-seo-delay-0.button-primary.button-orange {
+		background-color: $notice-button-orange-1;
+		border-color: $notice-button-orange-2;
+		-webkit-box-shadow: 0 1px 0 $notice-button-orange-2;
+		box-shadow: 0 1px 0 $notice-button-orange-2;
+		color: $notice-button-orange-color;
+		text-decoration: none;
+		text-shadow: 0 -1px 1px $notice-button-orange-1, 1px 0 1px $notice-button-orange-1, 0 1px 1px $notice-button-orange-1, -1px 0 1px $notice-button-orange-1;
+
+		&:hover {
+			background-color: $notice-button-orange-bg-color-hover;
+		}
+	}
+}
+
+.gofer-seo-notice-indented {
+	margin-left: 50px;
+	padding: 5px 0;
+
+	ul {
+		list-style: circle inside;
+	}
+}

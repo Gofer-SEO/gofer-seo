@@ -558,6 +558,15 @@ class Gofer_SEO_Post {
 	 */
 	public function get_images() {
 		$images = array();
+		$image_defaults = array(
+			'id'        => 0,
+			'url'       => '',
+			'caption'   => '',
+			'title'     => '',
+			'width'     => 0,
+			'height'    => 0,
+			'mime_type' => '',
+		);
 
 		if ( 'attachment' === $this->post->post_type ) {
 			if ( false !== strpos( $this->post->post_mime_type, 'image/' ) ) {
@@ -767,9 +776,7 @@ class Gofer_SEO_Post {
 		// External/Custom images remaining.
 		if ( ! empty( $post_image_urls ) ) {
 			foreach ( $post_image_urls as $v1_image_url ) {
-				$images[] = array(
-					'url' => $v1_image_url,
-				);
+				$images[] = wp_parse_args( array( 'url' => $v1_image_url ), $image_defaults );
 			}
 		}
 

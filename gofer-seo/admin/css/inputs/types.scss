@@ -1,0 +1,772 @@
+/*!
+ * Admin - Inputs
+ *
+ * Styling for multiple inputs.
+ *
+ * @since 1.0.0
+ */
+
+@import "../_abstracts/variables";
+
+.gofer-seo-admin-page .gofer-seo-container {
+	p, b, label {
+		color: $secondary;
+	}
+
+	a {
+		color: lighten( $secondary, 6% );
+	}
+
+	a:hover {
+		color: lighten( $secondary, 32% );
+
+	}
+}
+
+// Wrap Header (bold wrap).
+.gofer-seo-wrap-dynamic {
+	> p {
+		margin: 0 0 9px 0;
+
+		> b {
+			font-size: 14px;
+			font-weight: 700;
+		}
+	}
+}
+
+// *** INPUTS ***
+// Admin/All Pages.
+.gofer-seo-container .gofer-seo-input-wrap {
+	input {
+		&:disabled {
+			text-decoration: line-through;
+		}
+
+		&[readonly] {
+			background: $types-readonly-bg;
+			border-color: $types-readonly-border-color;
+			box-shadow: inset 0 1px 2px $types-readonly-box-shadow;
+			color: $types-readonly-color;
+
+			&:focus {
+				box-shadow: inset 0 1px 2px $types-readonly-box-shadow;
+			}
+		}
+	}
+
+	textarea {
+
+		&:disabled {
+			text-decoration: line-through;
+		}
+
+		&[readonly] {
+			background: $types-readonly-bg;
+			border-color: $types-readonly-border-color;
+			box-shadow: inset 0 1px 2px $types-readonly-box-shadow;
+			color: $types-readonly-color;
+
+			&:focus {
+				box-shadow: inset 0 1px 2px $types-readonly-box-shadow;
+			}
+		}
+	}
+}
+
+.gofer-seo-container:not(.gofer-seo-user-editor) .gofer-seo-input-wrap {
+	input {
+		color: $types-color;
+	}
+
+	> input[type="text"],
+	input[type="url"] {
+		border-color: $types-input-border-color;
+		width: 100%;
+
+		&:focus {
+			border-color: $types-input-border-color-focus;
+			box-shadow: 0 0 3px 1px $types-input-box-shadow-focus;
+		}
+	}
+
+	> input[type="number"],
+	&.gofer-seo-input-type-range > input[type="number"] {
+		padding: 0 0 0 9px;
+		border-color: $types-number-border-color;
+		box-shadow: inset 0 1px 2px $types-number-box-shadow;
+
+		&:focus {
+			border-color: $types-number-border-color-focus;
+			box-shadow: inset 0 1px 2px $types-number-box-shadow;
+			outline: 0;
+		}
+
+		&:hover {
+			border-color: $types-number-border-color-hover;
+			box-shadow: 0 0 3px 1px $types-number-box-shadow-hover;
+			outline: 2px solid transparent;
+		}
+
+		$image_base64: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAASCAYAAABvqT8MAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAABR0RVh0VGl0bGUATnVtYmVyIFNwaW5uZXJr6ez+AAAADHRFWHRBdXRob3IARWtvSlKOVX6QAAAAGHRFWHRDcmVhdGlvbiBUaW1lADIwMjItMDEtMjK6g7YRAAAAL3RFWHRTb3VyY2UAaHR0cHM6Ly93b3JkcHJlc3Mub3JnL3BsdWdpbnMvZ29mZXItc2VvLxVSD8sAAABYdEVYdENvcHlyaWdodABDQzAgUHVibGljIERvbWFpbiBEZWRpY2F0aW9uIGh0dHA6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL3B1YmxpY2RvbWFpbi96ZXJvLzEuMC/G4735AAAAh0lEQVQoke3SvQnCUBiF4UeyQcABBEewCa5g5QDWltkohWPYOoToAoKNhVgppsmFEG+8Btu8cKrv/eD+HOJsUfbMPljhiRfWKXmBO95NHij65BkuLTnkinlXznGMyCFnTGHSLGywTBz3gF3qTiP88aw/f1ybQdUIDCpf4Gu9s8jCCTfsUXWHNWSLMarqPgfzAAAAAElFTkSuQmCC);
+		&::-webkit-outer-spin-button,
+		&::-webkit-inner-spin-button {
+			-webkit-appearance: none;
+			width: 1em;
+		}
+
+		&:hover::-webkit-inner-spin-button {
+			background: $primary $image_base64 no-repeat center center;
+			border-left: 1px solid $secondary-light-2;
+			opacity: 0.5;
+		}
+
+		&::-webkit-inner-spin-button:hover,
+		&::-webkit-inner-spin-button:active {
+			box-shadow: 0 0 2px $secondary-light-1;
+			opacity: 0.8;
+		}
+	}
+
+	> input[type="date"] {
+		border-color: $types-input-border-color;
+		width: 36%;
+		min-width: 150px;
+
+		&:focus {
+			border-color: $types-input-border-color-focus;
+			box-shadow: 0 0 3px 1px $types-input-box-shadow-focus;
+		}
+	}
+
+	> textarea {
+		border-color: $types-input-border-color;
+		color: $types-color;
+		width: 100%;
+		min-height: 45px;
+		max-height: 562px;
+
+		&:focus {
+			border-color: $types-input-border-color-focus;
+			box-shadow: 0 0 3px 1px $types-input-box-shadow-focus;
+		}
+	}
+
+	> select {
+		width: 36%;
+		min-width: 150px;
+		color: $types-color;
+		border-color: $types-input-border-color;
+
+		&:focus {
+			color: $types-color;
+			border-color: $types-input-border-color-focus;
+			box-shadow: 0 0 3px 1px $types-input-box-shadow-focus;
+		}
+
+		&:hover {
+			color: lighten( $types-color, 10% );
+		}
+	}
+
+	// Radio.
+	> .gofer-seo-radio-item {
+		float: left;
+		width: 24%;
+		margin-top: 5px;
+		margin-bottom: 3px;
+		padding-right: 1%;
+		min-inline-size: fit-content;
+
+		@media (max-width: 1500px) {
+			width: 29%;
+			padding-right: 2%;
+		}
+
+		@media (max-width: 960px) {
+			width: 48%;
+			margin-top: 12px;
+			margin-bottom: 9px;
+		}
+
+		@media (max-width: 500px) {
+			width: 100%;
+			padding-right: 0;
+		}
+	}
+
+	.gofer-seo-radio-item label {
+		vertical-align: baseline;
+	}
+
+	> .gofer-seo-radio-item > input[type="radio"] {
+		appearance: auto;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		margin-top: 7px;
+		margin-bottom: 3px;
+		border-color: $types-radio-border-color;
+		box-shadow: inset 0 1px 2px $types-radio-box-shadow;
+
+		&:focus {
+			border-color: $types-radio-border-color;
+			box-shadow: inset 0 1px 2px $types-radio-box-shadow;
+			outline: 0;
+		}
+
+		&:hover {
+			border-color: $types-radio-border-color-hover;
+			box-shadow: 0 0 0 1px $types-radio-box-shadow-hover;
+			outline: 2px solid transparent;
+
+			&:checked {
+				border-color: $types-radio-border-color;
+				box-shadow: inset 0 1px 2px $types-radio-box-shadow;
+			}
+		}
+
+		&:checked {
+			background: #fff;
+
+			&::before {
+				background: $types-radio-background-checked;
+			}
+		}
+	}
+
+	// Checkbox.
+	> input[type="checkbox"] {
+		margin-top: 7px;
+		margin-bottom: 3px;
+		border-color: $types-checkbox-border-color;
+		box-shadow: inset 0 1px 2px $types-checkbox-box-shadow;
+
+		&:focus {
+			border-color: $types-checkbox-border-color;
+			box-shadow: inset 0 1px 2px $types-checkbox-box-shadow;
+			outline: 0;
+		}
+
+		&:hover {
+			border-color: $types-checkbox-border-color-hover;
+			box-shadow: 0 0 3px 1px $types-checkbox-box-shadow-hover;
+			outline: 2px solid transparent;
+		}
+
+		&:checked {
+			background: $types-checkbox-background-checked;
+
+			&::before {
+				/* stylelint-disable-next-line font-family-no-missing-generic-family-keyword -- Dashicons is required. */
+				font: 400 21px/1 dashicons;
+				content: "\f147";
+				color: $types-checkbox-icon-color;
+				margin: -3px 0 0 -4px;
+
+				@media (max-width: 782px) {
+					font-size: 27px;
+					margin: 0 0 0 -5px;
+				}
+			}
+		}
+
+		@media (max-width: 782px) {
+			margin-top: 8px;
+			margin-bottom: 4px;
+		}
+	}
+
+	// Multi-Checkbox.
+	> .gofer-seo-multi-checkbox-item {
+		float: left;
+		width: 25%;
+		margin-top: 5px;
+		margin-bottom: 3px;
+
+		input {
+			border-color: $types-checkbox-border-color;
+			box-shadow: inset 0 1px 2px $types-checkbox-box-shadow;
+
+			&:focus {
+				border-color: $types-checkbox-border-color;
+				box-shadow: inset 0 1px 2px $types-checkbox-box-shadow;
+				outline: 0;
+			}
+
+			&:hover {
+				border-color: $types-checkbox-border-color-hover;
+				box-shadow: 0 0 3px 1px $types-checkbox-box-shadow-hover;
+				outline: 2px solid transparent;
+			}
+
+			&:checked {
+				background: $types-checkbox-background-checked;
+
+				&::before {
+					/* stylelint-disable-next-line font-family-no-missing-generic-family-keyword -- Dashicons is required. */
+					font: 400 21px/1 dashicons;
+					content: "\f147";
+					color: $types-checkbox-icon-color;
+					margin: -3px 0 0 -4px;
+
+					@media (max-width: 782px) {
+						font-size: 27px;
+						margin: 0 0 0 -5px;
+					}
+				}
+			}
+
+			@media (max-width: 782px) {
+				margin-top: 8px;
+				margin-bottom: 4px;
+			}
+		}
+
+		@media (max-width: 1500px) {
+			width: 33%;
+		}
+
+		@media (max-width: 960px) {
+			width: 50%;
+			margin-top: 12px;
+			margin-bottom: 9px;
+		}
+
+		@media (max-width: 500px) {
+			width: 100%;
+		}
+	}
+
+	// Range.
+	&.gofer-seo-input-type-range input[type="range"] {
+		-webkit-appearance: none;
+		width: 36%;
+		min-width: 150px;
+		height: 24px;
+		margin: 10px 0;
+
+		&:focus {
+			outline: none;
+		}
+
+		$thumb-height: 18px;
+		$thumb-width: 30px;
+		$thumb-border-radius: 9px;
+		&::-webkit-slider-thumb {
+			box-shadow: 0 0 0 #000;
+			border: 0 solid #000;
+			height: $thumb-height;
+			width: $thumb-width;
+			border-radius: $thumb-border-radius;
+			background: $secondary;
+			cursor: pointer;
+			-webkit-appearance: none;
+			margin-top: -4.5px;
+		}
+
+		&::-moz-range-thumb {
+			box-shadow: 0 0 0 #000;
+			border: 0 solid #000;
+			height: $thumb-height;
+			width: $thumb-width;
+			border-radius: $thumb-border-radius;
+			background: $secondary;
+			cursor: pointer;
+		}
+
+		&::-ms-thumb {
+			margin-top: 1px;
+			box-shadow: 0 0 0 #000;
+			border: 0 solid #000;
+			height: $thumb-height;
+			width: $thumb-width;
+			border-radius: $thumb-border-radius;
+			background: $secondary;
+			cursor: pointer;
+		}
+
+		// Not properly supported by browsers.
+		&:hover::-webkit-slider-thumb,
+		&:hover::-moz-range-thumb,
+		&:hover::-ms-thumb {
+			background-color: lighten( $secondary, 33% ) !important;
+		}
+
+		$track-width: 100%;
+		$track-height: 9px;
+		$track-border-radius: 9px;
+		&::-webkit-slider-runnable-track {
+			width: $track-width;
+			height: $track-height;
+			cursor: pointer;
+			//animate: 0.2s;
+			box-shadow: 0 0 0 #000;
+			background: $primary;
+			border-radius: $track-border-radius;
+			border: 0 solid #000;
+		}
+
+		&:active::-webkit-slider-runnable-track {
+			background: lighten( $primary, 17% );
+		}
+
+		&::-moz-range-track {
+			width: $track-width;
+			height: $track-height;
+			cursor: pointer;
+			//animate: 0.2s;
+			box-shadow: 0 0 0 #000;
+			background: $primary;
+			border-radius: $track-border-radius;
+			border: 0 solid #000;
+		}
+
+		&::-ms-track {
+			width: $track-width;
+			height: $track-height;
+			cursor: pointer;
+			//animate: 0.2s;
+			background: transparent;
+			border-color: transparent;
+			color: transparent;
+		}
+
+
+
+		input[type="range"]::-webkit-progress-value {
+			background-color: #a8c023;
+			height: $track-height;
+		}
+
+		input[type="range"]::-moz-range-progress {
+			background-color: #a8c023;
+			height: $track-height;
+		}
+
+		&::-ms-fill-lower {
+			background: $primary;
+			border: 0 solid #000;
+			border-radius: floor( $track-border-radius / 2 ) * 4;
+			box-shadow: 0 0 0 #000;
+		}
+
+		&::-ms-fill-upper {
+			background: #e4e8d1;
+			border: 0 solid #000;
+			border-radius: floor( $track-border-radius / 2 ) * 4;
+			box-shadow: 0 0 0 #000;
+		}
+
+		&:focus::-ms-fill-lower {
+			background: $primary;
+		}
+
+		&:focus::-ms-fill-upper {
+			background: #e4e8d1;
+		}
+	}
+
+	&.gofer-seo-input-type-range input[type="number"] {
+		width: 54px;
+	}
+
+	// Image Media.
+	.gofer-seo-image-media-button {
+		margin-bottom: 3px;
+	}
+
+	.gofer-seo-image-media-text {}
+
+	// TODO Add image preview.
+	//.gofer-seo-image-media-img {
+	//	width: 100%;
+	//}
+}
+
+// User Editor Page.
+.gofer-seo-user-editor {
+	&.gofer-seo-container {
+		width: 100%;
+		padding: 0;
+	}
+
+	.gofer-seo-input-wrap {
+		> input[type="text"],
+		> input[type="url"] {
+			width: 25em;
+		}
+
+		> select {
+			width: 15em;
+			min-width: unset;
+		}
+	}
+}
+
+// Add Field List.
+.gofer-seo-add-field-list {
+	table.gofer-seo-add-field-list-table {
+		width: 100%;
+		border: 1px $types-add-field-table-border outset;
+
+		&:empty {
+			display: none;
+		}
+
+		> thead {
+			font-size: 10px;
+			text-align: left;
+			background: $types-add-field-table-thead-bg;
+			line-height: 1.8;
+
+			th {
+				padding: 6px 9px;
+			}
+
+			@media (max-width:513px) {
+				font-size: 8px;
+
+				th {
+					padding: 3px 1px;
+				}
+			}
+		}
+
+		> tbody {
+			font-size: 12px;
+
+			> tr:nth-child(even) {
+				background: $types-add-field-table-tbody-bg;
+			}
+			> tr > td {
+				overflow-wrap: anywhere;
+			}
+
+			@media (max-width:513px) {
+				& {
+					font-size: 9px;
+				}
+			}
+		}
+	}
+}
+
+// Add Field Robots.txt.
+.gofer-seo-add-field-robots-txt {
+	> .gofer-seo-row > div.gofer-seo-col-12 > .gofer-seo-row {
+		.gofer-seo-add-item-robots-txt-user-agent-button,
+		.gofer-seo-add-item-robots-txt-sitemap-button {
+			height: 32px;
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+		 &:first-child {
+			 margin-bottom: 0;
+		 }
+	}
+
+	> .gofer-seo-row > div.gofer-seo-col-12 > .gofer-seo-row > div > .gofer-seo-row {
+		// Inputs.
+		> div {
+			input {
+				width: 100%;
+			}
+			select {
+				min-width: 111px;
+			}
+		}
+	}
+
+	> .gofer-seo-row > div.gofer-seo-col-12.gofer-seo-add-field-robots-txt-sitemaps > .gofer-seo-row > div > .gofer-seo-row,
+	> .gofer-seo-row > div.gofer-seo-col-12.gofer-seo-add-field-robots-txt-user-agents > .gofer-seo-row > div > .gofer-seo-row {
+		margin-bottom: 0;
+
+		// Inputs.
+		> div {
+			margin-right: 1px;
+			-ms-flex: 0 0 32.333333%;
+			flex: 0 0 32.333333%;
+			max-width: 32.333333%;
+		}
+	}
+
+	table.gofer-seo-add-field-robots-txt-table {
+		width: 100%;
+		border: 1px $types-add-field-table-border outset;
+
+		&:empty {
+			display: none;
+		}
+
+		> thead {
+			text-align: left;
+			background: $types-add-field-table-thead-bg;
+			line-height: 1.8;
+
+			th {
+				padding: 6px 9px;
+			}
+		}
+
+		> tbody > tr:nth-child(even) {
+			background: $types-add-field-table-tbody-bg;
+		}
+	}
+}
+
+// Select2.
+/* stylelint-disable selector-class-pattern -- Select2 uses their own pattern. */
+.gofer-seo-input-type-select2-multi-select {
+	.select2-container .select2-selection--multiple {
+		min-height: 45px;
+		max-height: 562px;
+		border: 1px solid $primary-dark-2;
+		resize: vertical;
+		overflow-wrap: break-word;
+		overflow: auto;
+
+		.select2-selection__choice {
+			height: 18px;
+			padding: 1px 9px 2px 5px;
+			margin: 7px 6px 2px 0;
+			background: $primary-dark-1;
+			color: #fff;
+
+			.select2-selection__choice__remove {
+				color: #fff;
+
+				&:hover {
+					color: $default-red-light;
+				}
+			}
+		}
+
+		.select2-search__field {
+			min-height: 27px;
+		}
+	}
+
+	.select2-container--default.select2-container--focus .select2-selection--multiple {
+		border: 1px solid $type-select2-border;
+	}
+}
+
+.select2-container .select2-dropdown {
+	.select2-results > ul.select2-results__options {
+		.select2-results__group {
+			border-bottom: $secondary;
+		}
+
+		ul.select2-results-options li.select2-results__option {
+			margin: 0;
+		}
+
+		ul.select2-results-options li.select2-results__option:nth-child(even) {
+			background-color: lighten( $secondary, 80% );
+		}
+	}
+}
+/* stylelint-enable */
+
+// Tabs.
+.gofer-seo-tabs {
+	.nav-link {
+		color: $type-tabs-nav-color-link;
+
+		&:hover, &:focus {
+			color: $type-tabs-nav-color-link-hover;
+		}
+	}
+
+	.nav-tabs {
+		padding: 0 1%;
+		border-bottom: unset;
+
+		.nav-link {
+			padding-bottom: 0.4rem;
+			border-style: solid;
+			border-color: $type-tabs-nav-border;
+			border-width: 1px 1px 0 1px;
+			text-decoration: none;
+			font-weight: 600;
+			background-color: $type-tabs-nav-bg-color;
+			box-shadow: inset 0 -1px 2px 0 $type-tabs-nav-box-shadow;
+
+			&.active {
+				border-bottom: 3px solid $type-tabs-nav-border-color-active;
+				box-shadow: 0 1px 3px 0 $type-tabs-nav-box-shadow-active;
+			}
+		}
+	}
+
+	.tab-content {
+		border-top: 1px solid $type-tabs-tab-content-border;
+		border-right: 1px solid $type-tabs-tab-content-border;
+		border-bottom: 1px solid $type-tabs-tab-content-border;
+		border-left: 1px solid $type-tabs-tab-content-border;
+		border-radius: 6px;
+		box-shadow: 0 1px 9px $type-tabs-tab-content-box-shadow;
+	}
+}
+
+
+// Responsive @media.
+// Radio.
+//@media (max-width: 1500px) {
+//	.gofer-seo-input-wrap > .gofer-seo-radio-item {
+//		width: 29%;
+//		padding-right: 2%;
+//	}
+//}
+//
+//@media (max-width: 960px) {
+//
+//	.gofer-seo-input-wrap > .gofer-seo-radio-item {
+//		width: 48%;
+//		margin-top: 12px;
+//		margin-bottom: 9px;
+//	}
+//}
+//
+//@media (max-width: 500px) {
+//
+//	.gofer-seo-input-wrap > .gofer-seo-radio-item {
+//		width: 100%;
+//		padding-right: 0;
+//	}
+//}
+//
+//// Checkbox.
+//@media (max-width: 782px) {
+//
+//	.gofer-seo-input-wrap > input[type="checkbox"] {
+//		margin-top: 8px;
+//		margin-bottom: 4px;
+//	}
+//
+//	.gofer-seo-input-wrap input[type="checkbox"]:checked::before {
+//		font-size: 27px;
+//		margin: 0 0 0 -5px;
+//	}
+//}
+//
+//// Multi-Checkbox.
+//@media (max-width: 1500px) {
+//	.gofer-seo-input-wrap > .gofer-seo-multi-checkbox-item {
+//		width: 33%;
+//	}
+//}
+//
+//@media (max-width: 960px) {
+//	.gofer-seo-input-wrap > .gofer-seo-multi-checkbox-item {
+//		width: 50%;
+//		margin-top: 12px;
+//		margin-bottom: 9px;
+//	}
+//}
+//
+//@media (max-width: 500px) {
+//	.gofer-seo-input-wrap > .gofer-seo-multi-checkbox-item {
+//		width: 100%;
+//	}
+//}

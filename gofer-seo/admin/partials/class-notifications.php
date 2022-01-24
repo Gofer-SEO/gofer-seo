@@ -706,7 +706,7 @@ class Gofer_SEO_Notifications {
 	 * @since 1.0.0
 	 */
 	public function admin_enqueue_scripts() {
-		$file_ext_js  = gofer_seo_is_min_enabled() ? 'min.css' : 'css';
+		$file_ext_js  = gofer_seo_is_min_enabled() ? 'min.js' : 'js';
 		$file_ext_css = gofer_seo_is_min_enabled() ? 'min.css' : 'css';
 		// Register.
 		wp_register_script(

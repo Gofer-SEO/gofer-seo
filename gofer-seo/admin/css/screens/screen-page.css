@@ -13,5 +13,5 @@
  * an empty postbox-container.
  */
 .gofer-seo-admin-page .postbox-container > .meta-box-sortables {
-	min-height: 9px;
+  min-height: 9px;
 }
