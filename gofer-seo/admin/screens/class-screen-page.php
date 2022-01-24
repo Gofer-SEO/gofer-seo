@@ -247,7 +247,7 @@ abstract class Gofer_SEO_Screen_Page extends Gofer_SEO_Screen {
 				$this->menu_parent_slug,                         // Menu slug.
 				//array( $this, 'display_page' ),                // Callback function (if dashboard is added).
 				null,                                            // Replaced by submenu.
-				'dashicons-rest-api',                            // Menu icon.
+				gofer_seo_get_icon_menu_base64(),                // Menu icon.
 				$this->menu_order                                // Menu position.
 			);
 

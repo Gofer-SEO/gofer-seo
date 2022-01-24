@@ -5,14 +5,20 @@
  *
  * @since 1.0.0
  */
-.gofer-seo-tooltip, .gofer-seo-tooltip:active {
+/**
+ * Gofer SEO - SASS/SCSS Abstract - Variables
+ *
+ * Contains commonly used values, like color, size, dimensions, etc..
+ *
+ * @since 1.0.3
+ */
+.gofer-seo-tooltip {
   text-align: left;
   float: left;
   max-width: 23px;
   min-width: 20px;
-  padding-top: 2px;
   outline: none;
-  color: #888;
+  color: #ffd6b0;
   font-family: sans-serif;
   line-height: 17px;
 }
@@ -25,35 +31,37 @@
   margin-right: 4px;
 }
 
+.gofer-seo-tooltip:active {
+  color: #ffd6b0;
+}
+
+.gofer-seo-tooltip:hover, .gofer-seo-tooltip:focus {
+  color: #ff9639;
+  box-shadow: unset;
+}
+
 .gofer-seo-tooltip span {
   font-size: 14px;
 }
 
-.gofer-seo-ui-tooltip.ui-tooltip {
+.ui-tooltip.gofer-seo-ui-tooltip {
+  font-family: "Open Sans", sans-serif;
+  -webkit-box-shadow: 0 0 5px #27221c;
+  box-shadow: 0 0 5px #27221c;
+  border: 0;
+  border-radius: 9px;
+  background: #f4f5f0;
+  max-width: 300px;
   padding: 8px;
   position: absolute;
   z-index: 9999;
-  max-width: 300px;
-  -webkit-box-shadow: 0 0 5px #aaa;
-  box-shadow: 0 0 5px #aaa;
 }
 
-.ui-tooltip.ui-widget.ui-corner-all.ui-widget-content.gofer-seo-ui-tooltip {
-  font-family: "Open Sans", sans-serif;
-  -webkit-box-shadow: 0 1px 6px -2px #0073aa;
-  box-shadow: 0 1px 6px -2px #0073aa;
-  border: 0;
-  border-radius: 0;
-  background: #fefefe;
-}
-
-.ui-tooltip.ui-widget.ui-corner-all.ui-widget-content.gofer-seo-ui-tooltip a {
+.ui-tooltip.gofer-seo-ui-tooltip div.ui-tooltip-content a {
   color: #0073aa;
   text-decoration: none;
 }
 
-.ui-tooltip.ui-widget.ui-corner-all.ui-widget-content.gofer-seo-ui-tooltip dt {
+.ui-tooltip.gofer-seo-ui-tooltip div.ui-tooltip-content dt {
   font-weight: 700;
 }
-
-/*# sourceMappingURL=tooltips.css.map */

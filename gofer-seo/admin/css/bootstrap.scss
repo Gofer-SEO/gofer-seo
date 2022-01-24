@@ -9,6 +9,8 @@
  * @since 1.0.0
  */
 
+@import "_abstracts/variables";
+
 .fade {
 	transition: opacity 0.15s linear;
 
@@ -125,22 +127,22 @@ $widths: (
 	}
 
 	.nav-tabs {
-		border-bottom: 1px solid #dee2e6;
+		border-bottom: 1px solid $bootstrap-border-1;
 	}
 
 	.nav-link {
 		display: block;
 		padding: 0.5rem 1rem;
-		color: #0d6efd;
+		color: $bootstrap-color-link;
 		text-decoration: none;
 		transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
 
 		&:hover, &:focus {
-			color: #0a58ca;
+			color: $bootstrap-color-link-hover;
 		}
 
 		&.disabled {
-			color: #6c757d;
+			color: $bootstrap-color-disabled;
 			pointer-events: none;
 			cursor: default;
 		}
@@ -159,27 +161,27 @@ $widths: (
 			border-top-right-radius: 0.25rem;
 
 			&:hover, &:focus {
-				border-color: #e9ecef #e9ecef #dee2e6;
+				border-color: $bootstrap-border-2 $bootstrap-border-2 $bootstrap-border-1;
 				isolation: isolate;
 			}
 
 			&.disabled {
-				color: #6c757d;
+				color: $bootstrap-color-disabled;
 				background-color: transparent;
 				border-color: transparent;
 			}
 
 			&.active {
-				color: #495057;
-				background-color: #fff;
-				border-color: #dee2e6 #dee2e6 #fff;
+				color: $bootstrap-color;
+				background-color: $bootstrap-white;
+				border-color: $bootstrap-border-1 $bootstrap-border-1 $bootstrap-white;
 			}
 		}
 
 		.nav-item.show .nav-link {
-			color: #495057;
-			background-color: #fff;
-			border-color: #dee2e6 #dee2e6 #fff;
+			color: $bootstrap-color;
+			background-color: $bootstrap-white;
+			border-color: $bootstrap-border-1 $bootstrap-border-1 $bootstrap-white;
 		}
 
 		.dropdown-menu {

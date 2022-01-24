@@ -8,6 +8,13 @@
  *
  * @since 1.0.0
  */
+/**
+ * Gofer SEO - SASS/SCSS Abstract - Variables
+ *
+ * Contains commonly used values, like color, size, dimensions, etc..
+ *
+ * @since 1.0.3
+ */
 .fade {
   transition: opacity 0.15s linear;
 }
@@ -230,14 +237,14 @@
 
 .gofer-seo-tabs .nav-tabs .nav-link.active {
   color: #495057;
-  background-color: #fff;
-  border-color: #dee2e6 #dee2e6 #fff;
+  background-color: #ffffff;
+  border-color: #dee2e6 #dee2e6 #ffffff;
 }
 
 .gofer-seo-tabs .nav-tabs .nav-item.show .nav-link {
   color: #495057;
-  background-color: #fff;
-  border-color: #dee2e6 #dee2e6 #fff;
+  background-color: #ffffff;
+  border-color: #dee2e6 #dee2e6 #ffffff;
 }
 
 .gofer-seo-tabs .nav-tabs .dropdown-menu {
@@ -253,5 +260,3 @@
 .gofer-seo-tabs .tab-content > .active {
   display: block;
 }
-
-/*# sourceMappingURL=bootstrap.css.map */

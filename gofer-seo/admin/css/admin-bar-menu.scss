@@ -3,3 +3,28 @@
  *
  * @since 1.0.0
  */
+
+#wpadminbar .ab-item > .ab-gofer-seo-icon {
+	position: relative;
+	float: left;
+	speak: never;
+	padding: 4px 0;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background-image: none;
+	margin-right: 6px;
+}
+
+#wpadminbar .ab-item > .ab-gofer-seo-icon.gofer-seo-icon-menu {
+	background: url(../images/menu.svg) no-repeat center;
+	background-size: contain;
+	width: 20px;
+	height: 20px;
+}
+
+#wpadminbar .ab-top-menu > li.hover > .ab-item .ab-gofer-seo-icon,
+#wpadminbar.nojq .quicklinks .ab-top-menu > li > .ab-item:focus .ab-gofer-seo-icon,
+#wpadminbar:not(.mobile) .ab-top-menu > li:hover > .ab-item .ab-gofer-seo-icon,
+#wpadminbar:not(.mobile) .ab-top-menu > li > .ab-item:focus .ab-gofer-seo-icon {
+	color: #72aee6;
+}

@@ -6,9 +6,11 @@
  * @since 1.0.0
  */
 
+@import "_abstracts/variables";
+
 .gofer-seo-quick-edit-wrap {
-	float: left;
 	display: block;
+	float: left;
 	opacity: 1;
 	max-height: 75px;
 	overflow: hidden;
@@ -53,10 +55,10 @@ td {
 
 .gofer-seo-quick-edit-pencil {
 	margin-right: 5px;
-	color: #72777c;
+	color: $quick-edit-color-pencil;
 
 	&:hover {
-		color: #0073aa;
+		color: $quick-edit-color-pencil-hover;
 		outline: 0;
 	}
 
@@ -76,7 +78,15 @@ td {
 
 .gofer-seo-quick-edit-input-save {
 	margin-right: 5px;
-	color: rgb(22, 204, 22);
+	color: $quick-edit-color-save;
+
+	&:active {
+		color: $quick-edit-color-save;
+	}
+
+	&:hover {
+		color: lighten( $quick-edit-color-save, 12% );
+	}
 
 	&:focus {
 		box-shadow: none;
@@ -84,7 +94,15 @@ td {
 }
 
 .gofer-seo-quick-edit-input-cancel {
-	color: #f00;
+	color: $quick-edit-color-cancel;
+
+	&:active {
+		color: $quick-edit-color-cancel;
+	}
+
+	&:hover {
+		color: lighten( $quick-edit-color-cancel, 12% );
+	}
 
 	&:focus {
 		box-shadow: none;
@@ -93,8 +111,8 @@ td {
 
 .gofer-seo-quickedit-spinner {
 	float: left;
-	width: 20px;
-	margin-right: 5px;
+	width: 16px;
+	margin: 0 6px 3px 0;
 }
 
 

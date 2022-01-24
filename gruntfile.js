@@ -14,7 +14,9 @@ module.exports = function(grunt) {
 		pkg: grunt.file.readJSON('package.json'),
 		filesSCSS: [
 			'admin/css/*.scss',
-			'admin/css/**/*.scss'
+			'admin/css/**/*.scss',
+			'public/css/*.scss',
+			'public/css/**/*.scss'
 		],
 		filesPHP: [
 			'gofer-seo/*.php',

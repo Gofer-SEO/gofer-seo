@@ -6,22 +6,31 @@
  * @since 1.0.0
  */
 
+@import "../_abstracts/variables";
+
 @mixin label-outer-props {
 	// Added for future use.
 	// font-size: 14px;
 	font-weight: 600;
-	color: #545454;
+	color: $layouts-color;
 	margin-top: 3px;
 }
 
 @mixin label-outer-selectors {
 	> label {
-		padding-right: 9%;
+		font-size: 12px;
+		vertical-align: top;
 	}
 
-	@media (max-width: 782px) {
+	@media screen and (max-width: 782px) {
 		margin-top: 9px;
 	}
+}
+
+.gofer-seo-meta-box.gofer-seo-container {
+	width: 100%;
+	padding-right: 0;
+	padding-left: 0;
 }
 
 // Rows.
@@ -33,6 +42,20 @@
 
 		@include label-outer-selectors;
 	}
+
+	// Currently unsupported & experimental.
+	//@container (max-width: 782px) {
+	//	> .gofer-seo-label-outer {
+	//		-ms-flex: 0 0 50%;
+	//		flex: 0 0 50%;
+	//		max-width: 50%;
+	//	}
+	//	> .gofer-seo-input-outer {
+	//		-ms-flex: 0 0 50%;
+	//		flex: 0 0 50%;
+	//		max-width: 50%;
+	//	}
+	//}
 }
 
 .gofer-seo-wrap > div > .gofer-seo-row {
@@ -48,7 +71,7 @@
 
 .gofer-seo-wrap-dynamic > div > .gofer-seo-row {
 	margin-bottom: 9px;
-	padding-left: 18px;
+	padding-left: 9px;
 
 	> .gofer-seo-label-outer {
 		font-size: 12px;

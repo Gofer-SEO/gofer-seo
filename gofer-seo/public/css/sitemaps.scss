@@ -1,0 +1,90 @@
+/*!
+ * Gofer SEO - Sitemaps CSS
+ *
+ * @since 1.0.3
+ * @package Gofer SEO
+ */
+
+@import "_abstracts/variables";
+
+body {
+	margin: 0;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 68.5%;
+}
+
+#sitemap__header {
+	background-color: $primary;
+	padding: 20px 40px;
+
+	h1, p, a {
+		color: lighten( $secondary, 85% );
+	}
+
+	h1 {
+		font-size: 2em;
+	}
+
+	p {
+		font-size: 1.2em;
+	}
+
+	a:hover {
+		color:lighten( $secondary, 66% );
+	}
+}
+
+#sitemap__table {
+	margin: 20px 2%;
+	border: none;
+	border-collapse: collapse;
+	font-size: 1em;
+	width: 96%;
+
+	tr {
+		th {
+			border-bottom: 1px solid lighten( $secondary, 65% );
+			padding: 15px 5px;
+			font-size: 14px;
+
+			&.link {
+				width: 33%;
+			}
+			&.loc {
+				// Index.
+			}
+
+			&.pubDate, &.publication_date {
+				width: 180px;
+			}
+			&.lastmod {
+				// Index.
+				width: 180px;
+			}
+		}
+
+		&:nth-child(even) {
+			background-color: lighten( $secondary, 80% );
+		}
+
+		td {
+			padding: 10px 5px;
+			border-left: 3px solid #fff;
+		}
+	}
+
+	td {
+		a {
+			display: block;
+		}
+
+		a:hover {
+			text-decoration: none;
+		}
+
+		a img {
+			max-height: 30px;
+			margin: 6px 3px;
+		}
+	}
+}

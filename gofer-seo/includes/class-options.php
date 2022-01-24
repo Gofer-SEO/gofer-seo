@@ -900,7 +900,7 @@ class Gofer_SEO_Options {
 			/* _/ Image \_____________________________________________________________________________________________*/
 			'default_image'                            => array(
 				'type'  => array( 'int', 'string' ),
-				'value' => GOFER_SEO_IMAGES_URL . 'default-user-image.png',
+				'value' => GOFER_SEO_IMAGES_URL . 'default-user.png',
 			),
 			'default_image_width'                      => array(
 				'type'  => array( 'int', 'string' ),

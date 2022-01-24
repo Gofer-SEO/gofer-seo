@@ -200,7 +200,7 @@ abstract class Gofer_SEO_Screen {
 		// Styles that would be used on all screens.
 		// Plugin logo, font-icons, etc.
 		if ( ! wp_style_is( 'gofer-seo-bootstrap-css', 'registered' ) ) {
-			wp_register_style(
+			wp_enqueue_style(
 				'gofer-seo-bootstrap-css',
 				GOFER_SEO_URL . 'admin/css/bootstrap.' . $file_ext,
 				array(),
@@ -225,15 +225,7 @@ abstract class Gofer_SEO_Screen {
 			return;
 		}
 
-		wp_register_style(
-			'gofer-seo-admin-bar-menu-css',
-			GOFER_SEO_URL . 'admin/css/admin-bar-menu.' . $file_ext,
-			array(),
-			GOFER_SEO_VERSION,
-			'all'
-		);
-
-		wp_register_style(
+		wp_enqueue_style(
 			'gofer-seo-input-types-css',
 			GOFER_SEO_URL . 'admin/css/inputs/types.' . $file_ext,
 			array(),
@@ -241,7 +233,7 @@ abstract class Gofer_SEO_Screen {
 			'all'
 		);
 
-		wp_register_style(
+		wp_enqueue_style(
 			'gofer-seo-input-layouts-css',
 			GOFER_SEO_URL . 'admin/css/inputs/layouts.' . $file_ext,
 			array(),
@@ -249,7 +241,7 @@ abstract class Gofer_SEO_Screen {
 			'all'
 		);
 
-		wp_register_style(
+		wp_enqueue_style(
 			'gofer-seo-tooltips-css',
 			GOFER_SEO_URL . 'admin/css/inputs/tooltips.' . $file_ext,
 			array(),
@@ -438,7 +430,7 @@ abstract class Gofer_SEO_Screen {
 		wp_enqueue_style( 'gofer-seo-admin-bar-menu-css' );
 
 		if ( ! is_admin() ) {
-			$title = '<span class="ab-icon dashicons-before dashicons-rest-api"></span><span class="ab-label">' . __( 'Gofer SEO', 'gofer-seo' ) . '</span>';
+			$title = '<span class="ab-gofer-seo-icon gofer-seo-icon-menu"></span><span class="ab-label">' . __( 'Gofer SEO', 'gofer-seo' ) . '</span>';
 			$wp_admin_bar->add_menu(
 				array(
 					'id'    => GOFER_SEO_NICENAME,
@@ -450,7 +442,7 @@ abstract class Gofer_SEO_Screen {
 				)
 			);
 		} else {
-			$title = '<span class="ab-icon dashicons-before dashicons-rest-api"></span><span class="ab-label">' . __( 'SEO Settings', 'gofer-seo' ) . '</span>';
+			$title = '<span class="ab-gofer-seo-icon gofer-seo-icon-menu"></span><span class="ab-label">' . __( 'SEO Settings', 'gofer-seo' ) . '</span>';
 			$wp_admin_bar->add_menu(
 				array(
 					'id'    => GOFER_SEO_NICENAME . '-settings',

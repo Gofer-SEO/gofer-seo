@@ -5,9 +5,16 @@
  *
  * @since 1.0.0
  */
+/**
+ * Gofer SEO - SASS/SCSS Abstract - Variables
+ *
+ * Contains commonly used values, like color, size, dimensions, etc..
+ *
+ * @since 1.0.3
+ */
 .gofer-seo-quick-edit-wrap {
-  float: left;
   display: block;
+  float: left;
   opacity: 1;
   max-height: 75px;
   overflow: hidden;
@@ -43,11 +50,11 @@ td.gofer_seo_title.column-gofer_seo_title, td.gofer_seo_description.column-gofer
 
 .gofer-seo-quick-edit-pencil {
   margin-right: 5px;
-  color: #72777c;
+  color: #3d3833;
 }
 
 .gofer-seo-quick-edit-pencil:hover {
-  color: #0073aa;
+  color: #0096dd;
   outline: 0;
 }
 
@@ -69,12 +76,28 @@ td.gofer_seo_title.column-gofer_seo_title, td.gofer_seo_description.column-gofer
   color: #16cc16;
 }
 
+.gofer-seo-quick-edit-input-save:active {
+  color: #16cc16;
+}
+
+.gofer-seo-quick-edit-input-save:hover {
+  color: #36e936;
+}
+
 .gofer-seo-quick-edit-input-save:focus {
   box-shadow: none;
 }
 
 .gofer-seo-quick-edit-input-cancel {
-  color: #f00;
+  color: red;
+}
+
+.gofer-seo-quick-edit-input-cancel:active {
+  color: red;
+}
+
+.gofer-seo-quick-edit-input-cancel:hover {
+  color: #ff3d3d;
 }
 
 .gofer-seo-quick-edit-input-cancel:focus {
@@ -83,8 +106,6 @@ td.gofer_seo_title.column-gofer_seo_title, td.gofer_seo_description.column-gofer
 
 .gofer-seo-quickedit-spinner {
   float: left;
-  width: 20px;
-  margin-right: 5px;
+  width: 16px;
+  margin: 0 6px 3px 0;
 }
-
-/*# sourceMappingURL=quick-edit.css.map */

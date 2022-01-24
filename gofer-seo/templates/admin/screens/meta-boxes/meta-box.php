@@ -41,10 +41,6 @@ $meta_box_inputs = isset( $box['args']['meta_box_inputs'] ) ? (array) $box['args
 $input_typesets  = isset( $box['args']['meta_box_input_typesets'] ) ? (array) $box['args']['meta_box_input_typesets'] : array();
 $values          = isset( $box['args']['values'] ) ? (array) $box['args']['values'] : array();
 
-wp_enqueue_style( 'gofer-seo-bootstrap-css' );
-wp_enqueue_style( 'gofer-seo-input-layouts-css' );
-wp_enqueue_style( 'gofer-seo-input-types-css' );
-
 wp_enqueue_script( 'gofer-seo-bootstrap-js' );
 wp_enqueue_script( 'gofer-seo-inputs-input-conditions-js' );
 ?>

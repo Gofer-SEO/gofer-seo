@@ -1,0 +1,87 @@
+/*!
+ * Gofer SEO - Sitemaps CSS
+ *
+ * @since 1.0.3
+ * @package Gofer SEO
+ */
+/*!
+ * Gofer SEO - SASS/SCSS Abstract - Variables
+ *
+ * Contains commonly used values, like color, size, dimensions, etc..
+ *
+ * @since 1.0.3
+ */
+body {
+  margin: 0;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 68.5%;
+}
+
+#sitemap__header {
+  background-color: #898f69;
+  padding: 20px 40px;
+}
+
+#sitemap__header h1, #sitemap__header p, #sitemap__header a {
+  color: #fbfaf9;
+}
+
+#sitemap__header h1 {
+  font-size: 2em;
+}
+
+#sitemap__header p {
+  font-size: 1.2em;
+}
+
+#sitemap__header a:hover {
+  color: #d3cbc1;
+}
+
+#sitemap__table {
+  margin: 20px 2%;
+  border: none;
+  border-collapse: collapse;
+  font-size: 1em;
+  width: 96%;
+}
+
+#sitemap__table tr th {
+  border-bottom: 1px solid #d0c8be;
+  padding: 15px 5px;
+  font-size: 14px;
+}
+
+#sitemap__table tr th.link {
+  width: 33%;
+}
+
+#sitemap__table tr th.pubDate, #sitemap__table tr th.publication_date {
+  width: 180px;
+}
+
+#sitemap__table tr th.lastmod {
+  width: 180px;
+}
+
+#sitemap__table tr:nth-child(even) {
+  background-color: #f0eeeb;
+}
+
+#sitemap__table tr td {
+  padding: 10px 5px;
+  border-left: 3px solid #fff;
+}
+
+#sitemap__table td a {
+  display: block;
+}
+
+#sitemap__table td a:hover {
+  text-decoration: none;
+}
+
+#sitemap__table td a img {
+  max-height: 30px;
+  margin: 6px 3px;
+}

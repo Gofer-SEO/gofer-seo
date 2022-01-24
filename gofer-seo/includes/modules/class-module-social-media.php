@@ -492,7 +492,7 @@ class Gofer_SEO_Module_Social_Media extends Gofer_SEO_Module {
 				$image_width  = $gofer_seo_options->options['modules']['social_media']['default_image_width'];
 				$image_height = $gofer_seo_options->options['modules']['social_media']['default_image_height'];
 			}
-			if ( GOFER_SEO_IMAGES_URL . 'default-user-image.png' === $image ) {
+			if ( GOFER_SEO_IMAGES_URL . 'default-user.png' === $image ) {
 				$theme_custom_logo = get_theme_mod( 'custom_logo' );
 				if ( ! empty( $theme_custom_logo ) ) {
 					$image = $theme_custom_logo;

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100" height="100" version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ <title>Default User</title>
+ <metadata>
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:title>Default User</dc:title>
+    <cc:license rdf:resource="http://creativecommons.org/publicdomain/zero/1.0/"/>
+    <dc:date>2022-01-22</dc:date>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>EkoJR</dc:title>
+     </cc:Agent>
+    </dc:creator>
+    <dc:publisher>
+     <cc:Agent>
+      <dc:title>EkoJR</dc:title>
+     </cc:Agent>
+    </dc:publisher>
+    <dc:source>https://wordpress.org/plugins/gofer-seo/</dc:source>
+    <dc:language>en-US</dc:language>
+   </cc:Work>
+   <cc:License rdf:about="http://creativecommons.org/publicdomain/zero/1.0/">
+    <cc:permits rdf:resource="http://creativecommons.org/ns#Reproduction"/>
+    <cc:permits rdf:resource="http://creativecommons.org/ns#Distribution"/>
+    <cc:permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks"/>
+   </cc:License>
+  </rdf:RDF>
+ </metadata>
+ <g>
+  <rect x="1.7802e-6" width="100" height="100" fill="#c5c5c5" style="paint-order:markers stroke fill"/>
+  <path d="m87.388 100a37.388 41.061 0 0 0-18.694-35.56 37.388 41.061 0 0 0-37.388 2e-6 37.388 41.061 0 0 0-18.694 35.56" color="#000000" fill="#fff" stroke-width="0" style="-inkscape-stroke:none;paint-order:markers stroke fill"/>
+  <ellipse cx="50" cy="40.741" rx="22.492" ry="22.491" fill="#fff" stroke-width="0" style="paint-order:markers stroke fill"/>
+ </g>
+</svg>

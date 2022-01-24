@@ -129,11 +129,11 @@ window.addEventListener('load', function() {
 
 			field.fadeOut('fast', function() {
 				/**
-				 *  @see admin/images/activity.gif
+				 *  @see admin/images/busy.gif
 				 */
 				let spinner = document.createElement('img');
 				spinner.classList.add('gofer-seo-quickedit-spinner');
-				spinner.src   = goferSeoData.adminImagesURL + 'activity.gif';
+				spinner.src   = goferSeoData.adminImagesURL + 'busy.gif';
 				spinner.align = 'absmiddle';
 
 				let span = document.createElement('span');
