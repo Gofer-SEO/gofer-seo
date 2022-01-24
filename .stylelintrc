@@ -1,6 +1,18 @@
 {
   "extends": "@wordpress/stylelint-config",
   "rules": {
-    "max-line-length": 120
+    "max-line-length": null,
+    "indentation": 2,
+    "no-descending-specificity": null,
+    "rule-empty-line-before": [
+      "always",
+      {
+        "except": ["after-single-line-comment", "inside-block-and-after-rule", "first-nested"],
+        "ignore": ["after-comment"]
+      }
+    ],
+    "comment-empty-line-before": null,
+    "selector-list-comma-newline-after": null,
+    "color-named": null
   }
 }
