@@ -67,6 +67,14 @@ Most inputs have tooltips added to make it easier to understand. However, if the
 
 == Changelog ==
 
+= 1.0.3 =
+* Change CSS to SASS.
+* Change/Refactor styles.
+* Fix PHP error missing index on User/Profile Editor.
+* Fix missing nonce on User Editor.
+* Fix PHP error undefined index in Post class.
+* Fix missing JS file.
+
 = 1.0.2 =
 * Change JS & CSS enqueue files to minify.
 * Add Use Minify setting to Advanced module.
